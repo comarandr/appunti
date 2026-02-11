@@ -110,8 +110,84 @@ Fase in cui si controlla che i requisiti siano realistici, coerenti e completi. 
 
 Documento più o meno formale contenente l'insieme dei requisiti. In questa fase viene predisposto un piano di test
 
+**[immagine diagramma requisiti]**
+
 ### 2 - Progettazione e Sviluppo
+
+Parte che si occupa della conversione dei requisiti in un sistema eseguibile. In due fasi:
+
+- **progettazione**: progettare struttura software che realizzi le specifiche
+- **sviluppo**: implementazione dei componenti definiti nel progetto
+
+La distinzione o meno dipende dal tipo di processo software adottato.
+
+#### Progettazione
+
+Le fasi di progettazione sono intrecciate e interdipendenti, continue revisioni anche delle fasi precedenti
+
+**input di progettazione**: requisiti, descrizione dei dati, informazioni sulla piattaforma software in cui sarà eseguito (sistema operativo, database, altre applicazioni)
+
+##### Attività di progettazione
+
+- **progettazione dell'architettura**: progetto alto livello, identificazione struttura complessiva e componenti principali
+- **progettazione dell'interfaccia**: definizione interfaccia tra componenti, non ambigua
+- **progettazione e scelta dei componenti**: scelta dei componenti già disponibili, progettazione nuovi componenti. Progetto dettagliato ma generalmente senza dettagli di implementazione
+- **progettazione del database**: definizione struttura del database, tabelle, relazioni e vincoli
+
+L'output della progettazione è un progetto software che descrive struttura, modelli e strutture dati usati dal sistema e interfacce usate.
+
+[immagine diagramma progettazione - slide 22]
+
+#### Sviluppo
+
+Lo sviluppo è strettamente dipendente dal singolo programmatore, ma è possibile che ci siano standard aziendali e convenzioni condivise.
 
 ### 3 - Verifica e Validazione
 
+**Verifica**: mostrare conformità del sistema alle specifiche
+
+**Validazione**: mostrare che il sistema soddisfa le aspettative del cliente
+
+Generalmente ottenute tramite **testing** medianti dati di prova ricavati dalle specifiche.
+
+#### Testing
+
+Suddivisibile in tre fasi:
+
+- **test dei componenti**: test di singoli componenti in isolamento (unità o gruppi di funzioni e classi)
+- **test del sistema**: testare il sistema completo, oppure in più stadi con diverse componenti integrate, verificando conformità requisiti funzionali e non funzionali
+- **test del cliente**: sistema testato dal cliente con dati reali, verificando che soddisfi le sue aspettative
+
+La fase di testing è **iterativa**, se emergono difetti può essere necessario ripercorrere le altre fasi di testing
+
 ### 4 - Evoluzione
+
+Il software viene costantemenete riusato, evoluto e mantenuto, modificandolo ripetutamente durtante il suo ciclo di vita. Questo avviene per
+
+- correggere errori
+- migliorare funzionalità
+- adattarlo a nuovi ambienti operativi
+
+## 3. MODELLI DI PROCESSI SOFTWARE
+
+**CSV - modello del ciclo di vita del software**: caratterizzazione descrittiva o prescrittiva di come dovrebbe essere sviluppato un software
+
+**modello di processo software**: descrizione semplificata e astratta di un processo software
+
+Ogni processo può essere descritto tramite
+
+- **descrizione architetturale**: descrive la sequenza di attività senza fornire dettagli
+- **data-flow**: evidenzia trasformazioni dei dati dalle attività del processo
+- **role/action**: ruole e responsabilità di chi svolge le attività del processo
+
+La descrizione del processo software include:
+
+- **attività**: cosa deve essere fatto e in che ordine
+- **prodotti**: risultati di ogni attività
+- **ruoli**: chi deve svolgere le attività
+- **pre e post condizioni**: condizioni che devono essere soddisfatte prima e dopo ogni attività, criteri di transizione
+
+Ci sono diversi tipologie di modelli, tra cui:
+
+- **plan-driven**: pianificazione dettagliata di tutte le attività prima di iniziare lo sviluppo
+- **agile**: sviluppo iterativo e incrementale, con frequenti revisioni e
