@@ -1,0 +1,1019 @@
+<!DOCTYPE html><html><head>
+      <title>oop</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\comar\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#393a34;font-family:Consolas,"Bitstream Vera Sans Mono","Courier New",Courier,monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;font-size:.95em;line-height:1.2em;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{background:#c1def1}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#c1def1}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border:1px solid #ddd;background-color:#fff}:not(pre)>code[class*=language-]{padding:.2em;padding-top:1px;padding-bottom:1px;background:#f8f8f8;border:1px solid #ddd}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:green;font-style:italic}.token.namespace{opacity:.7}.token.string{color:#a31515}.token.operator,.token.punctuation{color:#393a34}.token.boolean,.token.constant,.token.inserted,.token.number,.token.symbol,.token.url,.token.variable{color:#36acaa}.language-autohotkey .token.selector,.language-json .token.boolean,.language-json .token.number,.token.atrule,.token.attr-value,.token.keyword,code[class*=language-css]{color:#00f}.token.function{color:#393a34}.language-autohotkey .token.tag,.token.deleted{color:#9a050f}.language-autohotkey .token.keyword,.token.selector{color:#00009f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.language-json .token.property,.token.class-name{color:#2b91af}.token.selector,.token.tag{color:maroon}.token.attr-name,.token.entity,.token.property,.token.regex{color:red}.token.directive.tag .tag{background:#ff0;color:#393a34}.line-numbers .line-numbers-rows{border-right-color:#a5a5a5}.line-numbers-rows>span:before{color:#2b91af}.line-highlight{background:rgba(193,222,241,.2);background:-webkit-linear-gradient(left,rgba(193,222,241,.2) 70%,rgba(221,222,241,0));background:linear-gradient(to right,rgba(193,222,241,.2) 70%,rgba(221,222,241,0))}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#555;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#030303}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7e7e7e}html body strong{color:#030303}html body del{color:#7e7e7e}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7e7e7e;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#030303}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#030303;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#030303;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#030303;page-break-after:avoid}html body blockquote{color:#7e7e7e}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="progr-a-oggetti-schemi">PROGR. A OGGETTI SCHEMI </h1>
+<h2 id="concetti-di-base">Concetti di base </h2>
+<h3 id="classe">CLASSE </h3>
+<p><strong>NORMALE</strong>: definizione e implementazione di un tipo<br>
+<strong>INTERFACCIA</strong>: solo definizione e metodi astratti (no body)<br>
+<strong>ASTRATTA</strong>: definizione + implementazione parziale (presenza metodi astratti)<br>
+<strong>CLASSE GENERICA</strong>: parametrizzata su più tipi (riutilizzabile con più tipi)</p>
+<p>ACCESSIBILITÀ DI UNA CLASSE:</p>
+<ul>
+<li>public: accessibile da qualsiasi classe</li>
+<li>default: accessibile da classi nello stesso package o sottoclassi</li>
+<li>protected: solo per classi interne</li>
+</ul>
+<h4 id="classe-tipo-concreto">CLASSE TIPO CONCRETO </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span><span class="token punctuation">{</span>
+    <span class="token comment">//MISSION:</span>
+    <span class="token comment">//abstract function:</span>
+    <span class="token comment">//invariante:</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo</span> variabiledistanza1
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo</span> variabiledistanza2
+
+    <span class="token keyword keyword-public">public</span> <span class="token function">costruttoreMyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token function">metodo1</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> arg1<span class="token punctuation">,</span> <span class="token class-name">Tipo</span> arg2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token function">metodo2</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> arg1<span class="token punctuation">,</span> <span class="token class-name">Tipo</span> arg2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token comment">//end MyClass</span>
+</code></pre><h4 id="classe-main">CLASSE MAIN </h4>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//inizializza, per esempio API</span>
+        <span class="token class-name">Tipo</span> nome1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Tipo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Tipo</span> nome1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Tipo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//esempio uso, magari con try/catch</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token comment">//end Main</span>
+</code></pre><h4 id="interfaccia">INTERFACCIA </h4>
+<p>Interfaccia fornisce:</p>
+<ul>
+<li>nome tipo, senza implementazione</li>
+<li>metodi astratti con relativi contratti</li>
+<li>costanti uniche variabili d'istanza ammesse</li>
+<li>strumento per <strong>dependency inversion</strong></li>
+</ul>
+<p>Classe che implementa interfaccia:</p>
+<ul>
+<li>tutti i metodi dell'interfaccia (essendo astratti)</li>
+<li>eventualmente altri metodi + variabili d'istanza</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Interfaccia</span><span class="token punctuation">{</span>
+    <span class="token comment">//metodi astratti</span>
+    <span class="token class-name">Tipo</span> <span class="token function">metodo1</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> argomento<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Tipo</span> <span class="token function">metodo2</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> argomento<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Tipo</span> <span class="token function">metodo3</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> argomento<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token class-name">MyClass</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Interfaccia</span><span class="token punctuation">{</span>
+    <span class="token comment">//eventuali variabili d'istanza</span>
+    <span class="token comment">//implementazione metodi astratti con body</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="classe-astratta">CLASSE ASTRATTA </h4>
+<p>Classe con costrutto <code>abstract</code> che prevede un'implementazione parziale per la presenza di <strong>metodi astratti</strong>.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token class-name">Tipo</span> variabile<span class="token punctuation">;</span>
+    <span class="token comment">//costruttore</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> variabile<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token comment">//metodi concreti con body</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">nomeMetodo</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> arg<span class="token punctuation">)</span><span class="token punctuation">{</span> body<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token comment">//metodi astratti</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> tipo <span class="token function">nomeMetodo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment">//end</span>
+</code></pre><h4 id="interfaccia-o-classe-astratta">INTERFACCIA o CLASSE ASTRATTA? </h4>
+<p>Usare una <strong>classe astratta</strong> quando:</p>
+<ul>
+<li>famiglia di tipi che condividono comportamento</li>
+<li>sottoclassi condividono parte dello stato</li>
+<li>variabili non statiche o final</li>
+</ul>
+<p>Usare un'<strong>interfaccia</strong> quando</p>
+<ul>
+<li>sottotipi sono completamente scollegati</li>
+<li>comportamento specifico ma senza implementazione</li>
+<li>sfruttare <strong>multi-ereditarietà</strong></li>
+</ul>
+<h3 id="tipi">TIPI </h3>
+<p><strong>PRIMITIVI</strong>: rappresentano valori</p>
+<ul>
+<li>byte, short, int, long, float, double, char, boolean</li>
+</ul>
+<p><strong>RIFERIMENTO</strong>: rappresentano oggetti mutabili (cambiano stato) o immutabili (stato non cambia). Possono essere shared se sono condivisi in 2 o più variabili.</p>
+<p><strong>CONCRETO</strong> (classe concreta): può essere istanziato, implementazione completa<br>
+<strong>ASTRATTO</strong> (classe astratta o interfaccia): non può essere istanziato, funge da contratto o base per altri tipi<br>
+<strong>REALE</strong>: classe concreta a cui appartiene l'oggetto<br>
+<strong>APPARENTE</strong>: tipo dichiarato di variabile, definisce i metodi e campi visibili al compilatore. Deve essere uguale o <strong>supertipo</strong> del tipo reale.<br>
+<strong>SUPERTIPO</strong>: classe generale, include operazioni comuni ai sottotipi<br>
+<strong>SOTTOTIPO</strong>: estende o implementa il supertipo,deve rispettare contratto del supertipo</p>
+<p>Quando si fa una dichiarazione il compilatore guarda solo il lato sinistro per</p>
+<ul>
+<li>verificare quali metodi sono accessibili</li>
+<li>verificare correttezza del codice</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">SuperClasse</span> x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SottoClasse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TipoApparente</span> nomeVariabile <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TipoReale</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Il tipo apparente definisce cosa posso fare, il tipo reale definisce come viene fatto.</p>
+<p>posso evocare soltanto i metodi dichiarati nel tipo apparente o nelle sue super-classi/interfacce.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">SuperClasse</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">metodoSuper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token class-name">Condiviso</span><span class="token punctuation">(</span>print <span class="token string">"Super"</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token class-name">Statico</span><span class="token punctuation">(</span>print <span class="token string">"Super"</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SottoClasse</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">SuperClasse</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">metodoSotto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token class-name">Condiviso</span><span class="token punctuation">(</span>print <span class="token string">"Sotto"</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token class-name">Statico</span><span class="token punctuation">(</span>print <span class="token string">"Sotto"</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">SuperClasse</span> x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SottoClasse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+x<span class="token punctuation">.</span><span class="token function">metodoSuper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//ok</span>
+x<span class="token punctuation">.</span><span class="token function">metodoSotto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//errore di compilazione</span>
+<span class="token class-name"><span class="token namespace">x<span class="token punctuation">.</span></span>Condiviso</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// print "Sotto"</span>
+<span class="token class-name"><span class="token namespace">x<span class="token punctuation">.</span></span>Statico</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//print "Super"</span>
+</code></pre><p>Analogamente funziona con le variabili d'istanza:</p>
+<ul>
+<li>le variabili d'istanza sono legate al tipo apparente</li>
+<li>devo usare un metodo per ottenere il valore della variabile d'istanza del tipo reale</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">SuperClasse</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">metodoget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getNonOverride</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SottoClasse</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">SuperClasse</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">37</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">metodoget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Estrai</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">SuperClasse</span> o<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> o<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token class-name">SuperClasse</span> x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SottoClasse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Estrai</span><span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>
+x<span class="token punctuation">.</span><span class="token function">getNonOverride</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>
+x<span class="token punctuation">.</span><span class="token function">metodoget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//37</span>
+</code></pre><p>esempio con array:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-int">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token class-name">Object</span> x <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+<span class="token comment">//tipo reale, apparente di a: int[]</span>
+<span class="token comment">//tipo reale di x: int[]</span>
+<span class="token comment">//tipo apparente di x: Object</span>
+
+a<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//3</span>
+a <span class="token operator">=</span> x<span class="token punctuation">;</span> <span class="token comment">//errore di compilazione</span>
+x<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//errore di compilazione (Object non ha length())</span>
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> x<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//3</span>
+</code></pre><h4 id="ereditarietà-e-gerarchia-di-classi">EREDITARIETÀ e GERARCHIA DI CLASSI </h4>
+<p>Deve valere il <strong>principio di sostituibilità di Liskov</strong>: sottotipo deve portarsi sostituire al supertipo</p>
+<ul>
+<li>
+<p>firma: sottotipo deve essere compatibile con supertipo</p>
+<ul>
+<li>TUTTI metodi astratti presenti e con stessa firma</li>
+<li>metodi concreti non sovrascritti ereditati automaticamente</li>
+</ul>
+</li>
+<li>
+<p>metodi: sottotipo deve chiedere di meno e promettere di più</p>
+<ul>
+<li>sottotipo più generale: meno eccezione o in meno casi PRE_super =&gt; PRE_sottotipo</li>
+<li>sottotipo promette di più: (PRE_super &amp; POST_sotto) =&gt; POST_super<br>
+esempio. post_super val &gt;0, post_sotto &gt; 1</li>
+</ul>
+</li>
+<li>
+<p>proprietà: sottotipo mantiene proprietà supertipo</p>
+<ul>
+<li>proprietà invariante per oggetti</li>
+<li>proprietà evolutive</li>
+</ul>
+</li>
+</ul>
+<p>APPARENTE: <strong>supertipo</strong> (meno funzioni) → REALE: <strong>sottotipo</strong> (più funzioni, richiede meno vincoli, può sollevare meno eccezioni)</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> lista <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//apparente: List, reale: ArrayList</span>
+</code></pre><h5 id="gerarchia-di-classi">GERARCHIA DI CLASSI </h5>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Sottotipo</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Supertipo</span><span class="token punctuation">{</span>
+    <span class="token comment">//variabili d'istanza super</span>
+    <span class="token comment">//variabili d'istanza sottotipo</span>
+    <span class="token comment">//@Override metodi super (obbligatiori se astratti)</span>
+    <span class="token comment">//metodi sottotipo</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="polimorfismo">POLIMORFISMO </h4>
+<ul>
+<li>metodi: posso instradare verso metodi diversi in una classe in base alle firme</li>
+<li>oggetti: istanza supertipo castata in istanza sottotipo</li>
+</ul>
+<p>principio liskov</p>
+<ul>
+<li>rispettato: uso gerarchia + ereditarietà</li>
+<li>non rispettato: delega o associazione</li>
+</ul>
+<h4 id="tipi-dati-astratti-adt">TIPI DATI ASTRATTI (adt) </h4>
+<p>obiettivo degli adt è creare una struttura che ricacalchi il problema</p>
+<p>Un dato astratto è composto da:</p>
+<ul>
+<li>rappresentazione: strutture dati, componenti</li>
+<li>operazioni: metodi dell'adt</li>
+</ul>
+<p>Viene definito dal suo comportamento</p>
+<p>variabili d'istanza (private) e metodi <strong>non</strong> devono essere <strong>statici</strong></p>
+<p>SPECIFICAZIONE:</p>
+<ul>
+<li>STATO ASTRATTO: valori possibili adt (es. matrice bidimensionale di float)</li>
+<li>PROTOCOLLO: operazioni su valori, vale anche sequenza di chiamate di operazioni, con contratti riferiti allo stato astratto</li>
+</ul>
+<p>esempio. ADT = insieme di interi. Metodo ha delle POST condizioni su eccezione</p>
+<ul>
+<li><code>//solleva EmptyIntSetException se array ha 0 elementi</code>: NON VA BENE, riferito a implementazione</li>
+<li><code>//solleva EmptyIntSetException se insieme è vuoto</code>: OTTIMO, riferito a stato astratto</li>
+</ul>
+<p>MISSION: cosa sa (stato) e cosa può fare (transizioni di stato)</p>
+<p>INVARIANTE: "matrice valida m definita come m è NxM con N,M &gt; 0"</p>
+<ul>
+<li>indipendente da implementazione</li>
+<li>funge da pre per tutti i metodi (tranne per costruttore)</li>
+<li>vale per tutti gli stati</li>
+</ul>
+<p>INVARIANTE DI RAPPRESENTAZIONE:</p>
+<ul>
+<li>legato alla funzione di astrazione f: dato astratto → stato concreto</li>
+<li>descritto nella classe</li>
+</ul>
+<h4 id="tipo-generico">TIPO GENERICO </h4>
+<p>garantisce type safety a compile-time</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Box</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">T</span> value<span class="token punctuation">;</span> <span class="token comment">//var d'ist.</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token class-name">T</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">T</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> value<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso</span>
+<span class="token class-name">Box</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> b <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Box</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Integer</span> x <span class="token operator">=</span> b<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Anche con interfaccia</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Repository</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">T</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">T</span> <span class="token function">findById</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Utils</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token class-name">T</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="metodi">METODI </h3>
+<p>accessibilità dei metodi:</p>
+<ul>
+<li><strong>PUBLIC</strong>: da qualsiasi classe → API, servizi, operazioni ADT</li>
+<li><strong>PROTECTED</strong>: nel package o da sottoclassi esterne → per design pattern come</li>
+<li><strong>DEFAULT</strong>: solo nel package → collaborazioni tra classi nel package, logica condivisa</li>
+<li><strong>PRIVATE</strong>: solo all'interno della classe → per metodi di supporto, logica e uso interni</li>
+</ul>
+<p>come si chiama un metodo:<br>
+espressione0.metodo(espressione1, espressione2, ...)</p>
+<ul>
+<li>parte da oggetto e poi valuta espressione 1, 2, ...</li>
+<li>se non esiste oggetto solleva NullPointerException</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token class-name">NomeMetodo</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> argomento<span class="token punctuation">)</span> <span class="token keyword keyword-throws">throws</span> <span class="token class-name">Tipo</span> exception<span class="token punctuation">{</span>
+    <span class="token comment">//PRE: pre-condizioni affinchè il metodo ritorni valore atteso, meglio se assenti</span>
+    <span class="token comment">//POST: post-condizioni, eccezioni sollevate</span>
+    <span class="token comment">//MODIFIES: elenco variabili d'istanza modificate</span>
+
+    body<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="override">OVERRIDE </h4>
+<ul>
+<li>ridefinizione di un metodo ereditato da supertipo o interfaccia</li>
+<li>firma identica (nome, parametri, tipo ritorno)</li>
+<li>non funziona con metodi statici</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Animale</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">faiVerso</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Verso generico"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Cane</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animale</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">faiVerso</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Bau Bau"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="overload">OVERLOAD </h4>
+<ul>
+<li>definizione di più metodi con stesso nome ma firme diverse (diversi tipi o numero di parametri)</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Calcolatrice</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">somma</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> a<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">somma</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> a<span class="token punctuation">,</span> <span class="token keyword keyword-double">double</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">somma</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> a<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> b<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> c<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="contratto">CONTRATTO </h4>
+<ul>
+<li>pre-condizioni: cosa deve essere vero prima di chiamare il metodo</li>
+<li>post-condizioni: cosa deve essere vero dopo l'esecuzione del metodo</li>
+</ul>
+<h3 id="eccezioni">ECCEZIONI </h3>
+<p>Stato di un programma: combinazione di variabili d'istanza e stack di chiamate attive</p>
+<p>tipi di errori di programazione:</p>
+<ul>
+<li>fault: bug nel codice (es. divisione per 0)</li>
+<li>failure: comportamento anomalo in fase di esecuzione (es. file non trovato)</li>
+<li>error: problema grave che impedisce l'esecuzione (es. memoria insufficiente)</li>
+<li>design mistake: errore concettuale nel design (es. violazione del principio di sostituibilità di Liskov)</li>
+</ul>
+<p>Eccezioni: servono a gestire situazioni eccezionali</p>
+<ul>
+<li>non infliscono il flusso normale del programma</li>
+<li>non influenzano il set dei risultati attesi</li>
+<li>chiamante può decidere se gestirle o propagare</li>
+<li>esplicita rappresentazione di errori</li>
+</ul>
+<h4 id="eccezioni-checked">ECCEZIONI CHECKED </h4>
+<ul>
+<li>verificate a compile-time</li>
+<li>devono essere dichiarate nel metodo con <code>throws</code> o gestite con <code>try-catch</code></li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyCheckedException</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">MyCheckedException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">MyCheckedException</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="eccezioni-unchecked">ECCEZIONI UNCHECKED </h4>
+<ul>
+<li>verificate a runtime</li>
+<li>non è obbligatorio dichiararle o gestirle</li>
+<li>rappresentano violazioni di precondizioni, logicamente non recuperabili</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyUncheckedException</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">MyUncheckedException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">MyUncheckedException</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="asserzioni">ASSERZIONI </h3>
+<ul>
+<li>condizioni logiche verificate durante l'esecuzione</li>
+<li>usate per validare stati interni del programma</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-assert">assert</span> condizione_logica <span class="token operator">:</span> <span class="token string">"Messaggio di errore se l'asserzione fallisce"</span><span class="token punctuation">;</span>
+<span class="token comment">//esempio</span>
+<span class="token keyword keyword-assert">assert</span> x <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token string">"x deve essere positivo"</span><span class="token punctuation">;</span>
+</code></pre><h3 id="iteratori">ITERATORI </h3>
+<ul>
+<li>oggetti che permettono di attraversare una collezione senza esporre la sua rappresentazione interna</li>
+<li>possono essere definiti anche all'interno di una classe come classi interne</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyCollection</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementi<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> size<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Tipo</span><span class="token punctuation">&gt;</span></span> <span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ResettableMyIterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ResettableMyIterator</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Tipo</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> currentIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//variabile indice</span>
+        <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-boolean">boolean</span> <span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="enum">ENUM </h3>
+<ul>
+<li>insieme finito di costanti statiche e immutabili</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-enum">enum</span> <span class="token class-name">MyEnum</span><span class="token punctuation">{</span>
+    <span class="token function">ENUM1</span><span class="token punctuation">(</span><span class="token string">"Valore1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ENUM2</span><span class="token punctuation">(</span><span class="token string">"Valore2"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ENUM3</span><span class="token punctuation">(</span><span class="token string">"Valore3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> valore<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">MyEnum</span><span class="token punctuation">(</span><span class="token class-name">String</span> valore<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>valore <span class="token operator">=</span> valore<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getValore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> valore<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="design-pattern">DESIGN PATTERN </h3>
+<ul>
+<li>soluzioni riutilizzabili a problemi comuni di progettazione software</li>
+</ul>
+<h4 id="singleton">SINGLETON </h4>
+<ul>
+<li>garantisce che una classe abbia una sola istanza e fornisce un punto di accesso globale a essa</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">Singleton</span> instance <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">//costruttore privato</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            instance <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-return">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="factory">FACTORY </h4>
+<p>Fornisce un'interfaccia per creare oggetti in una superclasse, ma permette alle sottoclassi di alterare il tipo di oggetti che verranno creati</p>
+<ul>
+<li>interfaccia comune a tutti i prodotti</li>
+<li>classi concrete che implementano l'interfaccia</li>
+<li>interfaccia factory con metodo statico per creare oggetti in base a argomenti</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia prodotto</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Veicolo</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">muovi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classi concrete prodotto</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Auto</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Veicolo</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">muovi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"L'auto si muove"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Moto</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Veicolo</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">muovi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"La moto si muove"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//factory</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VeicoloFactory</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">Veicolo</span> <span class="token function">creaVeicolo</span><span class="token punctuation">(</span><span class="token class-name">String</span> tipo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>tipo<span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span><span class="token string">"auto"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Auto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>tipo<span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span><span class="token string">"moto"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Moto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso della factory</span>
+<span class="token class-name">Veicolo</span> veicolo1 <span class="token operator">=</span> <span class="token class-name">VeicoloFactory</span><span class="token punctuation">.</span><span class="token function">creaVeicolo</span><span class="token punctuation">(</span><span class="token string">"auto"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+veicolo1<span class="token punctuation">.</span><span class="token function">muovi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: L'auto si muove</span>
+<span class="token class-name">Veicolo</span> veicolo2 <span class="token operator">=</span> <span class="token class-name">VeicoloFactory</span><span class="token punctuation">.</span><span class="token function">creaVeicolo</span><span class="token punctuation">(</span><span class="token string">"moto"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+veicolo2<span class="token punctuation">.</span><span class="token function">muovi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: La moto si muove</span>
+</code></pre><h4 id="builder">BUILDER </h4>
+<p>provvede flessibilità quando inizializzi un tipo con molti attributi</p>
+<ul>
+<li>classe prodotto esterna, con costruttore privato con argomento builder</li>
+<li>classe interna builder statica con attributi pubblici corrispondenti
+<ul>
+<li>costruttore con attributi obbligatori</li>
+<li>metodi per attributi opzionali che ritornano <code>this</code></li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//classe prodotto</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Persona</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> cognome<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> età<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> email<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Persona</span><span class="token punctuation">(</span><span class="token class-name">PersonaBuilder</span> builder<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome <span class="token operator">=</span> builder<span class="token punctuation">.</span>nome<span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>cognome <span class="token operator">=</span> builder<span class="token punctuation">.</span>cognome<span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>età <span class="token operator">=</span> builder<span class="token punctuation">.</span>età<span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>email <span class="token operator">=</span> builder<span class="token punctuation">.</span>email<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//classe builder interna</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">PersonaBuilder</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> cognome<span class="token punctuation">;</span>
+        <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> età<span class="token punctuation">;</span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> email<span class="token punctuation">;</span>
+
+        <span class="token comment">//costruttore con campi obbligatori</span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">PersonaBuilder</span><span class="token punctuation">(</span><span class="token class-name">String</span> nome<span class="token punctuation">,</span> <span class="token class-name">String</span> cognome<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome <span class="token operator">=</span> nome<span class="token punctuation">;</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>cognome <span class="token operator">=</span> cognome<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//metodi per campi opzionali</span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">PersonaBuilder</span> età<span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> età<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>età <span class="token operator">=</span> età<span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">PersonaBuilder</span> <span class="token function">email</span><span class="token punctuation">(</span><span class="token class-name">String</span> email<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>email <span class="token operator">=</span> email<span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//metodo build essenziale per costruire </span>
+        <span class="token keyword keyword-public">public</span> <span class="token class-name">Persona</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Persona</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso del builder</span>
+<span class="token class-name">Persona</span> persona <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Persona<span class="token punctuation">.</span>PersonaBuilder</span><span class="token punctuation">(</span><span class="token string">"Mario"</span><span class="token punctuation">,</span> <span class="token string">"Rossi"</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span>età<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">email</span><span class="token punctuation">(</span><span class="token string">"mario.rossi@example.com"</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="observer">OBSERVER </h3>
+<p>Serve a disaccoppiare il soggetto osservato dagli osservatori</p>
+<ul>
+<li>interfaccia Observer con metodo <code>update(data)</code> per notifiche</li>
+<li>interfaccia Observable con metodi addObserver, removeObserver, notifyObservers</li>
+<li>classe concreta osservatore con metodo update(Object data)</li>
+<li>classe concreta osservabile con
+<ul>
+<li>lista di osservatori</li>
+<li>metodo con notifyObservers che chiama update() su tutti gli osservatori</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia osservatore</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Observer</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token class-name">Object</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//interfaccia soggetto osservabile</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Observable</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token class-name">Observer</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span><span class="token class-name">Observer</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">notifyObservers</span><span class="token punctuation">(</span><span class="token class-name">Object</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//classe concreta soggetto osservabile</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Agenzia</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Observable</span> <span class="token punctuation">{</span>
+    <span class="token comment">//lista di osservatori</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Observer</span><span class="token punctuation">&gt;</span></span> observers <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> msg<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token class-name">Observer</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>observers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span><span class="token class-name">Observer</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>observers<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">notifyObservers</span><span class="token punctuation">(</span><span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Observer</span> o <span class="token operator">:</span> observers<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            o<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//metodo con stato che vogliamo comunicare</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setMsg</span><span class="token punctuation">(</span><span class="token class-name">String</span> notizia<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>msg <span class="token operator">=</span> notizia<span class="token punctuation">;</span>
+        <span class="token function">notifyObservers</span><span class="token punctuation">(</span>notizia<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">//classe osservatore</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Quotidiano</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Observer</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+    <span class="token comment">//costruttore</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Quotidiano</span><span class="token punctuation">(</span><span class="token class-name">String</span> nome<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome <span class="token operator">=</span> nome<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token comment">//metodo update</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token class-name">Object</span> news<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nome <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> news<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> client<span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Agenzia</span> agenzia <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Agenzia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Quotidiano</span> q1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Quotidiano</span><span class="token punctuation">(</span><span class="token string">"Giornale1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Quotidiano</span> q2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Quotidiano</span><span class="token punctuation">(</span><span class="token string">"Giornale2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        agenzia<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>q1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        agenzia<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>q2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        agenzia<span class="token punctuation">.</span><span class="token function">setMsg</span><span class="token punctuation">(</span><span class="token string">"Notizia importante!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="decorator">DECORATOR </h4>
+<p>Aggiunge responsabilità/comportamenti dinamicamente mediante classi</p>
+<ul>
+<li>interfaccia comune I generale per tutti oggetti</li>
+<li>classi concrete che implementano l'interfaccia</li>
+<li>classe astratta decorator che implementa interfaccia e contiene attributo <code>protected</code> a tipo I</li>
+<li>classi concrete decorator con attributo super e override metodi per aggiungere funzionalità</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia componente I</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Drink</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe concreta componente O implementa I</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Espresso</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Drink</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token string">"Espresso"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token number">1.50</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe decoratore astratta D implementa I</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">DrinkDecorator</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Drink</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token class-name">Drink</span> drink<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">DrinkDecorator</span><span class="token punctuation">(</span><span class="token class-name">Drink</span> drink<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>drink <span class="token operator">=</span> drink<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe decoratore concreta estende D</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Latte</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">DrinkDecorator</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Latte</span><span class="token punctuation">(</span><span class="token class-name">Drink</span> drink<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>drink<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> drink<span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", Latte"</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> drink<span class="token punctuation">.</span><span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">0.50</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Choco</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">DrinkDecorator</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Choco</span><span class="token punctuation">(</span><span class="token class-name">Drink</span> drink<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>drink<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> drink<span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", Choco"</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> drink<span class="token punctuation">.</span><span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">0.70</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso del decorator</span>
+<span class="token class-name">Drink</span> myDrink <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Espresso</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myDrink <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Latte</span><span class="token punctuation">(</span>myDrink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+myDrink <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Choco</span><span class="token punctuation">(</span>myDrink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myDrink<span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" $"</span> <span class="token operator">+</span> myDrink<span class="token punctuation">.</span><span class="token function">costo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&gt;&gt;&gt;</span> <span class="token class-name">Espresso</span><span class="token punctuation">,</span> <span class="token class-name">Latte</span><span class="token punctuation">,</span> <span class="token class-name">Choco</span> $<span class="token number">2.70</span>
+</code></pre><h4 id="composite">COMPOSITE </h4>
+<p>Compone oggetti in strutture ad albero per rappresentare gerarchie parte-tutto</p>
+<ul>
+<li>interfaccia componente comune a foglie e compositi</li>
+<li>classe foglia: oggetti finali senza figli</li>
+<li>classe composita: contiene una variabile d'istanza lista di componenti (foglie o altre compositi)</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia componente</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">FileSysComp</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> <span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe foglia</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">File</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">FileSysComp</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> size<span class="token punctuation">;</span>
+
+    <span class="token comment">//costruttore</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token class-name">String</span> nome<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> size<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>stampa nome <span class="token operator">+</span> dim<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> size<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe composita</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Directory</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">FileSysComp</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FileSysComp</span><span class="token punctuation">&gt;</span></span> contenuto <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//costruttore</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Directory</span><span class="token punctuation">(</span><span class="token class-name">String</span> nome<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">FileSysComp</span> componente<span class="token punctuation">)</span><span class="token punctuation">{</span>contenuto<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>componente<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> stampa el<span class="token punctuation">.</span> contenuto<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>somma dim<span class="token punctuation">.</span> contenuto<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso del composite</span>
+<span class="token class-name">FileSysComp</span> f1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"a.txt"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">FileSysComp</span> f2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"b.txt"</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">FileSysComp</span> dir1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Directory</span><span class="token punctuation">(</span><span class="token string">"dir1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Directory</span><span class="token punctuation">)</span> dir1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Directory</span><span class="token punctuation">)</span> dir1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre><h4 id="bridge">BRIDGE </h4>
+<p>Serve a disaccoppiare astrazione da implementazione, nei casi in cui rischio di creare una gerarchia di classi moltiplicata per un’altra gerarchia</p>
+<ul>
+<li>astrazione: tipo apparente lato client</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">Abstraction</span> a <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">RefinedAbstraction</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ConcreteImplementor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>interfaccia implementazioni concrete e relative classi concrete</li>
+<li>classe astratta con riferimento a interfaccia con attributo <code>protected</code></li>
+<li>classi concrete astrazione che estendono</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia implementazione</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Dispositivo</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">spegni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">setVol</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> vol<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">//classe concreta implementazione</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">TV</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Dispositivo</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">spegni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setVol</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> vol<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe astratta astrazione</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Telecomando</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token class-name">Dispositivo</span> dispositivo<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Telecomando</span><span class="token punctuation">(</span><span class="token class-name">Dispositivo</span> dispositivo<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-void">void</span> <span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-void">void</span> <span class="token function">spegni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-void">void</span> <span class="token function">alzaVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe concreta astrazione</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">TelecomandoBase</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Telecomando</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">TelecomandoBase</span><span class="token punctuation">(</span><span class="token class-name">Dispositivo</span> dispositivo<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>dispositivo<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>dispositivo<span class="token punctuation">.</span><span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">spegni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>dispositivo<span class="token punctuation">.</span><span class="token function">spegni</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">alzaVolume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>dispositivo<span class="token punctuation">.</span><span class="token function">setVol</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso del bridge</span>
+<span class="token class-name">Dispositivo</span> tv <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TV</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Telecomando</span> telecomando <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TelecomandoBase</span><span class="token punctuation">(</span>tv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+telecomando<span class="token punctuation">.</span><span class="token function">accendi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="visitor">VISITOR </h4>
+<p>due interfacce:</p>
+<ul>
+<li>per operazioni (visitor), con metodo <code>visit(tipo element)</code> per ogni tipo concreto</li>
+<li>per elementi (element), con metodo <code>accept(visitor v)</code></li>
+</ul>
+<p>Poi classi concrete per implementare elementi e operazioni</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia visitor, implementa metodo visit per ogni tipo</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">ShapeVisitor</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Cerchio</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Rettangolo</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//interfaccia elementi</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Shape</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">accept</span><span class="token punctuation">(</span><span class="token class-name">ShapeVisitor</span> visitor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//elementi concreti</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Cerchio</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-double">double</span> raggio<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Cerchio</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> raggio<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>raggio <span class="token operator">=</span> raggio<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">getRaggio</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> raggio<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">accept</span><span class="token punctuation">(</span><span class="token class-name">ShapeVisitor</span> visitor<span class="token punctuation">)</span> <span class="token punctuation">{</span>visitor<span class="token punctuation">.</span><span class="token function">visit</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Rettangolo</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-double">double</span> base<span class="token punctuation">;</span> 
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-double">double</span> altezza<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Rettangolo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> base<span class="token punctuation">,</span> <span class="token keyword keyword-double">double</span> altezza<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">getBase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">getAltezza</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">accept</span><span class="token punctuation">(</span><span class="token class-name">ShapeVisitor</span> visitor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        visitor<span class="token punctuation">.</span><span class="token function">visit</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//visitor concreti, ovvero implementazioni operazioni</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">AreaVisitor</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">ShapeVisitor</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Cerchio</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>formula area<span class="token punctuation">;</span> stampa area<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Rettangolo</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>formula area<span class="token punctuation">;</span> stampa area<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">PrintVisitor</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">ShapeVisitor</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Cerchio</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>print get<span class="token punctuation">.</span><span class="token function">raggio</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token class-name">Rettangolo</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>stampa<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso all'interno del main(String[] args)</span>
+<span class="token class-name">Shape</span><span class="token punctuation">[</span><span class="token punctuation">]</span> shapes <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-new">new</span> <span class="token class-name">Cerchio</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token keyword keyword-new">new</span> <span class="token class-name">Rettangolo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">ShapeVisitor</span> areaVisitor <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">AreaVisitor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ShapeVisitor</span> printVisitor <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">PrintVisitor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Shape</span> s <span class="token operator">:</span> shapes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            s<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>areaVisitor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            s<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>printVisitor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre><h4 id="strategy">STRATEGY </h4>
+<p>definisce famiglia di algoritmi incapsulati in classi separate e intercambiali in runtime.</p>
+<p>-tipo apparente: Strategy<br>
+-tipo reale: classi concrete che implementano algoritmi</p>
+<ul>
+<li>interfaccia generica Strategy che funge da base a tutti gli algoritmi</li>
+<li>classi concrete che implementano algoritmi</li>
+<li>classe selettore con attributo <code>private</code> Strategy, metodi per settare strategia e usare algoritmo</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//interfaccia</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">SpedizioneStrategy</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> peso<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classi concrete che implementano algoritmo</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Standard</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">SpedizioneStrategy</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> peso<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> peso <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Express</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">SpedizioneStrategy</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> peso<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> peso <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Internazionale</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">SpedizioneStrategy</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> peso<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> peso <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//classe che usa strategia</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">SetSpedizione</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">SpedizioneStrategy</span> tipologia<span class="token punctuation">;</span> <span class="token comment">//strategia</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setTipologia</span><span class="token punctuation">(</span><span class="token class-name">SpedizioneStrategy</span> tipologia<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>tipologia <span class="token operator">=</span> tipologia<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-double">double</span> <span class="token function">costo</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> peso<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> tipologia<span class="token punctuation">.</span><span class="token function">costo</span><span class="token punctuation">(</span>peso<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//uso nel main(String[] args)</span>
+<span class="token comment">//inizializzo classe che usa strategia</span>
+<span class="token class-name">SetSpedizione</span> spedizione <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SetSpedizione</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//imposto e uso diverse strategie, basta cambiare classe nell'argomento</span>
+spedizione<span class="token punctuation">.</span><span class="token function">setTipologia</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Standard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>spedizione<span class="token punctuation">.</span><span class="token function">costo</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&gt;&gt;</span> <span class="token number">10.0</span>
+</code></pre><h3 id="tipi-metodi-e-cose-utili">TIPI, METODI E COSE UTILI </h3>
+<h4 id="dto">DTO </h4>
+<ul>
+<li>classe che incapsula i dati per il trasferimento tra sottosistemi</li>
+<li>solo variabili d'istanza private e metodi getter/setter</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">UserDTO</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo</span> var1<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo</span> var2<span class="token punctuation">;</span>
+    <span class="token comment">//costruttore</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">UserDTO</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> var1<span class="token punctuation">,</span> <span class="token class-name">Tipo</span> var2<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span>
+    <span class="token comment">//getter</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token function">getVar1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> var1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo</span> <span class="token function">getVar2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> var2<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token comment">//setter</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setVar1</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> var1<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>var1 <span class="token operator">=</span> var1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setVar2</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> var2<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>var2 <span class="token operator">=</span> var2<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="stream">STREAM </h4>
+<ul>
+<li>sequenza di dati che può essere letta o scritta in modo continuo</li>
+</ul>
+<h4 id="solid-principles">S.O.L.I.D. PRINCIPLES </h4>
+<h5 id="single-responsibility-principle">SINGLE RESPONSIBILITY PRINCIPLE </h5>
+<ul>
+<li>una classe deve avere una sola responsabilità</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//esempio errato</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">GestioneDipendente</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">calcolaStipendio</span><span class="token punctuation">(</span><span class="token class-name">Dipendente</span> d<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">salvaSuDatabase</span><span class="token punctuation">(</span><span class="token class-name">Dipendente</span> d<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//esempio suddivisione</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CalcolatoreStipendio</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">calcola</span><span class="token punctuation">(</span><span class="token class-name">Dipendente</span> d<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">RepositoryDipendente</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">salva</span><span class="token punctuation">(</span><span class="token class-name">Dipendente</span> d<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="openclosed-principle">OPEN/CLOSED PRINCIPLE </h5>
+<ul>
+<li>le classi devono essere aperte per estensione ma chiuse per modifica, ereditarietà o composizione</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//esempio errato, classe dipende da implementazione</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Notificatore</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">invia</span><span class="token punctuation">(</span><span class="token class-name">String</span> tipo<span class="token punctuation">,</span> <span class="token class-name">String</span> messaggio<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>tipo<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"EMAIL"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* invia email */</span> <span class="token punctuation">}</span>
+        <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>tipo<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"SMS"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* invia sms */</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//esempio corretto con interfaccia</span>
+
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Notifica</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">invia</span><span class="token punctuation">(</span><span class="token class-name">String</span> messaggio<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EmailNotifica</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Notifica</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">invia</span><span class="token punctuation">(</span><span class="token class-name">String</span> messaggio<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* invia email */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SMSNotifica</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Notifica</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">invia</span><span class="token punctuation">(</span><span class="token class-name">String</span> messaggio<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* invia sms */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="liskov-substitution-principle">LISKOV SUBSTITUTION PRINCIPLE </h5>
+<ul>
+<li>i sottotipi devono essere sostituibili ai loro supertipi senza alterare il comportamento del programma</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//errato, un Rettangolo con concreto Q non potrebbe settare b,h diversi</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Rettangolo</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> b<span class="token punctuation">,</span> h<span class="token punctuation">;</span> 
+    <span class="token keyword keyword-int">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-return">return</span> b<span class="token operator">*</span>h<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> set <span class="token class-name">H</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> h<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>h <span class="token operator">=</span> h<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> set <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>b <span class="token operator">=</span> b<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Quadrato</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Rettangolo</span><span class="token punctuation">{</span> 
+    <span class="token keyword keyword-void">void</span> set <span class="token class-name">H</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> h<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>h <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>b <span class="token operator">=</span> h<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> set <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>b <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>h <span class="token operator">=</span> b<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//corretto, interfaccia Forma</span>
+
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Forma</span><span class="token punctuation">{</span><span class="token keyword keyword-int">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Rettangolo</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Forma</span><span class="token punctuation">{</span><span class="token keyword keyword-int">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Quadrato</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Forma</span><span class="token punctuation">{</span><span class="token keyword keyword-int">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+</code></pre><h5 id="interface-segregation-principle">INTERFACE SEGREGATION PRINCIPLE </h5>
+<ul>
+<li>interfacce piccole e specifiche, nessun client dovrebbe dipendere da metodi che NON utilizza</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-interface">interface</span> <span class="token class-name">StampanteMultifunzione</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">scansione</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">fax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">StampanteSemplice</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">StampanteMultifunzione</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ok */</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">scansione</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* non serve */</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">fax</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* non serve */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//soluzione: interfacce specifiche</span>
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Stampante</span> <span class="token punctuation">{</span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Scanner</span> <span class="token punctuation">{</span> <span class="token keyword keyword-void">void</span> <span class="token function">scansione</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Fax</span> <span class="token punctuation">{</span> <span class="token keyword keyword-void">void</span> <span class="token function">inviaFax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">StampanteSemplice</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Stampante</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">stampa</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ok */</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="dependency-inversion-principle">DEPENDENCY INVERSION PRINCIPLE </h5>
+<ul>
+<li>le astrazioni non dovrebbero dipendere dai dettagli/implementazioni, ma le implementazioni dovrebbero dipendere dalle astrazioni</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token comment">//ServizioOrdini dipende da EmailNotifica</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ServizioOrdini</span> <span class="token punctuation">{</span>
+    <span class="token class-name">EmailNotifica</span> emailNotifica <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">EmailNotifica</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">inviaConferma</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>emailNotifica<span class="token punctuation">.</span><span class="token function">invia</span><span class="token punctuation">(</span><span class="token string">"confermato"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//corretto, ServizioOrdini dipende da interfaccia Notifica</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ServizioOrdini</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Notifica</span> notifica<span class="token punctuation">;</span>
+    <span class="token class-name">ServizioOrdini</span><span class="token punctuation">(</span><span class="token class-name">Notifica</span> notifica<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>notifica <span class="token operator">=</span> notifica<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">inviaConferma</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> notifica<span class="token punctuation">.</span><span class="token function">invia</span><span class="token punctuation">(</span><span class="token string">"confermato"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Uso:</span>
+<span class="token class-name">ServizioOrdini</span> servizio <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ServizioOrdini</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmailNotifica</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

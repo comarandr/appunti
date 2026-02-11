@@ -1,0 +1,916 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} % Required for inserting images
+%before \begin
+\usepackage{amssymb} %per i simboli matematici
+\usepackage{mathtools} %per simboli 
+\usepackage{listings} %per scrivere codice
+\usepackage[boxruled,vlined]{algorithm2e}
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+\usepackage{color} %per colorare il codice
+\usepackage[hidelinks]{hyperref} %per i link
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COPERTINA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Algoritmi \& Strutture Dati}
+\author{Andrea Comar}
+\date{October 2024}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONCETTI MATEMATICI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Concetti Matematici}
+\section{Notazione asintotica} %%% NOTAZIONE ASINTOTICA %%%
+Strumento per confrontare quale funzioni divergono all'infinito più velocemente. Metodo di confronto 
+tra funzioni di costo degli algoritmi. Caratteristiche:
+\begin{itemize}
+    \item $f: \mathbb{N} \rightarrow \mathbb{R^+}$
+    \item funzioni \textbf{monotone crescenti}
+    \item $lim_{n \rightarrow \infty} \ f(n) = \infty$ (divergenti)
+\end{itemize}
+
+In breve la notazione asintotica si basa su tre simboli:
+\begin{itemize}
+    \item $O$ (O-grande): rappresenta il caso peggiore, ovvero il \textbf{limite asintotico superiore}. ~ "cresce al più come"
+    \item $\Omega$ (Omega): rappresenta il caso migliore, ovvero il \textbf{limite asintotico inferiore} ~ "cresce al meno come"
+    \item $\Theta$ (theta): rappresenta il caso medio, ovvero il \textbf{limite asintotico stretto} ~ "stesso ordine di grande"
+\end{itemize}
+La notazione asintotica si fonda sul concetto di limite, in particolare sul \textbf{limite del rapporto}. Di base possiamo riscri
+
+
+\subsection{Notazione O-grande (e o-piccolo)} %%%%%%%%%%%%%%%%%%%%%%% NOTAZIONE O-GRANDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Notazione O-grande $O$} Abbiamo due definizioni equivalenti:
+\begin{itemize}
+\item $O(g(n))=\{f(n)| \ \exists c > 0 \ \exists \bar{n} \ \forall n \geq \bar{n} \ f(n) \leq c \cdot g(N)\}$ 
+\item Date $f,g : \mathbb{N} \rightarrow \mathbb{R^+}$ \textbf{monotone crescenti}, diciamo che $f(n) \in O(g(n))$ se $\exists c > 0 \ e \ \exists \bar{n} : \forall n \geq \bar{n} \ f(n) \leq c \cdot g(n)$
+\end{itemize}
+Di base entrambe fanno riferimento al concetto di \textbf{limite del rapporto} 
+\begin{itemize}
+    \item $\displaystyle \limsup_{n \to \infty} \lvert \frac{f(n)}{g(n)} \rvert < \infty \Leftrightarrow f(n) = O(g(n))$ 
+\end{itemize}
+Diciamo che g(n) domina f(n), ovvero f(n) ha un ordine di grandezza minore o uguale a g(n).
+\paragraph{notazione o-piccolo $o$} Se nelle definizioni invece di $\exists c$ vale per $\forall c$  si parla di notazione o-piccolo. Quindi vale il seguente limite:
+\begin{itemize}
+    \item $\displaystyle \lim_{n \rightarrow \infty} \frac{f(n)}{g(n)} = 0 \Leftrightarrow f(n) = o(g(n))$
+\end{itemize}
+Di conseguenza $f(n) = o(g(n)) \Rightarrow f(n) = O(g(n))$, NON il contrario.
+\subsection{Notazione Omega-grande (e omega-piccolo)} %%%%%%%%%%%%%%%%%% NOTAZIONE OMEGA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Notazione Omega-grande $\Omega$} Abbiamo due definizioni equivalenti:
+\begin{itemize}
+\item $\Omega(g(n))=\{f(n)| \ \exists c > 0 \ \exists \bar{n} \in \mathbb{N} \ \forall n \geq \bar{n} \ f(n) \geq c \cdot g(N)\}$ 
+\item Date $f,g : \mathbb{N} \rightarrow \mathbb{R^+}$ \textbf{monotone crescenti}, diciamo che $f(n) \in \Omega(g(n))$ se $\exists c > 0 \ e \ \exists \bar{n} : \forall n \geq \bar{n} \ f(n) \geq c \cdot g(n)$
+\end{itemize}
+Di base entrambe fanno riferimento al concetto di \textbf{limite del rapporto}
+\begin{itemize}
+    \item $\displaystyle \liminf_{n \rightarrow \infty} \lvert \frac{f(n)}{g(n)} \rvert > 0 \Leftrightarrow f(n) = \Omega(g(n))$
+\end{itemize}
+\paragraph{notazione omega-piccolo $\omega$} Se nelle definizioni invece di $\exists c$ vale per $\forall c$  si parla di notazione omega-piccolo. Quindi vale il seguente limite:
+\begin{itemize}
+    \item $\displaystyle \lim_{n\to\infty} \frac{f(n)}{g(n)} = \infty \Leftrightarrow f(n) = \omega(g(n))$
+\end{itemize}
+Di conseguenza $f(n) = \omega(g(n)) \Rightarrow f(n) = \Omega(g(n))$, NON il contrario.
+
+\subsection{Notazione Theta} %%%%%%%%%% NOTAZIONE THETA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Notazione Theta $\Theta$} Abbiamo due definizioni equivalenti:
+\begin{itemize}
+\item $\Theta(g(n))=\{f(n)| \ \exists c_1, c_2 > 0 \ \exists \bar{n} \in \mathbb{N} \ \forall n \geq \bar{n} \ c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n)\}$
+\item Date $f,g : \mathbb{N} \rightarrow \mathbb{R^+}$ \textbf{monotone crescenti}, diciamo che $f(n) \in \Theta(g(n))$ se $\exists c_1, c_2 > 0 \ e \ \exists \bar{n} : \forall n \geq \bar{n} \ c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n)$
+\end{itemize}
+
+Di base entrambe fanno riferimento al concetto di \textbf{limite del rapporto}
+\begin{itemize}
+    \item $\displaystyle 0 < \liminf_{n\to\infty} \lvert \frac{f(n)}{g(n)}\rvert \leq \limsup_{n\to\infty}\lvert \frac{f(n)}{g(n)}\rvert \leq \infty$
+\end{itemize}
+
+\paragraph{notazione $\sim$}  Se le due funzioni sono sia $o$ che $\Theta$ allora si può scrivere $f(n) \sim g(n)$ e vale che:
+\begin{itemize}
+    \item $\displaystyle \lim_{n \rightarrow \inf} \frac{f(n)}{g(n)} = c , c \neq 0 \in \mathbb{R} \Leftrightarrow f(n) \sim g(n)$
+\end{itemize}
+Di conseguenza $f(n) \sim g(n) \Rightarrow f(n) = \Theta(g(n))$, NON il contrario. \newline
+NOTA: per parlare di equivalenza asintotica $c$ dovrebbe essere esattamente uguale a 1.
+\newpage
+
+\subsection{Proprietà di base} %%%%%%%%%%%%%%%% PROPRIETA' %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Se f(n) è $O$ di g(n) allora g(n) è $\Omega$ di f(n). Significa che g(n) cresce di più asintoticamente.
+\begin{itemize}
+\item $f(n) \in O(g(n)) \ \Leftrightarrow \ g(n) \in \Omega(f(n))$
+\end{itemize}
+Se f(n) cresce allo stesso modo di g(n), g(n) rappresenta sia il limite superiore che inferiore.
+\begin{itemize}
+\item $f(n) \in \Theta(g(n)) \ \Leftrightarrow \ f(n) \in O(g(n)) \ \wedge \ f(n) \in \Omega(g(n))$
+\end{itemize}
+Analogamente per la notazione o-piccolo e omega-piccolo:
+\begin{itemize}
+\item $f(n) \in o(g(n)) \ \Leftrightarrow \ g(n) \in \omega(f(n))$
+\end{itemize}
+Infine due funzioni piuttosto basilari, ovvero:
+\begin{itemize}
+    \item $f=O(f)$ 
+    \item $f = o(f) \Rightarrow f \equiv 0 $
+\end{itemize}
+
+\subsection{Comportamento rispetto alle operazioni} %%%%%%%%%%%%%%%%% REGOLE %%%%%%%%%%%%%%%%%%
+Le seguenti regole valgono indistimamente per $O$, $\Omega$ e $\Theta$, si ereditano dalle proprietà dei limiti.
+\paragraph{Abuso di notazione}
+\begin{itemize}
+    \item $f(x) = O(g(x))$ non è corretto in quanto non sono effettivamente uguali, tuttavia si usa per comodità al posto di $f(x) \in O(g(x))$
+\end{itemize}
+\paragraph{Transitività}
+\begin{itemize}
+    \item $f \in O(g) \ \wedge \ g \in O(h) \ \Rightarrow \ f \in O(h)$
+    \item $f \in \Omega(g) \ \wedge \ g \in \Omega(h) \ \Rightarrow \ f \in \Omega(h)$
+    \item $f \in \Theta(g) \ \wedge \ g \in \Theta(h) \ \Rightarrow \ f \in \Theta(h)$
+    \item $f \in o(g) \ \wedge \ g \in o(h) \ \Rightarrow \ f \in o(h)$
+    \item $f \in \omega(g) \ \wedge \ g \in \omega(h) \ \Rightarrow \ f \in \omega(h)$
+\end{itemize}
+
+\paragraph{Additività}
+\begin{itemize}
+    \item $f \in O(h) \ \wedge \ g \in O(h) \ \Rightarrow \ f + g \in O(h)$
+    \item $f \in \Omega(h) \ \wedge \ g \in \Omega(h) \ \Rightarrow \ f + g \in \Omega(h)$
+    \item $f \in \Theta(h) \ \wedge \ g \in \Theta(h) \ \Rightarrow \ f + g \in \Theta(h)$
+\end{itemize}
+\paragraph{Riflessività}
+\begin{itemize}
+    \item $f \in O(f)$, con abuso di notazione $f(n) = O(f(n))$
+    \item $f \in \Omega(f)$, con abuso di notazione $f(n) = \Omega(f(n))$
+    \item $f \in \Theta(f)$, con abuso di notazione $f(n) = \Theta(f(n))$
+\end{itemize}
+\paragraph{Simmetria}
+\begin{itemize}
+    \item $f = \Theta(g) \ \Rightarrow \ g = \Theta(f)$
+\end{itemize}
+\paragraph{Simmetria trasposta}
+\begin{itemize}
+    \item $f = O(g) \ \Rightarrow \ g = \Omega(f)$
+    \item $f = o(g) \ \Rightarrow \ g = \omega(f)$
+\end{itemize}
+\paragraph{Somma di due funzioni}: 
+\begin{itemize}
+    \item $f_1 \in O(g_1) \ \wedge \ f_2 \in O(g_2) \Rightarrow f_1 + f_2 \in O(g_1 + g_2)$
+    \item $f_1 \in \Omega(g_1) \ \wedge \ f_2 \in \Omega(g_2) \ \Rightarrow \ f_1 + f_2 \in \Omega(g_1 + g_2)$
+    \item $f_1 \in \Theta(g_1) \ \wedge \ f_2 \in \Theta(g_2) \ \Rightarrow \ f_1 + f_2 \in \Theta(g_1 + g_2)$
+\end{itemize}
+
+\paragraph{Prodotto di due funzioni}
+
+\begin{itemize}
+    \item $f_1 \in O(g_1) \ \wedge \ f_2 \in O(g_2) \ \Rightarrow \ f_1 \cdot f_2 \in O(g_1 \cdot g_2 )$
+    \item $f_1 \in \Omega(g_1) \wedge f_2 \in \Omega(g_2) \ \Rightarrow \ f_1 \cdot f_2 \in \Omega(g_1 \cdot g_2)$
+    \item $f_1 \in \Theta(g_1) \ \wedge \ f_2 \in \Theta(g_2) \ \Rightarrow \ f_1 \cdot f_2 \in \Theta(g_1 \cdot g_2)$
+\end{itemize}
+
+Le precedenti regole NON valgono per operazioni di sottrazione e divisione.
+
+\paragraph{Costante moltiplicatica}
+\begin{itemize}
+    \item $O(c \cdot f) = O(f)$, $\forall c \in \mathbb{R}_0$
+    \item $\Omega(c \cdot f) = \Omega(f)$, $\forall c \in \mathbb{R}_0$
+    \item $\Theta(c \cdot f) = \Theta(f)$, $\forall c \in \mathbb{R}_0$
+\end{itemize}
+Semplicemente possiamo dire che la costante moltiplicativa non influisce sul comportamento asintotico.
+
+\paragraph{Trascurare termini additivi di ordine inferiore}
+\begin{itemize}
+    \item $g = O(f) \ \Rightarrow \ f + g = \Theta(f)$
+\end{itemize}
+Ovver possiamo considerare unicamente il termine di ordine maggiore.
+
+\paragraph{Trascurare le costanti moltiplicative} 
+\begin{itemize}
+    \item $\forall a > 0 \ \Rightarrow \ a \cdot f = \Theta(f)$
+\end{itemize}
+\newpage
+
+\section{Cenni utili sui limiti}
+
+\section{Stime di Somme}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ALGORITMI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Algoritmi}
+\section{Tabella riassuntiva costi temporali} %%%%%%%%%%%%%%%% TABELLA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Algoritmo} & \textbf{peggiore} & \textbf{ migliore medio} & \textbf{stabile } & \textbf{Inplace}\\
+    \hline
+    \hyperlink{insertionsort}{\textbf{Insertion Sort}} & $\Theta(n^2)$ & $\Theta(n)$ & stabile & inplace\\ 
+    \hyperlink{merge}{Merge} & $\Theta(n)$ & $\Theta(n)$ & stabile & non inplace\\
+    \hyperlink{mergesort}{\textbf{Merge Sort}}& $\Theta(n \log n)$ & $\Theta(n \log n)$ & & non inplace\\
+    \hyperlink{heapify}{Heapify} & $O(\log n)$ & & & \\
+    \hyperlink{buildmaxheap}{Build Max Heap} & $\Theta(n)$ & & & inplace \\ 
+    \hyperlink{heapsort}{\textbf{Heap Sort}} & $\Theta(n \log n)$ & $\Theta(n)$ ripetizioni & non stabile & inplace\\
+    \hyperlink{quicksort}{Quick Sort} & $\Theta(n^2)$ & $\Theta(n \log n)$ & non stabile &non inplace \\
+    \hyperlink{selection}{Selection Sort} & $\Theta(n^2)$ & & & \\
+    \hyperlink{countingsort}{Counting Sort} & $\Theta(n^2)$  & $\Theta(n+k)$, $k \in O$(n) & stabile & non inplace\\    
+    Radix Sort &  & $d \cdot \Theta(n)$ & stabile & inplace \\
+    Bucket Sort & $\Theta(n^2)$ & $\Theta(n)$ & dipende & non inplace\\
+    \hline
+
+\end{tabular}
+\newpage
+\section{Cenni introduttivi da SISTEMARE}
+\paragraph{valutazione complessità}: 
+
+Ogni istruzione di base (assegnamenti, confronti, operazioni algoritmiche) ha un costo costante $c_h$.
+Per semplicità, la funzione di complessità è così strutturata:
+\begin{itemize}
+    \item $Time: \mathbb{N} \rightarrow \mathbb{R^+}$
+\end{itemize}
+L'algoritmo ovviamente reagisce in modo diverso a seconda dell'input, pertanto parleremo di tempo assoluto nel:
+\begin{itemize}
+    \item \textbf{caso migliore}: $T_p:\mathbb{N} \leftarrow \mathbb{R^+}$, ovvero tempo impiegato al massimo
+    \item \textbf{caso peggiore}: input che massimizza il tempo di esecuzione
+    \item \textbf{caso medio}: input che si presenta con probabilità uniforme
+\end{itemize}
+\section{Algoritmi di ordinamento e costruzione}
+\paragraph{PROBLEMA} Problema data una sequenza a1, a2, ..., an di numeri, trovare una permutazione tale che 
+$a1 \leq a2  \leq ... \leq an$. \newline
+Soluzioni:
+\hypertarget{insertionsort}{} \subsection{Insertion sort}  %%%%%%%%% INSERTION SORT %%%
+
+Dato un vettore, inizio a scorrere da sinistra verso destra. Ad ogni passo, confronto l'elemento corrente con quelli precedenti, e lo inserisco nella 
+giusta posizione.
+\[\text{A = [\colorbox{green}{5,} 2, 4, ...]}\]
+\[\text{A = [\colorbox{yellow}{5,} \colorbox{green}{2,} 4, ...]}\]
+\[\text{A = [\colorbox{yellow}{2, 5,} \colorbox{green}{4,} ...]}\]
+\[\text{A = [\colorbox{yellow}{2, 4, 5,} \colorbox{green}{...}]}\]
+
+    \begin{algorithm}[H] 
+        \caption{InsertionSort\label{IR}}
+        \KwData{A array, i indice, j indice}
+        \Begin{
+        \For{ i $\leftarrow$ 2 to A.length }{
+            key $\leftarrow$ A[i]\;
+            j $\leftarrow$ j - 1\;
+            \While{ $j>0$ \&\&  $A[j] > key$}{
+                A[j+1] $\leftarrow$ A[j] \;
+                j $\leftarrow$ j - 1 \;
+            }
+            A[j+1] $\leftarrow$ key\;
+        }
+        }
+        \end{algorithm}
+
+\paragraph{Complessità Spaziale}: $\Theta(1)$ in richiede unicamente 3 interi (i, j, A.length)
+per memorizzare i valori. Questo lo rende un algoritmo \textbf{inplace}.\\
+È un algoritmo \textbf{stabile} con $A[j] > key$, in quanto non scambia elementi uguali.\\
+
+
+\paragraph{Complessità Temporale}:
+\begin{itemize}
+    \item nel caso migliore: $\Theta(n)$, input: vettore già ordinato
+    \item nel caso peggiore: $\Theta(n^2)$, input: vettore ordinato al contrario
+\end{itemize}
+Nel \textbf{caso medio} l'algoritmo ha complessità $\Theta(n^2)$. 
+\paragraph{Correttezza}:
+
+\newpage
+\hypertarget{mergesort}{}\subsection{Merge sort} %%%%%%%%%%% MERGE SORT %%%%%%%%%%%
+Problema: devo riordinare un generico array A di $n$ elementi. Immagino di voler riordinare una sottosezione di A, ovvero A[p..q].
+Trovo r pari a $ \floor{\frac{(p+q)}{2}}$ e ordino ricorsivamente le due sottosezioni A[p..r] e A[r+1..q]. Infine unisco le due sottosezioni 
+mediante la procedura \hyperlink{merge}{Merge}.
+
+\[\text{p = 4, q = 11, r = 7, m = q - p + 1 = 8}\] 
+\[\text{[..., \colorbox{yellow}{20, 10, 21, 30,} \colorbox{green}{9, 8, 26, 25,} ...]}\]
+\[\text{[..., \colorbox{yellow}{20, 10,} \colorbox{yellow}{21, 30,} \colorbox{green}{9, 8,} \colorbox{green}{26,25,} ...]}\]
+\[\text{[..., \colorbox{yellow}{20,} \colorbox{yellow}{10,} \colorbox{yellow}{21,} \colorbox{yellow}{30,} \colorbox{green}{9,} \colorbox{green}{8,} \colorbox{green}{26,} \colorbox{green}{25,} ...]}\]
+
+
+\begin{algorithm}[H]
+\caption{MergeSort}
+\KwIn{Array $A$, indices $p$, $q$}
+\KwOut{Sorted array $A[p..q]$}
+\Begin{
+\If{$p < q$}{
+    $r \leftarrow \floor{\frac{(p+q)}{2}}$\;
+    MergeSort(A,p,r)\;
+    MergeSort(A,r+1,q)\;
+    Merge(A,p,q,r)\;
+}
+}
+\end{algorithm}
+
+
+\paragraph{Complessità Spaziale}: $\Theta(n)$ in quanto richiede un vettore di appoggio di dimensione n.
+
+\paragraph{Complessità Temporale}: $\Theta(n \log n)$ in quanto il vettore viene diviso in due parti e
+ogni parte viene ordinata in $\log n$ passi. 
+\paragraph{Equazione ricorsiva di complessità:}
+$\begin{cases}
+    \Theta(1) \ n \leq 1\\
+    2T(\frac{n}{2}) + \Theta(n) \ n > 1\\
+\end{cases}$
+\newpage
+\hypertarget{merge}{} \subsection{Merge} %%%%%%%%%%% MERGE %%%
+La procedura prende in input o due vettori oppure un vettore con due sottosezioni \textbf{già ordinate} e le unisce in un unico vettore ordinato. 
+Si basa sul confronto tra i valori più piccoli delle due sottosezioni, operazione poco costosa in quanto sono ordinate.
+
+\[\text{[..., \colorbox{yellow}{20,} \colorbox{yellow}{10,} \colorbox{yellow}{21,} \colorbox{yellow}{30,} \colorbox{green}{9,} \colorbox{green}{8,} \colorbox{green}{26,} \colorbox{green}{25,} ...]}\]
+\[\text{[..., \colorbox{yellow}{10, 20,} \colorbox{yellow}{21, 30,} \colorbox{green}{8, 9,} \colorbox{green}{25,26,} ...]}\]
+\[\text{[..., \colorbox{yellow}{10, 20, 21, 30,} \colorbox{green}{8, 9, 25, 26,} ...]}\]
+\[\text{[..., \colorbox{yellow}{\textbf{10}, 20, 21, 30,} \colorbox{green}{\textbf{8}, 9, 25, 26,} ...] $\rightarrow$ [\textbf{8}, ???] }\]
+\[\text{[..., \colorbox{yellow}{\textbf{10}, 20, 21, 30,} \colorbox{green}{8,\textbf{9}, 25, 26,} ...] $\rightarrow$ [8, \textbf{9}, ???] }\]
+\[\text{[..., \colorbox{yellow}{\textbf{10}, 20, 21, 30,} \colorbox{green}{8,9,\textbf{25}, 26,} ...] $\rightarrow$ [8, 9, \textbf{10}, ???] }\]
+\[\text{[..., \colorbox{yellow}{10,\textbf{20}, 21, 30,} \colorbox{green}{8,9,\textbf{25}, 26,} ...] $\rightarrow$ [8, 9, 10, \textbf{20}, ???] }\]
+
+\begin{algorithm}[H]
+\caption{Merge}
+\KwIn{Array $A$, indices $p$, $r$, $q$}
+\KwOut{Merged array $A[p..q]$}
+\Begin{
+$i \leftarrow p$\;
+$j \leftarrow r + 1$\;
+$B \leftarrow$ new array of size $q - p + 1$\;
+$k \leftarrow 1$\;
+\While{$i < r + 1$ \textbf{and} $j < q + 1$}{
+    \eIf{$A[i] \leq A[j]$}{
+        $B[k] \leftarrow A[i]$\;
+        $i \leftarrow i + 1$\;
+    }{
+        $B[k] \leftarrow A[j]$\;
+        $j \leftarrow j + 1$\;
+    }
+    $k \leftarrow k + 1$\;
+}
+\If{i > r}{
+    \For{$l \leftarrow j$ \KwTo $q$}{
+        $B[k] \leftarrow A[l]$\;
+        $k \leftarrow k + 1$\;
+    }
+}
+\Else{
+    \For{$l \leftarrow i$ \KwTo $r$}{
+        $B[k] \leftarrow A[l]$\;
+        $k \leftarrow k + 1$\;
+    }
+}
+}
+\end{algorithm}
+\paragraph{procedura:}
+La procedura Merge si basa sul \textbf{confrontare} i primi due valori delle rispettive sottosezioni (ovvero i \textbf{valori più piccoli}), inserirendo il minore in un vettore di appoggio B. L'elemento maggiore dei due viene 
+confrontato con l'elemento successivo dell'altra sottosezione, e così via. Se una delle due sottosezioni si esaurisce, allora si copiano tutti gli elementi rimanenti dell'altra sottosezione. 
+Il procedimento viene effettuato tramite due indici $i$ e $j$.
+
+\paragraph{complessità temporale:} $\Theta(n)$ in quanto ogni elemento viene confrontato una sola volta, proprietà che deriva dal fatto che sono ordinate.
+
+
+\hypertarget{builheap}{}\subsection{Build-Heap (array)} %%%%%%%%% BUILD HEAP %%%%%%%%%
+Date n chiavi memorizzate in un array, voglio trasformare l'array in una max-heap.
+
+\begin{algorithm}[H]
+\caption{Build-Max-Heap}
+\KwIn{Array $H$}
+\KwOut{Max-heap $H$}
+\Begin{
+$H.heapsize \leftarrow H.length$\;
+\For{$\displaystyle i \leftarrow \floor{\frac{H.length}{2}}$ downto 1}{
+    Heapify(H,i)\;
+}
+}
+\end{algorithm}
+
+\hypertarget{heapify}{}\subsection{Heapify (array)} %%%%%%%%%% HEAPIFY %%%%%%%%%%%%
+Procedura che serve a trasformare una heap in una max-heap. \newline
+\textbf{pre-condizioni:} H[left(i)] e H[right(i)] sono max-heap.
+
+
+\begin{algorithm}[H]
+\caption{Heapify}
+\KwIn{Heap $H$, indice $i$}
+\KwOut{Max-heap $H$}
+\Begin{
+$l \leftarrow$ left(i)\;
+$r \leftarrow$ right(i)\;
+\eIf{$l \leq H.heapsize$ \&\& $H[l] > H[i]$}{
+    m $\leftarrow$ l \textit{(m è max)}\;
+}{
+    m $\leftarrow$ i\;
+}
+\If{$r \leq H.heapsize$ \&\& $H[r]>H[m]$}{
+    m $\leftarrow$ r\;
+}
+\If{$m \neq i$}{
+    scambia (H,i,m) \;
+    Heapify(H,m)\;
+}
+}
+\end{algorithm}
+
+\paragraph{Complessità Spaziale}: 
+\paragraph{Complessità Temporale}: generalmente la complessità è $O(n)$, nel caso peggiore $\Theta(n)$
+
+$T(h) =\begin{cases}
+    \Theta(1) \ se \ h = 0 \\
+    T(h-1) \ + \ \Theta(1) \ se \ h > 0 \\
+\end{cases}$
+\paragraph{Correttezza}:
+
+\hypertarget{extractmaxheap}{}\subsection{Extract-Max-Heap} %%%%%%%%%% EXTRACT MAX HEAP %%%%%%%%%
+
+\begin{algorithm}[H]
+\caption{Extract-Max-Heap}
+\KwIn{Heap $H$}
+\KwOut{Max-heap $H$}
+\Begin{
+scambia(H,1,H.heapsize)\;
+H.heapsize $\leftarrow$ H.heapsize - 1\;
+\If{$H.heapsize \geq 1$}{
+Heapify(H,1)\;
+}
+return H[H.heapsize + 1]\;
+}
+\end{algorithm}
+
+
+    
+\hypertarget{heapsort}{}\subsection{Heap Sort} %%%%%%%%%%%% HEAP SORT %%%%%%%%%%%%%
+Algoritmo per ordinare n chiavi in ordine crescente usando una max heap. L'idea è di costruire una max heap estraendo il massimo e ripetendo il procedimento.
+\begin{algorithm}[H]
+\caption{HeapSort}
+\KwIn{Array $A$}
+\KwOut{Sorted array $A$}
+\Begin{
+Build-Max-Heap(A)\;
+\For{$i \leftarrow A.length$ downto 2}{
+    scambia(A,1,i)\;
+    A.heapsize $\leftarrow$ A.heapsize - 1\;
+    Heapify(A,1)\;
+}
+}
+\end{algorithm}
+
+Notiamo come l'algoritmo sia una sorta di fusione tra BuildHeap e Extract Max Heap.
+
+\paragraph{Complessità temporale}: $O(n \log n)$, con caso peggiore $\Theta(n \log n)$ e caso migliore $\Theta(n)$ quando sono presenti \textbf{molte ripetizioni}. 
+
+\hypertarget{quicksort}{}\subsection{Quick Sort} %%%%%%%%%%%% QUICK SORT %%%%%%%%%%%%%
+Ho un vettore da ordinare, scelgo un elemento che fa da perno e divido il vettore in due parti, uno contenente 
+elementi minori del perno e uno con elementi maggiori. Partition serve a trovare il perno e a dividere il vettore in due parti.
+Utilizzo ricorsivamente partition per ordinare le due sottosezioni.
+
+\begin{algorithm}[H]
+\caption{QuickSort}
+\KwIn{Array $A$, indice $p$, indice $q$}
+\KwOut{Sorted array $A[p..q]$}
+\Begin{
+\If{$p < q$}{
+    $r \leftarrow Partition(A,p,q)$\;
+    QuickSort(A,p,r-1)\;
+    QuickSort(A,r+1,q)\;
+}
+}
+\end{algorithm}
+
+\paragraph{Complessità temporale}: caso peggiore $\Theta(n^2)$, caso medio $\Theta(n \log n)$
+
+$T(n)\begin{cases}
+    \Theta(1) \ se \ n \leq 1\\
+    T(m) + T(m-n-1) + \Theta(n) \ se \ n > 1\\
+\end{cases}$
+
+\paragraph{complessità spaziale:} l'algoritmo NON è inplace e NON è stabile.
+
+\hypertarget{partition}{\subsection{Partition}} %%%%%%%%%%%% PARTITION %%%%%%%%%%%%%
+\paragraph{idea:} prendo l'ultimo elemento come perno e lo inserisco nella posizione corretta, posizionando tutti 
+gli elementi minori o uguali del perno a sinistra di quest'ultimo e quelli maggiori a destra. Restituisco l'indice 
+della posizione corretta del perno. Le due porzioni dell'array NON sono ordinate.
+
+\begin{algorithm}[H]
+\caption{Partition}
+\KwIn{Array $A$, indice $p$, indice $q$}
+\KwOut{Pivot index $i$}
+\Begin{
+$x \leftarrow$ A[q] \;
+$i \leftarrow p-1$\;
+\For{$j \leftarrow p$ to  q}{
+    \If{$A[j] \leq x$}{
+    $i \leftarrow i+1$\;
+    scambia (A,i,j)\;
+    }
+    }
+    return $i$\;
+}
+\end{algorithm}
+
+\paragraph{Complessità temporale}: $\Theta(n)$ in quanto si tratta di un ciclo for per $n$ elementi.
+
+\hypertarget{selection}{}\subsection{Selection} %%%%%%%%%%%% SELECTION %%%%%%%%%%%%%
+Utilizzo del perno ottimale per partition, in questo modo l'ordinamento è sempre efficiente
+
+
+\hypertarget{select}{}\subsection{Select} %%%%%%%%%%%% SELECT %%%%%%%%%%%%%
+Dato un vettire A di lunghezza $n$ e dato $i \in [1,...,n]$, determinare l'elemento che finirebbe in posizione i-esima se ordinassi A. 
+
+\begin{algorithm}[H]
+\caption{Select}
+\KwIn{Array $A$, indice $p$, indice $q$, indice $i$}
+\KwOut{Elemento $x$}
+\Begin{
+\eIf{$p = q$}{
+    return A[p]\;
+}{
+    $r \leftarrow Partition(A,p,q,)$\;
+    \If{i = r}{
+        return A[r]\;
+    }
+    \ElseIf{i < r}{
+        return Select(A,p,r-1,i)\;
+    }
+    \Else{
+        return Select(A,r+1,q,i-k)\;
+    }
+}
+}
+\end{algorithm}
+\paragraph{idea:} Bisogna trovare un buon perno.
+
+\section{Algoritmi di ordinamento non basati su scambi e confronti}
+
+\subsection{Breve intro}
+Ogni algoritmo di ordinamento \textbf{basato su scambi e confronti} nel \textbf{caso peggiore} ha complessità pari a $\mathbf{\Omega(n \ log \ n)}$. 
+È possibile ridurre la complessità introducendo delle ipotesi dull'input che permettano l'utilizzo di algoritmi di ordinamento non basati su confronti.
+
+\hypertarget{countingsort}{\subsection{Counting Sort}} %%%%%%%%%%%% COUNTING SORT %%%%%%%%%%%%%
+Richiede delle \textbf{ipotesi sulle chiavi}(i valori assunti), ovvero che siano intere e comprese tra 0 e k, con \textbf{$k \in O(n)$}. Una nota importante è 
+che \textit{k non è necessariamente una costante}. Anche valori come $k = \frac{n}{2}$, $k = 10 \cdot n$, $k = \log n$ sono validi.
+
+
+\begin{algorithm}[H]
+\caption{CountingSort}
+\KwIn{Array $A$, Array $B$, $k$}
+\KwOut{Sorted array $A$}
+\Begin{
+C $\leftarrow$ new array of size $k+1$\; 
+\For{j $\leftarrow$ 0 to k}{
+    C[j] $\leftarrow$ 0\;
+}
+\For{i $\leftarrow$ 1 to A.length}{
+    C[A[i]] $\leftarrow$ C[A[i]] + 1\;
+}
+\For{j $\leftarrow$ 1 to k}{
+    C[j] $\leftarrow$ C[j] + C[j-1]\;
+}
+\For{i $\leftarrow$ A.length down to 1}{
+    B[C[A[i]]] $\leftarrow$ A[i]\;
+    C[A[i]] $\leftarrow$ C[A[i]] - 1\;
+}
+}
+\end{algorithm}
+\paragraph{Complessità temporale}: $\Theta(n+k)$ se ho per ipotesi che $k = O(n)$. Allora per possiamo ignorare i termini di ordine inferiore e otteniamo $\Theta(n)$.
+\paragraph{Complessità spaziale}: 
+
+
+\hypertarget{radix}{\subsection{Radix Sort}} %%%%%%%%%%%% RADIX SORT %%%%%%%%%%%%%
+Utilizzato per ordinare $n$ numeri di $d$ cifre. Procede a partire dalla cifra meno significativa fino a quella più significativa. A ogni iterazione applico un 
+algoritmo di ordinamento stabile su una sola cifra. (es. counting sort).
+
+\hypertarget{bucketsort}{\subsection{Bucket Sort}} %%%%%%%%%%%% BUCKET SORT %%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STRUTTURE DATI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Strutture Dati}
+\section{strutture dati lineari} %%% STRUTTURE DATI LINEARI %%%
+\subsection{Array} %%%%%%%%%%%%%% ARRAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+struttura dati \textbf{statica} (= suo spazio di memoria non varia) di n elementi. 
+Sono a \textbf{indirizzamento diretto} e l'accesso ha un costo fisso di $\Theta (1)$
+\paragraph{operazioni e costo}:
+\begin{itemize}
+    \item \textbf{accesso e modifica}: $A[i]$, costo $\Theta(1)$
+\end{itemize}
+
+\subsection{Lista} %%%%%%%%%%%% LISTA %%%%%%%%%%%%%%%%%%%%
+Le liste sono strutture dati \textbf{dinamiche} (= il loro spazio di memoria può variare). 
+Possono occupare spazi di
+ memoria non contigui. Tra le operazioni che vogliamo fare con le liste ci sono:
+ \begin{itemize}
+    \item \textbf{inserimento} di un elemento in una posizione arbitraria
+    \item \textbf{cancellazione} di un elemento in una posizione arbitraria
+    \item \textbf{ricerca} di un elemento in una posizione arbitraria
+ \end{itemize}
+ 
+ \paragraph{liste concatenate}: ogni elemento della lista contiene un campo che punta all'elemento successivo.
+ Nel caso di liste concatenate \textbf{psuh}
+e \textbf{pull} hanno complessità $\Theta(1)$ in quanto conta soltanto la cella individuata dall'indice
+ e \textbf{max} ha complessità $\Theta(n)$.
+ 
+\subsection{Pila} %%%%%%%%%%%%% PILA %%%
+La pila è una struttura dati \textbf{dinamica} che permette di inserire \textbf{(push)} e cancellare \textbf{(pull)}
+ elementi con politica \textbf{LIFO} (Last In First Out).
+\subsection{Code di priorità} %%%%%%%%%%% CODE DI PRIORITA %%%
+Sono strutture dati \textbf{sequenziali} e \textbf{dinamiche} i cui elementi sono gestiti con politica \textbf{HPFO} (Highest Priority First Out).
+ Ogni elemento è dotato di una key ma anche di una priorità.
+\begin{itemize}
+    \item vettori sovradimensionati
+    \item liste concatenate
+    \item vettori sovradimensionati ordinato per priorità
+\end{itemize}
+Il tipo di implementazione influisce sulla complessità delle operazioni.
+\begin{itemize}
+
+\item implementazione tramite \textbf{lista concatenata}: 
+\begin{itemize}
+    \item \textbf{inserimento} chiave $k$ in posizione $h$: costo $O(n)$, caso peggiore $\Theta(n)$
+    \item inserimento (\textbf{push}) e cancellazione(\textbf{pop}) di $k$ \textbf{in testa}: costo $\Theta(1)$ 
+    \item \textbf{ricerca} dell'h-esimo elemento: costo $O(n)$, caso peggiore $\Theta(n)$
+\end{itemize}
+\item implementazione tramite \textbf{vettore sovradimensionato}:
+\begin{itemize}
+    \item \textbf{normale:} inserimento costo $O(n)$, peggiore $\Theta(n)$
+    \item \textbf{ordinato per priorità:} cancellazione $\Theta(1)$, inserimento $\Theta(n)$
+    \item \textbf{heap} cancellazione e inserimento con $O(\log n)$
+\end{itemize}
+\end{itemize}
+\subsection{Albero Binario} %%%%%%%%%%%%%% ALBERO BINARIO %%%
+Struttura dati \textbf{dinamica} costituita da nodi aventi i seguenti campi:
+\begin{itemize}
+    \item chiave: x.key
+    \item puntatore genitore: x.parent
+    \item puntatore figlio sinistro: x.left
+    \item puntatore figlio destro: x.right
+\end{itemize}
+Nota: ovviamente se x.left punta a y, allora y.parent punta a x. 
+
+\paragraph{albero binario completo:} Ogni nodo che non è una foglia ha esattamente due figli e tutti i 
+nodi sono al livello h o h-1.
+
+\paragraph{albero binario quasi completo:} è un albero binario completo fino al penultimo livello, l'ultimo è 
+riempito da sinistra a destra.
+
+\paragraph{altezza di un nodo:} lunghezza del cammino più lungo che va dal nodo a una foglia. Due convenzioni, in base
+alla scelta dell'altezza delle foglie, che può essere 0 o 1. Nel nostro caso sarà 0. 
+Un albero può avere altezza massima $n-1$.
+
+
+
+\subsection{Max-Heap} %%%%%%%%%%%%%%%% HEAP %%%
+\paragraph{Heap:} Ci permettono di implementare code con priorità costo di inserimento e cancellazione pari a $O(\log n)$.
+
+\paragraph{Max-Heap:} è un albero binario completo in cui ogni elemento ha una chiave minore o uguale di quella 
+del proprio genitore.
+
+\paragraph{costruzione (rivedere):} posso costruire una max heap tramite diversi metodi:
+\begin{itemize}
+    \item da H inserisco una per una le chiavi in K con insert-mex-heap
+    \item tramite Merge-Sort ordino al contrario, in questo modo ottengo una max-heap ($\Theta(n \log n)$)
+    \item sfrutto Heapify per trasformare un array in una max-heap $O(n \log n)$
+\end{itemize}
+
+\paragraph{proprietà} 
+Data una max-heap di n nodi:
+\begin{itemize}
+    \item altezza: $\Theta(\log n)$
+    \item chiave massima si trova nella radice
+    \item ogni percorso radice-foglia ha le chiavi ordinate in modo decrescente
+    \item la chiave minima si trova su una foglia
+    \item le foglie sono all'incirca $\frac{n}{2}$
+\end{itemize}
+
+\paragraph{operazioni:}
+voglio gestire le code di priorità, pertanto:
+\begin{itemize}
+    \item inserimento nuovo nodo
+    \item cancellazione elemento con priorità massima
+    \item ricerca del nodo con priorità massima
+    \item modifica della priorità di un nodo
+\end{itemize}
+
+\paragraph{implementazione:} per implementare una max-heap posso usare:
+\begin{itemize}
+    \item \textbf{albero}: struttura dati dinamica 
+    \item \textbf{vettore sovradimensionato}: struttura dati statica
+\end{itemize}
+
+\paragraph{procedure di base:}
+
+\begin{tabbing}
+\begin{lstlisting}
+    figlio sinistro:
+
+    left(i){
+        return 2i
+        } 
+\end{lstlisting}
+\
+\begin{lstlisting}
+    figlio destro:
+
+    right(i){
+        return 2i + 1
+        }
+\end{lstlisting}
+\begin{lstlisting}
+    nodo genitore:
+
+    parent(i){
+        return $\floor{\frac{i}{2}}$
+        }
+\end{lstlisting}
+    
+\end{tabbing}
+
+\subsection{Tabelle di Hash} %%%%%%%%%%%%%%%% TABELLE DI HASH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{problema:} dato un insieme $U$ di elementi identificati da chavi, voglio memorizzare un sottoinsieme $k \subseteq U$ che \textbf{varia dinamicamente} nel tempo.
+\paragraph{implementazione:}Notiamo che |U| = M è un numero molto grande rispetto K = n. L'utilizzo di un vettore renderebbe le operazioni efficienti, ma comporterebbe un grosso quantitativo di spazio $\Theta(M)$. Il vettore dovrebbe 
+contenere tutti gli elementi di U, in quanto K varia. L'utilizzo 
+di una lista concatenata degli elementi di k ridurrebbe lo spazio ($\Theta(n)$), ma comporterebbe un costo per le operazioni di ricerca e cancellazione $O(n)$. Quello che vogliamo noi è:
+\paragraph{operazioni:}
+\begin{itemize}
+    \item \textbf{inserimento} di un elemento con costo medio $\Theta(1)$
+    \item \textbf{cancellazione} di un elemento con costo medio $\Theta(1)$
+    \item \textbf{ricerca} di un elemento con costo medio $\Theta(1)$
+\end{itemize}
+Il tutto con costo spaziale $\Theta(n)$.
+
+\paragraph{implementazione:} due possibili implementazioni delle tabelle di Hash:
+\begin{itemize}
+    \item \textbf{chaining}, ovvero uso di vettore e liste concatenate
+    \item \textbf{open addressing}, ovvero uso di un vettore
+\end{itemize}
+
+\subsection{Tabelle di Hash con Chaining} %%%%%%%%%%%%%%%% TABELLE DI HASH CON CHAINING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{idea:} uso di un vettore T di dimensione m, in cui ogni cella contiene una lista concatenata di elementi.
+\paragraph{funzione di Hash:}
+\begin{itemize}
+    \item  $h: \{ 0,1,...,|U|-1 \} \rightarrow \{0,1,...,m-1\}$
+\end{itemize}
+L'elemento x viene inserito nella lista in $T[h(x.key)]$. Calcolare h(k) costa $\Theta(1)$.
+\paragraph{collisioni} Quando si verifica la seguente condizione:
+\begin{itemize}
+    \item $x \neq y \in U$ con $h(x.key) = h(y.key)$
+\end{itemize}
+Entrambe gli elementi vengono inseriti nella stessa lista concatenata, indirizzata dalla rispettiva cella in T. Ovviamente ogni 
+nuovo elemento viene inserito in testa alla lista. Questo garantisce $\Theta(1)$ per l'inserimento ma $O(m)$ per ricerca e rimozione.
+
+\paragraph{implementazione efficiente:} affinché le operazioni rispettino le ipotesi di costo $\Theta(1)$ nel caso medio, è necessario che le liste abbiano 
+mediamente la stessa lunghezza, ovvero dati |T| = m, |k| = n, allora la lunghezza media di ogni lista dovrebbe essere:
+\begin{itemize}
+\item $\displaystyle \alpha = \frac{n}{m}$, detto \textbf{fattore di carico}
+\end{itemize}
+
+\paragraph{teorema:} Se T è una tabella di Hash con chaining e vale l'ipotesi di hashing uniforme sempliceme, allora le operazioni di ricerca e cancellazione 
+hanno costo $\Theta(1 + \alpha)$ nel caso medio.
+
+\paragraph{ipotesi di hashing uniforme semplice:} ogni elemento di U ha la stessa probabilità di essere mappato in una qualsiasi delle m celle di T, se non conosco 
+x.key, ovvero 
+\begin{itemize}
+    \item $\forall \in [0,m-1]$ probabilità di $\displaystyle (h(x.key) = i) = \frac{1}{m}  $
+\end{itemize}
+
+dim(..)
+
+\subsection{funzioni di Hash} %%%%%%%%%%%%%%%% FUNZIONI DI HASH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item $h: \{ 0,1,...,|U|-1 \} \rightarrow \{0,1,...,m-1\}$
+\end{itemize}
+
+\paragraph{caratteristiche:}
+\begin{itemize}
+    \item \textbf{non iniettività}: in quanto due chiavi possono collidere
+    \item \textbf{suriettività}: in T non devono esserci celle non mappate
+    \item \textbf{uniformità}: ogni cella di T deve avere la stessa probabilità di essere mappata
+    \item controllo del dominio e del codominio
+\end{itemize}
+
+\paragraph{metodo della divisione:}
+\begin{itemize}
+    \item $h(key) = key \mod m$
+\end{itemize}
+
+suggerimenti: meglio che m sia un numero primo e lontano da una potenza di 2 (per migliore distribuzione)
+
+\paragraph{metodo bucketsort:} A[i] elementi vettore $\in$ [0,...1) distribuiti in modo uniforme. 
+$\floor{A[i] \cdot n} \in \{0,..., m-1\}$ B vettore di liste, con funzione:
+\begin{itemize}
+    \item $h(k) = \floor{k \cdot n}$
+\end{itemize}
+
+\paragraph{metodo universale:} generalizza il caso precedente per qualsiasi m, consideriamo $0 < A < 1$.
+\begin{itemize}
+    \item $h(k) = \floor{m \cdot (k \cdot A - \floor{k \cdot A})}$
+\end{itemize}
+Notiamo che $k \cdot A - \floor{k \cdot A}$ è la parte decimale di $k \cdot A$, in quanto $\floor{k \cdot A}$ è unicamente la parte intera.
+
+\subsection{Tabelle di Hash con Open Addressing} %%%%%%%%%%%%%%%% TABELLE DI HASH
+
+Tutti gli elementi vengono memorizzati in un vettore T di dimensione m. Le collisioni vengono risolte 
+tramite \textbf{sequenze di scansione}.
+
+\paragraph{funzione di Hash:} 
+\begin{itemize}
+    \item $h: \{ 0,1,...,|U|-1 \}$ x $\{0,1,...,m-1\}\rightarrow \{0,1,...,m-1\}$
+\end{itemize}
+
+il secondo argomento della funzione rappresenta il tentativo di inserimento.
+
+\paragraph{proprietà:} $\forall h(x.key, 0), h(x.key, 1), ... , h(x.key,m-1)$
+\begin{itemize}
+    \item \textbf{iniettiva}: ogni chiave viene mappata in una sola cella
+    \item \textbf{suriettiva}: ogni cella di T è mappata
+\end{itemize}
+In questo modo la funzione è \textbf{biettiva}, e rappresenta una \textbf{permutazione} di $\{0,1,...,m-1\}$.
+Per favorire la ricerca e la cancellazione, utilizzo due costanti per identificare le celle vuote:
+\begin{itemize}
+    \item \textbf{NIL}: cella mai usata
+    \item \textbf{DEL}: cella usata e svuotata, vale come occupata per ricerca/cancellazione
+\end{itemize}
+
+\paragraph{costi delle operazioni (inserimento, ricerca, cancellazione):}
+\begin{itemize}
+    \item \textbf{caso medio}: $\Theta(1)$ se vale ipotesi di \textbf{hashing uniforme}
+    \item \textbf{caso peggiore}: $\Theta(m)$
+\end{itemize}
+
+\paragraph{ipotesi di hashing uniforme:} tutte le possibili permutazioni di $\{0,1,...,m-1\}$ sono ugualmente probabili, ovvero $\displaystyle \frac{1}{m!}$, in quanto dati m elementi, 
+le possibili permutazioni sono $m!$
+
+\subsection{Tipologie di scansione}
+
+\paragraph{scansione lineare:}
+\begin{itemize}
+    \item $h(k,i) = (h(k) + i) \mod m$
+\end{itemize}
+Se una cella è occupata, si passa alla successiva. Non rispetta l'ipotesi di hashing uniforme, genera soltanto m possibili scansioni sulle m!
+
+\part{Glossario} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Termini e definizione}
+
+\paragraph{inplace} algoritmo che non richiede spazio aggiuntivo per l'esecuzione, quindi $\Theta(1)$
+
+\paragraph{stabile} algoritmo che mantiene l'ordine relativo degli elementi con chiavi uguali
+
+\paragraph{dinamico} struttura dati che può variare nel tempo
+
+\paragraph{sequenziale} struttura dati in cui gli elementi sono memorizzati in sequenza
+
+\paragraph{statico} struttura dati in cui lo spazio di memoria non varia
+
+
+
+
+\part{Esercizi e sfide} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{esercizi scrittura di algoritmi}
+\section{equazioni ricorsive}
+esercizi di equazioni ricorsive:
+
+$T(n)= \begin{cases}
+    \Theta(1) \ se \ n \leq 1\\
+    2T(\frac{n}{2}) + \Theta(1) \ se \ n > 1\\
+\end{cases}$
+
+Posso riscrivere l'equazione sostituendo $\Theta(1)$ con delle costanti, ottenendo:
+
+$T(n)= \begin{cases}
+    a \ se \ n \leq 1\\
+    2T(\frac{n}{2}) + b \ se \ n > 1\\
+\end{cases}$
+\\
+Tabella dei costi per livello:\\
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    numero nodi & dimensione nodo & costo unitario nodo & costo livello\\
+    \hline
+    1 & n & b & b\\
+    2 & $\frac{n}{2}$ & b & $2 \cdot b$\\
+    $2^2$ & $\frac{n}{2^2}$ & b & $2^2 \cdot b$\\
+    ... & ... & ... & ...\\
+    $2^i$ & $\frac{n}{2^i}$ & b & $2^i \cdot b$\\
+    ... & ... & ... & ...\\
+    $2^x$ & $\frac{n}{2^x}=1$ & a & $2^x \cdot a$\\
+    \hline
+\end{tabular}
+
+\paragraph{costo:} somma del costo dei livelli 
+
+
+$\displaystyle T(n) = b + 2 \cdot b + ... 2^i \cdot b + ... + 2^x \cdot a $
+
+$\displaystyle \frac{n}{2^x} = 1 \Rightarrow x = \log_2 n$
+
+$T(n) = \displaystyle \sum_{i=0}^{\log_2 n-1}2^i \cdot b + 2^{\log_2 n} \cdot a$
+
+ora opero sull'equazione 
+
+
+$T(n)= b ()$
+
+\section{esercizi di induzione e correttezza}
+\section{sfide}
+\subsection{Possibility Majority Candidate}
+\subsection{Liste Circolari}
+\subsection{Matrice}
+
+\end{document}
