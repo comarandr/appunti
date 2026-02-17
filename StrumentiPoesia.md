@@ -1,0 +1,224 @@
+# STRUMENTI PER LA POESIA
+
+## INTRODUZIONE METRICA
+
+### Essenziale di linguistica
+
+4 parti fondamentali:
+
+1. Fonetica/Fonologia: studio dei suoni (foni) del linguaggio e di come vengono organizzati in unità distintive (fonemi) per formare parole
+2. Morfologia: analizza la struttura interna delle parole (prefissi, suffissi, radici)
+3. Sintassi: studio di come le parole vengono combinate per frasi e come le relazioni strutturali determinano il significato
+4. Semantica: esamina il significato delle parole, frasi e testi
+
+Con 2 elementi aggiuntivi:
+
+- Lessico: insieme delle parole di una lingua
+- Pragmatica: studio di come il contesto influenza significato e uso del linguaggio
+
+### Strumenti della poesia
+
+**Discorsi in prosa:** discorsi la cui struttura è motivata dal significato
+
+**Discorsi in versi:** discorsi la cui struttura è motivata anche da principi formali estranei al significato
+
+**Verso:** segmento del discorso organizzato secondo determinate regole. Unità minima della scansione del discorso in versi
+
+**Strofe:** struttura intermedia di versi
+
+**Forma strofica:** strofe dello stesso numero di versi, composti degli stessi tipi di versi nello stesso ordine e con eventuale stesso schema di rime (uso comune: strutture analizzabili in strofe secondo una struttura regolare)
+
+**RITMO:** disporsi nel tempo di elementi riconoscibili e significativi (sillabe atone e toniche, suoni uguali, misure sillabiche)
+
+**METRO:** norma entro la quale il ritmo si realizza.
+
+- **Poesia regolare:** insieme elementi e regole che definiscono un modello
+- **Poesia libera:** semplicemente il discorso si articola in versi
+
+Esempio: settenario – metro: sette sillabe con sesta tonica, ritmo: disposizione degli altri accenti
+
+**PROSODIA:** insieme delle regole riguardanti la quantità delle sillabe e la combinazione delle sillabe lunghe e brevi in piedi, metri e versi
+
+#### CATALOGO DI FORME
+
+- **Rime regolate**: a struttura fissa
+- **Rime libere**: con struttura liberamente variabile
+- **Rime mescolate**: sottoposte ad alcune regole
+
+(forme regolate, fisse vs libere, generi e rime utilizzate, forme brevi, forme discorsive)
+
+Relazione tra struttura sintattica e struttura metrica è una scelta di stile, non vincolato da regole precise
+
+- Tendenzialmente di base è far **coincidere limite di verso con limite sintattico**
+
+**Enjambement:** termine che indica mancata coincidenza tra unità sintattica e limite di verso (anche inarcatura, accavallamento e rompimento)
+
+- **Rigetto:** parte breve di unità sintattica spezzata nel secondo verso
+- **Controrigetto:** parte breve di unità sintattica che si colloca all'inizio del primo verso
+
+L'enjambement è comune tra versi, raro tra altre unità metriche superiori.
+
+Nelle forme strofiche è normale che la strofa termini con un limite sintattico "forte" o con la fine del periodo.
+
+## CONTEGGIO DELLE SILLABE
+
+**Sillaba:** unità ritmica della catena parlata (definizione semplicistica e funzionale). Costituita da almeno una vocale, eventualmente seguita da consonante o semiconsonante
+
+**Isocromismo sillabico:** le sillabe percepite come se fossero tutte uguali per durata
+
+**Sillabismo:** numero di una serie di sillabe
+
+Due serie hanno lo stesso numero di sillabe se l'ultima tonica è nella stessa posizione (conti le sillabe fino all'ultima tonica)
+
+##### 3 casi normali
+
+- Uscita piana: ultima tonica + sillaba atona
+- Uscita tronca: ultima tonica
+- Uscita sdrucciola: ultima tonica + 2 sillabe atone
+- Eccezionale: ultima tonica + diverse sillabe atone
+
+Tutti questi casi sono considerati equivalenti in termini di sillabismo. Il numero di sillabe in un verso è determinato nel seguente modo:
+
+numero di sillabe fino all'ultima tonica compresa + 1
+
+In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che generalmente nella tradizione italiana vengono raramente mescolati.
+
+##### COMPUTO DELLE SILLABE ESEMPI
+
+- **Tutte le vocali sono separate da almeno una consonante:** numero di vocali
+  - `di me medesmo meco mi vergogno`
+  - `di-me-me-de-smo-me-co-mi-ver-go-gno` (11 vocali = 11 sillabe, 10 tonica)
+
+- Due o più vocali sono consecutive
+  - All'interno di una parola:
+    - **Dieresi:** nesso di 2 vocali → 2 sillabe (detto iato) – può essere grafica
+    - **Sineresi:** nesso di 2 vocali → 1 sillaba
+  - Tra due parole:
+    - **Dialefe:** vocale finale e vocale iniziale → 2 sillabe (detto iato)
+    - **Sinalefe:** vocale finale e vocale iniziale → 1 sillaba
+
+- **Semiconsonante:** una i o u senza valore di sillaba, articolata come consonante (ostruzione aria espirata)
+- **Semivocale:** analoga ma con minore ostruzione
+
+#### DIERESI E SINERESI
+
+- Nessi vocale tonica + atona fine parola: mai/mia, lei/mie, voi/io, rea/reo, sua, sue, fui, suo
+  - Fine verso: 2 sillabe
+  - Interno: 1 sillaba (se dieresi di eccezione (tradizione petrarchista, dante) – 2 sillabe)
+    - Dieresi d'eccezione più frequente davanti s + consonante
+
+- Analogo trattamento nessi interni
+
+- **Regola etimologica:** dieresi di nesso in 2 sillabe se deriva dal latino con 2 sillabe (anche derivazioni da altre lingue)
+  - iè, uò derivanti da è, ae, ò (valgono sempre 1 sillaba)
+  - `pie-de` ← `pe-dem`
+  - `Lie-to` ← `lae-tum`
+  - `Buo-no` ← `bo-num`
+  - `Cava-lie-re` ← `chevalier`
+
+##### NESSI TEORICAMENTE INSCINDIBILI
+
+- **au:** regolarmente monosillabico in (laude, lauro, causa, pausa, aura)
+- **eu:** generalmente monosillabico
+- **i consonantica:** generalmente mai valore di sillaba
+  - consonante + i + vocale derivante da cons. + l + vocale in latino
+    - `pie-no` ← `ple-num`
+    - `chia-ve` ← `cla-vem`
+    - `fio-re` ← `flo-rem`
+    - `tem-pio` ← `tem-plum`
+      - Dieresi per ricavare parole sdrucciole di fine verso (esempio < exemplum)
+
+- **i derivata da ri** (es aio ← arium)
+- **u consonantica:** guerra, quasi, questo / lingua, sangue
+- **Nesso grafico:** i come suono palatale di c, g, l (minaccia, saggio, figlio)
+  - Generalmente 1, ma capita 2 con latinismi (savio, filio – derivazione di i vocale latina: religione in dante con 5 e non 4)
+
+##### NESSI GENERALMENTE BISILLABICI
+
+- **a, e, o + vocale tonica:**
+  - `pa-e-se`, `pa-u-ra`, `ma-e-stro`, `be-a-to`, `le-a-le`, `le-o-ne`, `so-a-vi`
+
+- **Nessi voc + i cons. + voc:**
+  - `gio-ia`, `no-ia`, `-a-io`
+
+##### NESSI SCANSIONE VARIABILE
+
+- i, u atone + vocale tonica
+  - Comune la dieresi, eccl iè, uò ← lat. È, ò
+- nessi di due vocali atone diverse da i, u
+  - forme collegabili con quelle con nesso tonico, spesso bisillabiche: `be-a-trì-ce` &larr; `be-à-to`, `pa-u-ro-se` &larr; `pa-ù-ra` (può anche essere monosillabico `pau-ro-se`)
+- nessi di i atona + vocale atona in fine parola sono monosillabici (non sempre)
+  - `pa-ia`
+- nessi di vocale atona ≠ i + vocale atona in fine parola sempre monosillabici ma dieresi più frequente
+  - `per-pe-tua`, ma a volte `mu-tu-a` (dieresi)
+
+#### DIALEFE E SINALEFE
+
+Generalmente vocale finale + vocale iniziale: sinalefe
+
+- ahi quanto a dir qual era è cosa dura
+  - ahi^1^-quan^2^-to\^a^3^-dir^4^-qual^5^-e^6^-ra\^è^7^-co^8^sa^9^-du^10^ra^11^
+
+Una vocale può venir sopressa mediante:
+
+- **elisione** della vocale finale `nostr' intellecto` &larr; `nostro intellecto`
+- **aferesi** della vocale iniziale `ne 'ngombra` &larr; `ne ingombra`
+- **crasi** di due vocali `ma` &larr; `ma a`
+
+Per saper distinguere davvero elisione, aferesi e crasi dalla sinalefe è necessaria una copia dell'autore
+
+(PAG 41)
+
+#### ALTRE FIGURE
+
+- **elisione** soppressione vocale finale davanti all'iniziale della seguente (in alternativa a sinalefe)
+- **aferesi** soppressione vocale iniziale davanti alla finale della precedente (in alternativa a sinalefe)
+- **apocope** caduta della vocale finale `vuol` &larr; `vuole`
+  - esempio: rima tronca in consonante ( `cuor / amor` &larr; `cuore / amore`)
+  - **epìtesi (paragoge)** aggiunta di una vocale finale `fue` &larr; `fu` 
+    - evitare le finali tronche, costruire versi piani
+- **sincope** caduta di una vocale interna di parola `lettre` &larr; `lettere`
+  - può essere apparente
+
+#### CONVENZIONALITÀ DEL COMPUTO DELLE SILLABE
+
+Desiderabile che esecuzione rispetti il computo sillabico, esempio con dieresi o dialefe, stacco nella pronuncia fra le vocali che formano due sillabe diverse
+
+Nel caso non siano indicate dialefe e dieresi ci si dovrebbe affidare a un rapido calcolo delle sillabe
+
+Maggiori problemi con sinalefe e sineresi, ma generalmente son rare e si potrebbe limitarsi a pronunciare il più rapidamente possibile le vocali che formano la stessa sillaba.
+
+Con la sinalefe questione più problematica:
+
+- vanno pronunciate entrambe vocali (altrimenti sarebbe elisione)
+
+(...)
+
+#### CESURA
+
+**cesura**: sillaba finale di parola che segue o coincide con sillaba tonica
+
+**emistichio (mezzo verso)**: parte di verso che precede o segue la cesura
+
+- cesura come fatto metrico
+- cesura come fatto sintattico/ritmico
+
+(...)
+
+#### ISOSILLABISMO E ANISOSILLABISMO
+
+## L'ACCENTO
+
+## I VERSI ITALIANI
+
+## LA RIMA
+
+## FORME REGOLATE E FORME FISSE
+
+## FORME LIBERE METRICA TRADIZIONALE
+
+## METRICA BARBARA
+
+## FORME METRICHE POESIA ITALIANA
+
+## METRICA LIBERA MODERNA
