@@ -191,3 +191,30 @@ Ci sono diversi tipologie di modelli, tra cui:
 
 - **plan-driven**: pianificazione dettagliata di tutte le attività prima di iniziare lo sviluppo
 - **agile**: sviluppo iterativo e incrementale, con frequenti revisioni e
+
+### Modello a cascata
+
+[immagine diagramma modello a cascata]
+
+Si tratta di un processo:
+
+- plan-driven
+- document-centric
+- rigido
+- monolitico
+
+#### Modello a cascata con retroazione
+
+#### Modello a V
+
+### Modelli evolutivi
+
+#### Modello a sviluppo incrementale
+
+#### Modello a consegna incrementale
+
+#### Modello prototipale
+
+### Modelli orientati al riuso
+
+#### Modelli trasformazionali
