@@ -200,16 +200,77 @@ Con la sinalefe questione più problematica:
 
 **emistichio (mezzo verso)**: parte di verso che precede o segue la cesura
 
-- cesura come fatto metrico
-- cesura come fatto sintattico/ritmico
+- cesura come fatto metrico: derivazione dal décasyllabe francese/provenzale, due emistichi di 4 e 6 sillabe (4^a^ e 6^a^ tonica)
+- cesura come fatto sintattico/ritmico: pausa sintattica o di intonazione circa a metà verso, in modo che le due parti siano simili a un quinario e settenario
 
 (...)
 
 #### ISOSILLABISMO E ANISOSILLABISMO
 
+**isosillabismo**: tutti i versi hanno lo stesso numero di sillabe, nella tradizione italiana è tipico
+
+**ipermetro**: verso che eccede la misura prevista
+**ipometro**: verso che non raggiunge la misura prevista
+
+**anisillabismo:** dato un verso di base, una certa varianza del numero di sillabe non altera forma metrica
+
 ## L'ACCENTO
 
+La metrica italiana considera anche la posiuzione dell'ultima sillaba tonica, perchiò è definibile _sillabico-accentuativa_
+
+**accento di intensità, dinamico**: implica un aumento di forza nella pronuncia della sillaba, che si distingue dalle altre per maggiore intensità
+
+Tra accenti pertinenti nel verso e quelli rilevabili non c'è piena coincidenza, raramente un accento metrico cade su una sillaba che sarebbe atona in prosa. Per questi alcuni parlano di **ictus** invece che di accento
+
+### accenti obbligatori, principali, secondari
+
+- **accenti del verso**: sillabe che occupano certe posizioni sono toniche
+
+- **accenti obbligatori**: posizioni che devono essere occupate da una sillaba tonica secondo la norma adottata
+
+- **accenti principali**: accenti la cui presenza o assenza è un elemento distintivo tra un verso istituzionale o meno
+
+- **accenti secondari**: accenti che non sono obbligatori per il metro ma che contribuiscono a definire il ritmo del verso
+
+**schema accentuativo**: disposizione degli accenti nel verso
+
+### versi ad accentazione fissa o variabile
+
+- **versi ad accentazione fissa**: accenti obbligatori in posizioni fisse
+  - decasillabo (3^a^, 6^a^, 9^a^); novenario (2^a^, 5^a^, 8^a^); ottonario (3^a^, 7^a^); senario (2^a^, 5^a^);
+
+- **versi ad accentazione variabile**: versi con diverse disposizioni di accenti non obbligatori
+  - endecasillabo (su 4^a^ o 6^a^ oltre la 10^a^); settenario (una delle prime 4 sillabe tonica + 6^a^); quinario (1^a^ o 2^a^ + 4^a^)
+
 ## I VERSI ITALIANI
+
+### Endecasillabo
+
+### Decasillabo
+
+### Novenario
+
+### Novenario Doppio
+
+### Ottonario
+
+### Ottonario Doppio
+
+### Settenario
+
+### Settenario Doppio
+
+### Senario
+
+### Senario Doppio
+
+### Quinario
+
+### Quinario Doppio
+
+### Quadrisillabo
+
+### Trisillabo
 
 ## LA RIMA
 
