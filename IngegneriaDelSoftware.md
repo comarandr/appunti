@@ -41,7 +41,7 @@ Alcune sfide per processi software:
 - **diversità**: metodi per produrre software su dispositivi eterogenei
 - **consegna**: consentirla in tempi rapidi
 - **fiducia**: tecniche che rendano il software affidabile e sicuro agli occhi del cliente
-- **scala**: software distribuito su sistemi diversi 
+- **scala**: software distribuito su sistemi diversi
 
 I **principi fondamentali** sono:
 
@@ -192,28 +192,118 @@ Ci sono diversi tipologie di modelli, tra cui:
 - **plan-driven**: pianificazione dettagliata di tutte le attività prima di iniziare lo sviluppo
 - **agile**: sviluppo iterativo e incrementale, con frequenti revisioni e
 
-### Modello a cascata
+### Modelli a cascata
+
+#### Modello a cascata
 
 [immagine diagramma modello a cascata]
 
 Si tratta di un processo:
 
-- plan-driven
-- document-centric
-- rigido
-- monolitico
+- **plan-driven**: ciascuna fase segue quella successiva, le attività di prorocessso sono pianificate in anticipo
+- **document-centric**: ogni attività produce documenti che vengono utilizzati come input per le attività successive
+- **rigido**: fine di ogni fase è un milestone, gli output di una fase non sono modificabili nelle fasi successive
+- **monolitico**: cliente riceve il software solo alla fine del processo
+
+**vantaggi**: fasi e rispettivi output ben definiti
+
+**svantaggi**:
+
+- richiede chiarezza dei requisiti fin da subito e stabilità degli stessi
+- produce notevole mole di documentazione
+- poco flessibile
+
+Pertanto il modello a cascata risulta:
+
+- adatto a software che richiedono documentazione dettagliata
+- adatto a sistemi integrati in cui software deve interfacciarsi con sistemi hardware non flessibili
+
+**non adatto** a:
+
+- piccoli team dove comunicazione è informale e contesti in cui i requisiti cambiano notevolmente
 
 #### Modello a cascata con retroazione
 
+Variazione del modello a cascata con introduzione della **retroazione**, verifica della correttezza dell'output con possibilità di ripetere le fasi precedenti, grazie all'uso di **feedback**
+
+[immagine diagramma modello a cascata con retroazione]
+
+- più flessibile del modello a cascata, mitigandone la monoliticità
+- adatto a contesti in cui i requisiti sono poco soggetti a cambiamenti
+
 #### Modello a V
+
+Estensione del modello a cascata, in cui le attività di **progetto** sono collegate a quelle di **V&V (verifica e validazione)**
+
+[immagine diagramma modello a V]
+
+Ogni fase di progettazione è associata a una fase di V&V
+La fase di V&V è guidata da un insieme di piani di test, eseguito da un team indipendente
+
+In caso di errore nella fase V&V, si rieseguono le fasi di progettazione collegate
+
+Permette di anticipare validazione dei requisiti da parte del cliente, rilevando precocemente eventuali errori
 
 ### Modelli evolutivi
 
+Adatti a contesti con requisiti non chiari fin dall'inizio del processo
+
+Due tipologie fondamentali:
+
+- **modello a sviluppo incrementale**: lavorare con il cliente
+- **modello a consegna incrementale**: realizzazione di prototipi per esplorare requisiti
+
+**vantaggi**:
+
+- rapido feedback del cliente su versione preliminare
+- possibilità di cambiare i requisiti prima della consegna finale
+- consegna di versioni preliminari con funzionalità fondamentali
+- primi incrementi utili per dedurre requisiti successivi
+- funzionalità con maggiore priorità testate maggiormente
+
+**svantaggi**:
+
+- mancanza di visibilità del processo
+- sistemi mal strutturati per continui cambiamenti
+
+**applicabilità**:
+
+- componenti di piccole dimensioni
+- sistemi a vita breve
+- sistemi con requisiti che cambiano durante sviluppo
+
 #### Modello a sviluppo incrementale
+
+Si sviluppa una implementazione iniziale che viene esposta agli utenti e che verrà perfezionata attraverso **incrementi** ovvero versioni successive.
+
+[immagine diagramma modello a sviluppo incrementale]
+
+Posso partire da una descrizione sommaria dei requisiti
+
+le varie fasi (specifica, sviluppo, convalida) sono intrecciate con feedback veloci
+
+1. versione iniziale con requisiti fondamentali esposta agli utenti
+2. feedback di proxy degli utenti finali in ambiente diverso da quello target
+3. implementazioni di funzionalità e requisiti ulteriori in versioni intermedie (solitamente NON mostrate al cliente)
+4. ultimo incremento è versione finale rilasciata al cliente
 
 #### Modello a consegna incrementale
 
+Alcuni degli incrementi sviluppati sono consegnati al clienti
+
+[immagine diagramma modello a consegna incrementale]
+
+**vantaggio**: feedback più realistico
+**limitazione**: utenti devono aver tempo per testare adeguatamente gli incrementi rilasciati
+
+A ogni incremento viene inclusa una parte delle funzionalità, secondo dei livelli di priorità. I requisti di un incremento sono congelati una volta consegnati
+
 #### Modello prototipale
+
+**prototipo**: versione iniziale di un sistema software sviluppato rapidamente, generalmente **usa e getta**. Generalmente potrebbe non rispettare aspetti fondamentali (es. prestazioni)
+
+[immagine diagramma modello prototipale]
+
 
 ### Modelli orientati al riuso
 
