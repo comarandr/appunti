@@ -329,4 +329,46 @@ Oltre che in maniera informale, avviene mediante:
 
 Sfrutta dei **framework di integrazione** per comporre **componenti riutilizzabili** e **COTS**
 
+[immagine diagramma modello orientato al riuso]
+
+- requisiti specificati in maniera non dettagliata
+- ricerca e valutazione di componenti e sistemi che possono offrire le funzionalità richieste
+- requisiti perfezionati in base alle componenti disponibili e viene aggiornata la specifica
+- se disponibile sistema adeguato,configurato per il nuovo sistema
+- altrimenti componenti e sistemi possono essere adeguati alle nuove richieste insieme a componenti ex novo
+
+**vantaggi**:
+
+- riduce quantità software ex novo
+- costi e rischi ridotti
+- velocità consegna
+
+**svantaggi**:
+
+- compromessi nei requisiti
+- evoluzione delle componenti non controllate direttamente
+
 #### Modelli trasformazionali
+
+Le specifiche vengono definite mediante linguaggi formali (specifiche algebriche, modelli di stato)
+
+Correttezza mediante model checking
+
+Specifiche formali trasformate automaticamente in codice eseguibile
+
+1. requisiti specificati formalmente in fase di analisi, compresi chiaramente e in modo non ambiguo, verificate automaticamente
+2. man mano trasformati in descrizione più dettagliata e meno astratta, fino a ottenere codice eseguibile
+3. può trarre vantaggio da componenti riusabili
+
+**problemi**:
+
+- necessarie competenze specifiche per scrivere specifiche formali
+- difficile specificazione formale di alcune parti
+- difficoltà da parte del cliente a convalidare i requisiti 
+
+**applicabilità**:
+
+- NO a sistemi di grande dimensioni
+- ottimo per parti critiche, dove validità va dimostrata **by construction**
+
+## 4. SVILUPPO AGILE DEL SOFTWARE
