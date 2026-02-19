@@ -304,7 +304,29 @@ A ogni incremento viene inclusa una parte delle funzionalità, secondo dei livel
 
 [immagine diagramma modello prototipale]
 
+1. stabilire esplicitamente obiettivi del prototipo (piano di prototipazione)
+2. definire quali funzionalità includere nel prototipo (definizione dello schema)
+3. sviluppo del prototipo (prototipo)
+4. fase di valutazione del prototipo (report valutativo)
+
+Il prototipo necessita di formazione degli utenti sull'utilizzo, inoltre ha dei problemi di rappresentatività:
+
+- non è parte del sistema reale (al contrario degli incrementi)
+- valutatori non rappresentativi
+- uso può differe da quello del sistema reale
+
+NOTA: prototipazione può affiancare altri modelli
+
+- durante la progettazione (modello a cascata) per valutare opzioni alternative
+- durante validazione del sistema per controllarne il comportamento
 
 ### Modelli orientati al riuso
+
+Oltre che in maniera informale, avviene mediante:
+
+- componenti software riutilizzabili
+- interi sistemi (COTS)
+
+Sfrutta dei **framework di integrazione** per comporre **componenti riutilizzabili** e **COTS**
 
 #### Modelli trasformazionali
