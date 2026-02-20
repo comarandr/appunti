@@ -364,7 +364,7 @@ Specifiche formali trasformate automaticamente in codice eseguibile
 
 - necessarie competenze specifiche per scrivere specifiche formali
 - difficile specificazione formale di alcune parti
-- difficoltà da parte del cliente a convalidare i requisiti 
+- difficoltà da parte del cliente a convalidare i requisiti
 
 **applicabilità**:
 
@@ -372,3 +372,64 @@ Specifiche formali trasformate automaticamente in codice eseguibile
 - ottimo per parti critiche, dove validità va dimostrata **by construction**
 
 ## 4. SVILUPPO AGILE DEL SOFTWARE
+
+**processi plan-driven**: con pianificazione dettagliata, ottimi per sistemi critici, con team numerosi e lontani, progetti e software di lunga durata.Poco adatti a contesti dinamici, poco flessibili.
+
+Necessità di risposta rapida, comunicazione fra stakeholder e cliente nel processo per feedback rapido &rarr; agilità
+
+### Caratteristiche generali
+
+**documentazione minima**:
+
+- focus sul codice
+- no specifiche dettagliate
+- overhead documentazione limitata
+
+**consegna rapida e incrementale**:
+
+- incrementi rilasciati frequentemente
+- stakeholder coinvolti
+
+**strumenti di supporto**:
+
+- uso di strumenti di supporto del processo di sviluppo (es. automatizzazione test)
+
+|processi plan-driven            |processi agili                                              |
+|--------------------------------|------------------------------------------------------------|
+|attività pianificate in anticipo|                   pianificazione incrementale continua     |
+| fasi processo software distinte|requisiti, progettazione e implementazione contemporanemente|
+| incrementi pianificati         | incrementi rapidi                                          |
+
+Pratiche plan-driven e agili possono coesistere
+
+### Principi agili
+
+**coinvolgimento del cliente**:
+
+**accettare i cambiamenti**:
+
+**mantenere la semplicità**:
+
+**sviluppo incrementale**:
+
+**persone, non processi**:
+
+#### Applicabilità
+
+**adatto a**:
+
+**vattaggio**:
+
+### Tecniche agili
+
+#### Extreme Programming (XP)
+
+#### Tecniche agili - Storie Utente
+
+#### Tecniche agili - Refactoring
+
+#### Tecniche agili - Sviluppo preceduto dai Test
+
+#### Tecniche agili - Pair Programming
+
+#### Tecniche agili - Scrum
