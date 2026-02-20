@@ -404,21 +404,44 @@ Pratiche plan-driven e agili possono coesistere
 
 ### Principi agili
 
-**coinvolgimento del cliente**:
+**coinvolgimento del cliente**: coinvolti in tutto il processo di svluppo
 
-**accettare i cambiamenti**:
+- valutano e validano
+- forniscono nuovi requisiti e propongono modifiche
+- assegnano priorità
 
-**mantenere la semplicità**:
+**accettare i cambiamenti**: prodotto non pianificato rigidamente, prevedere che i requisiti cambieranno
 
-**sviluppo incrementale**:
+**mantenere la semplicità**: prodotto e processo di sviluppo semplici, eliminare le complessità
 
-**persone, non processi**:
+**sviluppo incrementale**: software consegnato incrementalmente, cliente specifica i requisiti da includere negli incrementi
+
+**persone, non processi**: processo di sviluppo non eccessivamente prescrittivo e rigido
 
 #### Applicabilità
 
 **adatto a**:
 
-**vattaggio**:
+- prodotti di piccole e medie dimensioni
+- prodotti personalizzati (con coinvolgimento cliente)
+- pochi stakholder
+- team fisicamente vicini, con comunicazione informale
+
+**vantaggi**:
+
+- consegne predicibili
+- rapida risposta a cambiamenti
+- rischi bassi grazie a cicli di consegna rapidi
+- alta produttività
+- clienti soddisfatti
+
+**esempio**:
+
+- prodotto evolve con brevi iterazioni
+- iterazioni con durata fissa (es. 2 settimane)
+- applicazione funzionante rilasciata a fine di ogni iterazione, aggiungendo quante più funzionalità ad alta priorità possibili
+- cliente rivede ogni incremento e ridefinisce priorità
+- non si fallisce una data di consegna, piuttosto si rimanda qualche feature
 
 ### Tecniche agili
 
