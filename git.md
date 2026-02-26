@@ -97,4 +97,12 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 `git reset <commit>` : Resetta il branch attivo a un commit specifico, annullando tutte le modifiche successive (perdita di dati)
 
-`git reset <commit>` : Resetta il branch attivo a un commit specifico, mantenendo le modifiche nella directory di lavoro (non annulla le modifiche, ma le sposta nell'area di staging)
+`git revert <commit>` : Crea un nuovo commit che annulla le modifiche introdotte da un commit specifico (non altera la cronologia)
+
+**nota**: \<commit> è il commit a cui si vuole tornare
+
+## git cherry-pick
+
+`git cherry-pick <commit>` : Applica le modifiche introdotte da un commit specifico al branch attivo (utile per portare modifiche specifiche da un branch all'altro senza unire tutto il branch)
+
+`git rebase -i <nome-branch/commit>` : Interattivo, permette di modificare la cronologia dei commit (riordinare, unire, modificare messaggi)
