@@ -5,7 +5,7 @@
 `git init` : Crea una nuova repository Git nella directory corrente
 `git clone <url>` : Clona una repository esistente da un URL
 
-## salvare le modifiche
+## Salvare le modifiche
 
 **area di staging** : è una zona temporanea dove si preparano i file prima di eseguire un commit
 
@@ -47,3 +47,14 @@
 in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 `git rebase <nome-branch>`: Applica le modifiche del branch attivo sopra il branch specificato (riordina la cronologia)
+
+## Sincronizzare con un repository remoto
+
+`git remote add <nome-remoto> <url>` : Aggiunge un repository remoto con un nome specificato
+
+`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto
+
+`git pull <nome-remoto> <nome-branch>` : Recupera e unisce i cambiamenti dal repository remoto al branch locale
+
+`git fetch <nome-remoto>` : Recupera i cambiamenti dal repository remoto senza unirli al branch locale
+
