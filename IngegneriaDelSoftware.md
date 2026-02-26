@@ -364,7 +364,7 @@ Specifiche formali trasformate automaticamente in codice eseguibile
 
 - necessarie competenze specifiche per scrivere specifiche formali
 - difficile specificazione formale di alcune parti
-- difficoltà da parte del cliente a convalidare i requisiti 
+- difficoltà da parte del cliente a convalidare i requisiti
 
 **applicabilità**:
 
@@ -372,3 +372,87 @@ Specifiche formali trasformate automaticamente in codice eseguibile
 - ottimo per parti critiche, dove validità va dimostrata **by construction**
 
 ## 4. SVILUPPO AGILE DEL SOFTWARE
+
+**processi plan-driven**: con pianificazione dettagliata, ottimi per sistemi critici, con team numerosi e lontani, progetti e software di lunga durata.Poco adatti a contesti dinamici, poco flessibili.
+
+Necessità di risposta rapida, comunicazione fra stakeholder e cliente nel processo per feedback rapido &rarr; agilità
+
+### Caratteristiche generali
+
+**documentazione minima**:
+
+- focus sul codice
+- no specifiche dettagliate
+- overhead documentazione limitata
+
+**consegna rapida e incrementale**:
+
+- incrementi rilasciati frequentemente
+- stakeholder coinvolti
+
+**strumenti di supporto**:
+
+- uso di strumenti di supporto del processo di sviluppo (es. automatizzazione test)
+
+|processi plan-driven            |processi agili                                              |
+|--------------------------------|------------------------------------------------------------|
+|attività pianificate in anticipo|                   pianificazione incrementale continua     |
+| fasi processo software distinte|requisiti, progettazione e implementazione contemporanemente|
+| incrementi pianificati         | incrementi rapidi                                          |
+
+Pratiche plan-driven e agili possono coesistere
+
+### Principi agili
+
+**coinvolgimento del cliente**: coinvolti in tutto il processo di svluppo
+
+- valutano e validano
+- forniscono nuovi requisiti e propongono modifiche
+- assegnano priorità
+
+**accettare i cambiamenti**: prodotto non pianificato rigidamente, prevedere che i requisiti cambieranno
+
+**mantenere la semplicità**: prodotto e processo di sviluppo semplici, eliminare le complessità
+
+**sviluppo incrementale**: software consegnato incrementalmente, cliente specifica i requisiti da includere negli incrementi
+
+**persone, non processi**: processo di sviluppo non eccessivamente prescrittivo e rigido
+
+#### Applicabilità
+
+**adatto a**:
+
+- prodotti di piccole e medie dimensioni
+- prodotti personalizzati (con coinvolgimento cliente)
+- pochi stakholder
+- team fisicamente vicini, con comunicazione informale
+
+**vantaggi**:
+
+- consegne predicibili
+- rapida risposta a cambiamenti
+- rischi bassi grazie a cicli di consegna rapidi
+- alta produttività
+- clienti soddisfatti
+
+**esempio**:
+
+- prodotto evolve con brevi iterazioni
+- iterazioni con durata fissa (es. 2 settimane)
+- applicazione funzionante rilasciata a fine di ogni iterazione, aggiungendo quante più funzionalità ad alta priorità possibili
+- cliente rivede ogni incremento e ridefinisce priorità
+- non si fallisce una data di consegna, piuttosto si rimanda qualche feature
+
+### Tecniche agili
+
+#### Extreme Programming (XP)
+
+#### Tecniche agili - Storie Utente
+
+#### Tecniche agili - Refactoring
+
+#### Tecniche agili - Sviluppo preceduto dai Test
+
+#### Tecniche agili - Pair Programming
+
+#### Tecniche agili - Scrum
