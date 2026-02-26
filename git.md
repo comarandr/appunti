@@ -40,6 +40,36 @@
 - `git checkout -b <nome-branch>` : Crea un nuovo branch e passa ad esso
 - `git checkout -d <nome-branch>` : Elimina un branch
 
+## Spostarsi tra i commit
+
+### visualizzare la cronologia dei commit
+
+`git log` : Mostra la cronologia dei commit
+
+`git log --oneline` : Mostra la cronologia dei commit in formato compatto (una riga per commit)
+
+`git log --graph` : Mostra la cronologia dei commit con una rappresentazione grafica dei branch e dei merge
+
+`git log --all` : Mostra la cronologia dei commit di tutti i branch
+
+`git log --remote` : Mostra la cronologia dei commit dei branch remoti
+
+### spostarsi in un commit specifico
+
+`git checkout <commit>` : Passa a un commit specifico (modalità detached HEAD)
+
+`git switch --detach <commit>` : Passa a un commit specifico in modalità detached HEAD (alternativa a checkout)
+
+`git checkout <nome-branch>^` : Passa al commit genitore del branch specificato
+
+`git checkout <nome-branch>~n` : Passa al commit n livelli sopra il branch specificato
+
+### forzatura di un branch
+
+`git branch -f <nome-branch> <commit>` : Forza il branch a puntare a un commit specifico (può causare perdita di dati se non usato con cautela)
+
+- nota: \<commit> può anche essere un riferimento relativo `nome-branch~n` o `nome-branch^`
+
 ## Unire i branch
 
 `git merge <nome-branch>`: Unisce il branch specificato nel branch attivo
@@ -47,6 +77,11 @@
 in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 `git rebase <nome-branch>`: Applica le modifiche del branch attivo sopra il branch specificato (riordina la cronologia)
+
+1. creo il ramo secondario con la feature da sviluppare
+2. mi sposto sul ramo secondario e faccio i commit
+3. mentre sono sul ramo secondario, faccio un rebase del ramo principale per portare le modifiche più recenti
+4. risolvo eventuali conflitti
 
 ## Sincronizzare con un repository remoto
 
@@ -58,3 +93,8 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 `git fetch <nome-remoto>` : Recupera i cambiamenti dal repository remoto senza unirli al branch locale
 
+## Annullare le modifiche
+
+`git reset <commit>` : Resetta il branch attivo a un commit specifico, annullando tutte le modifiche successive (perdita di dati)
+
+`git reset <commit>` : Resetta il branch attivo a un commit specifico, mantenendo le modifiche nella directory di lavoro (non annulla le modifiche, ma le sposta nell'area di staging)
