@@ -64,6 +64,15 @@
 
 `git checkout <nome-branch>~n` : Passa al commit n livelli sopra il branch specificato
 
+### operatori di riferimento ^ e ~
+
+- `^` : Riferisce al genitore di un commit
+  - `^<numero>` : Riferisce al genitore n-esimo di un commit nel caso di genitori multipli (**spostamento orizzontale**)
+- `~` : Riferisce al commit genitore di un commit, ma permette di specificare un numero di livelli da risalire
+  - `~n` : Riferisce al commit n livelli sopra il commit specificato (**spostamento verticale**)
+
+Gli operatori `^` e `~` possono essere combinati per navigare nella cronologia dei commit
+
 ### forzatura di un branch
 
 `git branch -f <nome-branch> <commit>` : Forza il branch a puntare a un commit specifico (può causare perdita di dati se non usato con cautela)
@@ -83,15 +92,6 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 3. mentre sono sul ramo secondario, faccio un rebase del ramo principale per portare le modifiche più recenti
 4. risolvo eventuali conflitti
 
-## Sincronizzare con un repository remoto
-
-`git remote add <nome-remoto> <url>` : Aggiunge un repository remoto con un nome specificato
-
-`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto
-
-`git pull <nome-remoto> <nome-branch>` : Recupera e unisce i cambiamenti dal repository remoto al branch locale
-
-`git fetch <nome-remoto>` : Recupera i cambiamenti dal repository remoto senza unirli al branch locale
 
 ## Annullare le modifiche
 
@@ -106,3 +106,30 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 `git cherry-pick <commit>` : Applica le modifiche introdotte da un commit specifico al branch attivo (utile per portare modifiche specifiche da un branch all'altro senza unire tutto il branch)
 
 `git rebase -i <nome-branch/commit>` : apre un editor interattivo che ti permette di selezionare i commit da includere, moficare o eliminare durante un rebase, dal branch o commit specificato fino al branch attivo.
+
+## Git tag
+
+`git tag <nome-tag>` : Crea un tag leggero con il nome specificato, permette di identificare un commit preciso
+
+`git describe <ref>` : Mostra una descrizione del commit più vicina a un tag, con output del tipo `<tag>-<numero-commit>-g<hash>`
+
+## Sincronizzare con un repository remoto
+
+### scaricare da un repository remoto
+
+**nota**: i rami remoti riflettono lo stato del repository remoto dall'ultima volta che abbiamo comunicato con esso (tramite fetch, pull o push)
+
+`git clone` : Clona una repository esistente da un URL, creando una copia locale del repository remoto
+
+`git fetch`: scarica commit presenti in remoto e assenti dal nostro repository locale, aggiornando dove puntano i nostri branche remoti ("origin/branch") ma senza modificare i nostri branch locali. è una sorta di download dei cambiamenti.
+
+`git remote add <nome-remoto> <url>` : Aggiunge un repository remoto con un nome specificato
+
+**nota**: potenzialmente è possibile prima scaricare i commit con fetch e poi unirli e spostarsi attraverso essi come se fossero stati creati localmente (cherry-pick, merge, rebase, checkout ... <origin/master>)
+
+### scaricare e modificare direttamente
+
+`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto 
+
+`git pull <nome-remoto> <nome-branch>` : Recupera e unisce i cambiamenti dal repository remoto al branch locale, consiste nella combinazione di `git fetch` e `git merge`
+
