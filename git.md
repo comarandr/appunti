@@ -3,7 +3,7 @@
 ## Creare una repository
 
 `git init` : Crea una nuova repository Git nella directory corrente
-`git clone <url>` : Clona una repository esistente da un URL
+`git clone <url>` : Clona una repository esistente da un URL. Imposta automaticamente il tracciamento del branch remoto "origin" e del branch "master" (o "main")
 
 ## Salvare le modifiche
 
@@ -85,13 +85,15 @@ Gli operatori `^` e `~` possono essere combinati per navigare nella cronologia d
 
 in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
-`git rebase <nome-branch>`: Applica le modifiche del branch attivo sopra il branch specificato (riordina la cronologia)
+`git rebase <nome-branch>`: Applica le modifiche del branch attivo sul il branch specificato (se mi trovo su B e faccio `rebase A` applica le modifiche di B su A)
 
 1. creo il ramo secondario con la feature da sviluppare
 2. mi sposto sul ramo secondario e faccio i commit
 3. mentre sono sul ramo secondario, faccio un rebase del ramo principale per portare le modifiche più recenti
 4. risolvo eventuali conflitti
 
+- pro: mantiene una cronologia più lineare e pulita
+- contro: modifica lo storico dei commit
 
 ## Annullare le modifiche
 
@@ -129,7 +131,20 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 ### scaricare e modificare direttamente
 
-`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto 
+`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto
 
 `git pull <nome-remoto> <nome-branch>` : Recupera e unisce i cambiamenti dal repository remoto al branch locale, consiste nella combinazione di `git fetch` e `git merge`
+
+**nota**: generalmente il main branch è bloccato. Normalmente bisogna:
+
+1. creare un branch secondario
+2. fare le modifiche e i commit su questo branch
+3. fare un push del branch secondario al repository remoto
+4. creare una pull request per unire le modifiche al main branch
+
+## Tracking
+
+`git branch -u <nome-remoto>/<branch-remoto> <branch-locale>` : Imposta il tracking del branch remoto con il branch locale. Se stiamo lavorando giù sul branch locale possiamo ometterlo
+
+`git checkout -b <branch-locale> <nome-remoto>/<branch-remoto>` : Imposta il tracking del branch remoto con il branch locale
 
