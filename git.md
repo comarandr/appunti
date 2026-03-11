@@ -131,7 +131,9 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 ### scaricare e modificare direttamente
 
-`git push <nome-remoto> <nome-branch>` : Invia i commit del branch locale al repository remoto
+`git push <remoto> <place>` : Invia i commit del branch locale al repository remoto
+
+`git push <remoto> <branch-locale>:<branch-remoto>` : Invia i commit del branch locale al repository remoto, specificando il nome del branch remoto (se diverso da quello locale)
 
 `git pull <nome-remoto> <nome-branch>` : Recupera e unisce i cambiamenti dal repository remoto al branch locale, consiste nella combinazione di `git fetch` e `git merge`
 
