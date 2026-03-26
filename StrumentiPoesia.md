@@ -216,13 +216,15 @@ Con la sinalefe questione più problematica:
 
 ## L'ACCENTO
 
+### Sillabismo e accento
+
 La metrica italiana considera anche la posiuzione dell'ultima sillaba tonica, perchiò è definibile _sillabico-accentuativa_
 
 **accento di intensità, dinamico**: implica un aumento di forza nella pronuncia della sillaba, che si distingue dalle altre per maggiore intensità
 
 Tra accenti pertinenti nel verso e quelli rilevabili non c'è piena coincidenza, raramente un accento metrico cade su una sillaba che sarebbe atona in prosa. Per questi alcuni parlano di **ictus** invece che di accento
 
-### accenti obbligatori, principali, secondari
+#### accenti obbligatori, principali, secondari
 
 - **accenti del verso**: sillabe che occupano certe posizioni sono toniche
 
@@ -234,7 +236,7 @@ Tra accenti pertinenti nel verso e quelli rilevabili non c'è piena coincidenza,
 
 **schema accentuativo**: disposizione degli accenti nel verso
 
-### versi ad accentazione fissa o variabile
+#### versi ad accentazione fissa o variabile
 
 - **versi ad accentazione fissa**: accenti obbligatori in posizioni fisse
   - decasillabo (3^a^, 6^a^, 9^a^); novenario (2^a^, 5^a^, 8^a^); ottonario (3^a^, 7^a^); senario (2^a^, 5^a^);
@@ -242,37 +244,147 @@ Tra accenti pertinenti nel verso e quelli rilevabili non c'è piena coincidenza,
 - **versi ad accentazione variabile**: versi con diverse disposizioni di accenti non obbligatori
   - endecasillabo (su 4^a^ o 6^a^ oltre la 10^a^); settenario (una delle prime 4 sillabe tonica + 6^a^); quinario (1^a^ o 2^a^ + 4^a^)
 
+- **versi distinti dal solo schema accentuativo**: generalmente due versi con lo stesso numero di sillabe sono sostituibili tra loro, anche se presentano una diversa disposizione degli accenti non obbligatori. Rari i casi in cui non è così
+
+### Interpretazione ritmica del verso
+
+(...)
+
 ## I VERSI ITALIANI
 
 ### Endecasillabo
 
+ultima sillaba tonica in 10^a^ posizione
+
+- **canonico**: almeno una tra 4^a^ o 6^a^ toniche + 10^a^
+  - **a minore**: 4^a^ + 10^a^ (ritmo iniziale quinario)
+  - **a maiore**: 6^a^ + 10^a^ (ritmo iniziale settenario)
+- **non canonico**: 4^a^ e 6^a^ atone
+
 ### Decasillabo
+
+ultima sillaba tonica in 9^a^ posizione
+
+- **forma accenti fissi**: 3^a^ + 6^a^ + 9^a^ toniche
 
 ### Novenario
 
+ultima sillaba tonica in 8^a^ posizione
+
+- **forma accenti fissi**: 2^a^ + 5^a^ + 8^a^ toniche
+
+In Pascoli del tipo 2^a^ + 5^a^ + 8^a^ e 3^a^ + 5^a^ + 8^a^
+
 ### Novenario Doppio
+
+Due novenari nello stesso verso
 
 ### Ottonario
 
+ultima sillaba tonica in 7^a^ posizione
+
+- **forma accenti fissi**: 3^a^ + 7^a^ toniche
+
+In Pascoli del tipo 3^a^ + 7^a^ e 1^a^ + 4^a^ + 7^a^
+
 ### Ottonario Doppio
+
+Due ottonari nello stesso verso
 
 ### Settenario
 
-### Settenario Doppio
+ultima sillaba tonica in 6^a^ posizione
+
+- **forma eccezionale**: 5^a^ + 6^a^ toniche
+
+Frequente combinazione settenari e endecasillabi
+
+### Settenario Doppio (alessandrino o martelliano)
+
+due settenari nello stesso verso, diverse tipologie
+
+- settenario sdrucciolo + settenario piano
+- settenario piano o sdrucciolo + settenario
+- martelliano: settenario piano + settenario piano
 
 ### Senario
 
+ultima sillaba tonica in 5^a^ posizione
+
+- **forma normale**: 2^a^ + 5^a^ toniche
+- **forma eccezionale**: altra sillaba tonica non in seconda posizione
+
 ### Senario Doppio
+
+Due senari nello stesso verso. Entrambi con 2^a^ + 5^a^
 
 ### Quinario
 
+ultima sillaba tonica in 4^a^ posizione
+
+Generalmente toniche 1^a^ o 2^a^, eccezionalmente la 3^a^ oppure unicamente la 4^a^
+
 ### Quinario Doppio
+
+Si distingue dal decasillabo perché la divisione è costante e accento cade sempre sulla 4^a^
 
 ### Quadrisillabo
 
+ultima sillaba tonica in 3^a^ posizione
+
 ### Trisillabo
 
+ultima sillaba tonica in 2^a^ posizione
+
 ## LA RIMA
+
+### Caratteristiche generali e tipologie di schemi delle rime
+
+**rima**: identià di suono della parte finale di duo o più parole, a partire della vocale tonica compresa (o di due o più versi sempre a partire dalla vocale tonica compresa)
+
+può avere funzione **demarcativa** da un verso all'altro, soprattuto nella poesia anisosillabica.
+
+Nella poesia isosillabica (verso percepibile in numero di sillabe e accenti), la funzione demarcativa è minore, se non all'interno del verso.
+
+**schema delle rime**: disposizione delle rime, uno degli elementi di maggiore rilievo nella costruzione di strutture strofiche.
+
+**rima baciata o a coppie o accoppiata**: AA BB CC
+**rima alternata o incrociata**: ABAB CDCD
+**rima incrociata o chiusa o abbracciata**: ABBA CDDC
+**rima incatenata**: ABAB BCBC
+**rima costante**: AAAA
+
+### Funzione ritmica o associativa
+
+Le ripetizione di serie di suoni servono a dare ritmo al testo e a associare tra loro due o più parole, relazionandole anche dal punto di vista semantico.
+
+**rima facile**: scarso impegno stilistico, di cui sono disponibili molte parole
+
+- **desinenziale**: parole di uguale desinenza (mentire / sentire) 
+- **suffissale**: parole di uguale suffisso (avverbi in -mente)
+
+**rima difficile**: rima con poche paroli disponibili
+
+**rima derivativa**: fra due parole di cui una deriva dall'altra (degna / disdegna), anche con con derivazione apparente (membra / rimembra)
+
+**rima inclusiva**: una parola in rima è contenuta nelle altre (arte / Marte), anche in assenza di derivazione vera o falsa (carte / parte)
+
+### identità di suoni e tipologie
+
+**rima perfetta**: identità di tutte le vocali e consonanti a partire dall'ultima tonica
+
+**rima imperfetta**: rima non perfetta
+
+- **assonanza**: identità rigorosa delle sole vocali (dice / venisse)
+  - **assonanza imperfetta**: uguale soltanto ultima vocale tonica
+- **consonanza**: uguali soltanto le consonanti o manca uguaglianza dell'ultima tonica, raramente in luogo della rima ma più spesso per collegare fra loro serie di rime diverse.
+
+L'assonanza al posto della rima non è necessariamente segno di trascuratezza.
+
+NOTA: il concetto di identità non è unicamente fonetica ma anche culturale: in italiano _è_ aperta fa rima con _é_ chiusa. Nelle metriche romanza e provenzale per esempio non è così. Pare che questo sia dovuta anche all'influenza del siciliano. Un esempio di rima culturale è la rima siciliana, uscita dall'uso odierno.
+
+### rima piana, tronca, sdrucciola
+
 
 ## FORME REGOLATE E FORME FISSE
 

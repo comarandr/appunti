@@ -1,34 +1,24 @@
-# Alfrig Grérr
+# Alfrigg Grérr
 
-## Backstory
+## Otr Grérr (padre)
 
-### Famiglia
+Rinomato fabbro. Tiene sempre il broncio, piuttosto scorbutico, ma tratta tutti allo stesso modo. Non ha preferenze per nessuno, né fa favori. L'unica sua ossessione è la forgiatura e il metallo, tant'è che al contrario di molti altri fabbri nanici, era incuriosito dalle tecniche di altre razze, anche elfiche. Quello che apprese lo applicò per migliorare le proprie creazioni, con risultati eccellenti, soprattutto in termini di silenziosità e leggerezza rispetto alle pure tecniche naniche.
 
-**Padre**: Otr Grérr
+La sua ossessione è all'origine dei suoi comportamenti piuttosto anomali per un nano: un'enorme curiosità quasi scientifica per i metalli e l'assenza di interesse per la questione razziale.
 
-**Madre**: Hildr Grérr
+Prima di stabilirsi a ... ha risieduto in diverse città, tra cui Melduar, dove sembra che si frequentasse con un "amico scomodo per un nano", un fabbro di un'altra razza, forse umana, forse addirittura elfica. Tutto ciò non passò inosservato. Poco prima della caduta di Melduar venne minacciato e allontanato, graziato anche grazie alla mediazione di suo fratello. Una volta trasferitosi a ... aprì una bottega di metallurgia nanica tradizionale e non fece parola con nessuno del suo passato.
 
-**Fratelli**: Fjalar Grérr, Galar Grérr
+Istruì i figli alla forgiatura, e quando furono abbastanza abili ne approfittò per dedicarsi anche allo studio dei metalli, in un piccolo laboratorio artigianale che aveva allestito sotto la sua bottega.
 
-**Zio**: Dvalinn Grérr
-
-### Otr Grèrr
-
-Rinomato fabbro, in particolare per quanto riguarda la forgiatura di asce e armature. Tiene sempre il broncio, piuttosto scorbutico, ma tratta tutti allo stesso modo. Non ha preferenze per nessuno, né fa favori. L'unica sua ossessione è la forgiatura e il metallo, tant'è che al contrario di molti altri fabbri nanici, era incuriosito dalle tecniche delle altre razze, anche elfiche. Per ovvi motivi non riuscì mai a padroneggiare completamente le tecnologie delle altre creature, ma pare che quello che apprese lo applicò per migliorare le proprie creazioni, con risultati eccellenti, soprattutto in termini di silenziosità e leggerezza rispetto alle pure tecniche naniche.
-
-Quando i figli fuono abbastanza grandi pare oltre a continuare a forgiare si dedicò alla collezione e allo studio dei metalli. Questa sua ossessione secondo molti è la spiegazione per i suoi comportamenti piuttosto anomali per un nano: una certa tolleranza per le altre razze, una tendenza allo studio e all'analisi dei metalli.
-
-prima di trasferirsi a ... (villaggio a nord nelle montagne) pare che viaggiò abbastanza in gioventù e si fosse stabilizzato nella città di Melduar prima che cadesse in mano agli elfi. Lì, secondo voci di corridoio, pare che avesse un amico "scomodo per un nano", un fabbro, nano secondo alcuni, umani secondo altri, demoniaco, o forse addirittura un elfo. Questa sua apertura gli costò molto, pare che venne minacciato per le sue tendenze. Venne anche contattato per lavorare come fabbro per l'esercito, ma rifiutò. Pare che ci siano state minacce e da quella volta decise di trasferirsi a ... Alfrigg non seppe mai se si trasferì per la guerra o per i suoi studi.
-
-Trasmise la diffidenza per la politica e una certa noncuranze per la questione razziale.
+Non volle mai sapere nulla dell'esercito e della guerra, pare che gli venne proposto di andare a lavorare nella capitale ma si rifiutò.
 
 ### Fjalar & Galar
 
 Fratelli gemelli, dotati di enorme talento per le armi. In particolare per quanto riguarda forgiature d'elite: fucili, pistole, martelli, spade. Decisamente più avidi rispetto al fratello, probabilmente non guarderebbero in faccia nessuno. Decisamente più interessati alla politica e a servir il miglior offerente dell'esercito. Litigavano spesso tra di loro visto il loro caratter scorbutico. Molto vicini alla causa del regno.
 
-### Dvalinn
+### Dvalinn (zio)
 
-Nano che ha sempre combattuto per l'esercito regolare. Combattente molto valoroso, pare che venne mandato diverse volte al fronte contro le altre razze. Per timore che fosse come il fratello venne man mano allontanato dal fronte principale.
+Fratello maggiore di Otr. Soldato per l'esercito regolare. Combattente molto valoroso, ha combattuto sia nel fronte meridionale che in quello occidentale. Spesso è stato impiegato anche all'interno di questioni intestine al regno e come scorta per i nobili, ma negli ultimi anni è stato man mano allontanato dai fronti principale. Aveva un debole per il giovane Alfrigg, al contrario del fratello era più socievole. Dotato di un forte senso del dovere e del rispetto per l'etica del guerriero, è sempre stato riconosciuto come un combattente valoroso e onorevole. Da quel che Alfrigg sa, fa parte di quella schiera di generali che non si è macchiato di particolari crimini di guerra. Molto devoto alla causa del regno, per cui darebbe la vita.
 
 ### Prima dell'Ordine
 
