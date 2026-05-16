@@ -1,6 +1,6 @@
-## C secondo sCagnetto
+# C secondo sCagnetto
 
-### indice
+## indice
 
 1. [Concetti basilari](#concetti-basilari-tipi-sintassi-ecc)
     1. [Compilazione](#compilazione)
@@ -23,9 +23,9 @@
 13. [Multithreading](#multithreading)
 14. [Mutex e condition variables](#mutex-e-condition-variables)
 
-#### concetti basilari (tipi, sintassi, ecc...)
+### concetti basilari (tipi, sintassi, ecc...)
 
-##### compilazione
+#### compilazione
 
 ```py
 $clang programma.c #genera a.out
@@ -37,7 +37,7 @@ $clang -c file.c #genera il file binario file.o
 $clang file.o -o file #genera eseguibile
 ```
 
-##### pre-processing
+#### pre-processing
 
 ```c
 //precedute da # 
