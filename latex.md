@@ -48,4 +48,40 @@ La suddivisione viene enumerata automaticamente
 \begin{tabbing} 
 col1 \ col2 \ col3 
 \end{tabbing}
-``` 
+```
+
+ottengo
+
+```txt
+col1    col2    col3
+```
+
+- **colore testo**: `\textcolor{color_name}{testo}`
+- **corsivo**: `\textit{testo}`
+- **grassetto**: `\textbf{testo}`
+- **sottolineato**: `\underline{testo}`
+
+## Tabelle
+
+Per prima cosa inizializziamo la tabella richiamando l'ambiente `tabular`:
+
+```tex
+\begin{tabular}{condizioni}
+...
+\end{tabular}
+```
+
+parametri:
+
+- **l,c,r**: allineamento a sinistra, al centro o a destra
+- **p{width}**: per specificare la larghezza di una colonna, esclude parametri di allineamento
+- **|**: per inserire una linea verticale
+- **@{...}**: per spaziare le colonne
+
+Costruzione della tabella:
+
+- **&**: per separare le colonne
+- **\\**: per andare a capo
+- **\hline**: per inserire una linea orizzontale
+- **\cline{i-j}**: per inserire una linea orizzontale tra colonna i e j
+- **\multicolumn{ncol}{allineamentoOrizz}{...}**: per unire n colonne, condizioni e testo sono opzionali
