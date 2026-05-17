@@ -3,7 +3,19 @@
 ## Indice
 
 1. [Parte 1 - Matematica discreta](#parte-1---matematica-discreta)
-    1. [Insiemi](#insiemi)
+    1. [Contare](#contare)
+    2. [Insiemi](#insiemi)
+    3. [Relazioni](#relazioni)
+    4. [Funzioni](#funzioni)
+    5. [Induzione](#induzione)
+    6. [Sommatorie](#sommatorie)
+    7. [Probabilità](#probabilità)
+    8. [Matematica degli interi](#matematica-degli-interi)
+    9. [Parità e disparità](#parità-e-disparità)
+    10. [Principio della piccionaia](#principio-della-piccionaia)
+    11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
+    12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
+    13. [Teoria dei Grafi](#teoria-dei-grafi)
 2. [Parte 2 - Algebra lineare](#parte-2---algebra-lineare)
     1. [Spazio $\mathbb{R}^n$](#spazio-mathbbrn)
         1. [Definizioni base](#definizioni-base)
@@ -11,7 +23,119 @@
 
 ## Parte 1 - Matematica discreta
 
+### Contare
+
 ### Insiemi
+
+**Insieme**: concetto porimitivo, collezione di oggetti detti elementi
+**Cardinalità $|A|$**: numero di elementi di un insieme $A$
+**Insieme vuoto $\emptyset$**: insieme senza elementi, $|\emptyset| = 0$
+**A sottoinsieme di B**: $A \subseteq B$ se ogni elemento di A è anche in B
+**prodotto cartesiano $A \times B$**: insieme di tutte le coppie $(a, b)$ con $a \in A$ e $b \in B$
+
+### Relazioni
+
+**riflessiva**: $x \smile x\ \forall x$
+**antiriflessiva**: $\neg (x \smile x)\ \forall x$
+
+**simmetrica**: $x \smile y \implies y \smile x$
+**antisimmetrica**: $x \smile y\ \implies \neg (y \smile x)$
+
+**transitiva**: $(x \smile y) \land (y \smile z) \implies (x \smile z)$
+
+**D'ORDINE**: irriflessiva, antisimmetrica e transitiva
+**D'EQUIVALENZA**: riflessiva, simmetrica e transitiva
+
+Le relazioni d'equivalenza implicano una partizione dell'insieme in classi di equivalenza
+
+#### Congruenza modulo $n$ $x \equiv_n y$
+
+Resto della divisione intera tra due numeri
+
+$12 \mod 3 = 0$ | $-12 \mod 3 = 0$
+$13 \mod 3 = 1$ | $-13 \mod 3 = 2$
+$14 \mod 3 = 2$ | $-14 \mod 3 = 1$
+
+dato $x \equiv_n y$ allora:
+
+- $x-y \equiv_n 0$
+- $x + z \equiv_n y + z$
+- $x \cdot z \equiv_n y \cdot z$
+
+considerando anche $z_1 \equiv_n z_2$:
+
+- $x+z_1 \equiv_n y+z_2$
+- $x \cdot z_1 \equiv_n y \cdot z_2$
+
+### Funzioni
+
+**iniettiva**: $x \neq x' \implies f(x) \neq f(x')$
+**suriettiva**: $f: A \to B\ f(A) = B $
+**biiettiva**: iniettiva e suriettiva, invertibile
+
+**ceiling**: $\lceil x \rceil = \min \{v \in \mathbb{Z} : v \geq x\}$ più piccolo intero maggiore o uguale a $x$
+**floor**: $\lfloor x \rfloor = \max \{v \in \mathbb{Z} : v \leq x\}$ più grande intero minore o uguale a $x$
+
+**composta**: $f \circ g(x) = f(g(x))$
+
+### Induzione
+
+- Base: $P(0)$ è vera
+- Passo induttivo: $ \forall n \geq 0,\ P(n+1)\ vera \implies P(n)\ vera$
+
+### Sommatorie
+
+$$ \sum_{k=1}^n a_k\ = a_1 + a_2 + \ldots + a_n $$
+
+#### Regole
+
+#### Somme multiple
+
+#### Scambio di indici
+
+#### Somme notevoli
+
+#### Metodo di perturbazione
+
+### Probabilità
+
+### Matematica degli interi
+
+### Parità e disparità
+
+#### Segno permutazioni
+
+### Principio della piccionaia
+
+### Principio di somma e del prodotto
+
+#### Principio di somma
+
+#### Principio di prodotto
+
+#### Combinazioni
+
+#### Coefficiente binomiale
+
+#### Triangolo di Pascal
+
+#### Processi Bernoulliani
+
+#### Disposizioni (insiemi ordinati)
+
+#### Multinsiemi (insiemi con elementi ripetuti)
+
+#### Combinazioni con ripetizioni
+
+### Principio di inclusione-esclusione
+
+#### Principio base
+
+#### Spiazzamenti
+
+### Teoria dei Grafi
+
+
 
 ## Parte 2 - Algebra lineare
 
@@ -49,4 +173,4 @@ $$ z = \lambda \cdot a \iff z_i = \lambda \cdot a_i\ \forall i = 1, \ldots, n $$
 - distributivo: $$\lambda \cdot (a+b) = \lambda \cdot a + \lambda \cdot b \forall \lambda \in \mathbb{R}, a,b \in \mathbb{R}^n$$
 - elemento neutro: $$1 \cdot a = a \forall a \in \mathbb{R}^n$$
 
-**PRODOTTO SCALARE**
+**PRODOTTO SCALARE**:
