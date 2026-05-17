@@ -149,4 +149,3 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 `git branch -u <nome-remoto>/<branch-remoto> <branch-locale>` : Imposta il tracking del branch remoto con il branch locale. Se stiamo lavorando giù sul branch locale possiamo ometterlo
 
 `git checkout -b <branch-locale> <nome-remoto>/<branch-remoto>` : Imposta il tracking del branch remoto con il branch locale
-
