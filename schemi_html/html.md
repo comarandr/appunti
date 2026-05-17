@@ -228,34 +228,34 @@ Posso suddividere un’immagine in diverse aree. In base all’area cliccata vie
 
 Utili per dividere la pagine in sezioni indipendenti tra loro, usati al posto del tag \<body>.
 
-Si inzializza un frameset con i tag **\<frameset> … \</frameset>**. Non possono essere accostati uno di seguito all’altro, perché i frameset occupano tutta la pagina. Possono essere annidati, ovvero un frame all’interno di un frameset può essere a sua volta un frameset di frame.
+Si inzializza un frameset con i tag **\<frameset> … \</frameset>**. Non possono essere accostati uno di seguito all’altro, perché i frameset occupano tutta la pagina. **Possono essere annidati**, ovvero un frame all’interno di un frameset può essere a sua volta un frameset di frame.
 Possiede i seguenti attributi
 
-- border, spessore dei bordi per frame figli
-- bordercolor, colore dei bordi dei frame figli
-- cols, numero e dimensione dei frame verticali (pixel o percentuale). Vanno bene anche elenchi per più frame verticali “40%,30%,*” l’asterisco alloca tutta l’area rimanente
-- rows, numero e dimensione delle righe, uso analogo a cols
-- frameborder, specifica se frame visualizzati con bordo (0 no, 1 sì). Definibile a livello di singolo frame
+- **border**, spessore dei bordi per frame figli
+- **bordercolor**, colore dei bordi dei frame figli
+- **cols**, numero e dimensione dei frame verticali (pixel o percentuale). Vanno bene anche elenchi per più frame verticali “40%,30%,*” l’asterisco alloca tutta l’area rimanente
+- **rows**, numero e dimensione delle righe, uso analogo a cols
+- **frameborder**, specifica se frame visualizzati con bordo (0 no, 1 sì). Definibile a livello di singolo frame
 
-All’interno dei frameset specifico le sezioni della pagina con l’attributo \<frame>, i cui attributi sono:
+All’interno dei frameset specifico le sezioni della pagina con l’attributo **\<frame>**, i cui attributi sono:
 
-- frameborder - specifica se il frame è visualizzato con un bordo. Il valore 1 ne indica la presenza, mentre 0 lo disabilita.
-- name - indica il nome con cui far riferimento al frame.
-- noresize - se presente, evita che l’utente possa ridimensionare il frame.
-- scrolling - specifica se deve apparire una barra di scorrimento nel frame. I valori possibili sono yes, no, auto; se impostato su auto, che è l’impostazione di default, è il browser a determinare l’eventuale creazione della barra.
-- src - indica il file da visualizzare all’interno del frame; se non si specifica un attributo src, lo spazio in cui dovrebbe apparire il frame risulterà vuoto.
-- marginheight e marginwidth - permettono di impostare la distanza verticale (marginheigth) e orizzontale (marginwidth) tra i bordi del frame e il suo contenuto
+- **frameborder**: specifica se il frame è visualizzato con un bordo. Il valore 1 ne indica la presenza, mentre 0 lo disabilita.
+- **name**: indica il nome con cui far riferimento al frame.
+- **noresize**: se presente, evita che l’utente possa ridimensionare il frame.
+- **scrolling**: specifica se deve apparire una barra di scorrimento nel frame. I valori possibili sono yes, no, auto; se impostato su auto, che è l’impostazione di default, è il browser a determinare l’eventuale creazione della barra.
+- **src**: indica il file da visualizzare all’interno del frame; se non si specifica un attributo src, lo spazio in cui dovrebbe apparire il frame risulterà vuoto.
+- **marginheight** e **marginwidth**: permettono di impostare la distanza verticale (marginheigth) e orizzontale (marginwidth) tra i bordi del frame e il suo contenuto
 
 Per caricare una pagina all’interno di un frame è sufficiente assegnare all’attributo target del tag \<link> il nome del frame in cui la pagina deve comparire
 
 ## Moduli
 
-Servono per la raccolta dati. Vengono inizializzati con il tag \<form> … \</form>. Presenta i seguenti attributi:
+Servono per la raccolta dati. Vengono inizializzati con il tag **\<form> … \</form>**. Presenta i seguenti attributi:
 
-- name
-- method, può assumere valore get o post in base a come vanno trasmessi dati
-- action, indirizzo script per elaborazione dei dati trasmessi al server tramite il modulo
-- enctype, con method POST, specifica come browser codifica I dati. Assume due valori
+- **name**
+- **method**, può assumere valore get o post in base a come vanno trasmessi dati
+- **action**, indirizzo script per elaborazione dei dati trasmessi al server tramite il modulo
+- **enctype**, con method POST, specifica come browser codifica I dati. Assume due valori
   - application/x-www-form-urlencoded (default)
   - multipart/form-data (per upload di file sul server, permette inviare dati come sequenza di parti)
 
@@ -263,39 +263,39 @@ All’interno del modulo \<form> … \</form> posso inserire gli oggetti per int
 
 ## Input \<input>
 
-**Casella di testo**: \<input type=”text”>, con attributi name, maxlength, size, value
+**Casella di testo**: **\<input type=”text”>**, con attributi name, maxlength, size, value
 
-**Area di testo**: \<textarea> testo area di testo pre-inserito </textarea> con name, rows/cols (numero righe colonne) e wrap (comportamento in caso di contenuto maggiore larghezza area) con valori off (aggiunge scrollbar orizzontale), virtual o soft (a capo automaticamente, server riceve una riga), physical o hard (a capo automaticamente, server riceve più righe)
+**Area di testo**: **\<textarea>** testo area di testo pre-inserito **\</textarea>** con name, rows/cols (numero righe colonne) e wrap (comportamento in caso di contenuto maggiore larghezza area) con valori off (aggiunge scrollbar orizzontale), virtual o soft (a capo automaticamente, server riceve una riga), physical o hard (a capo automaticamente, server riceve più righe)
 
-**Casella password**: \<input type=”password”>
+**Casella password**: **\<input type=”password”>**
 
-**Campo nascosto**: \<input type=”hidden” name=”” value=””>
+**Campo nascosto**: **\<input type=”hidden” name=”” value=””>**
 
-**Pulsante di commando per invio dati**: \<input type=”submit”> con name e value (testo su pulsante)
+**Pulsante di commando per invio dati**: **\<input type=”submit”>** con name e value (testo su pulsante)
 
-**Pulsante per ripristinare valori di default**: \<input type=”reset”> con name e value (testo su pulsante)
+**Pulsante per ripristinare valori di default**: **\<input type=”reset”>** con name e value (testo su pulsante)
 
-**Pulsante generico che deve essere programmato**: \<input type=”button”> con name e value (testo su pulsante)
+**Pulsante generico che deve essere programmato**: **\<input type=”button”>** con name e value (testo su pulsante)
 
-**Casella di controllo**: \<input type=”checkbox”> con attributi name, value, checked, unchecked
+**Casella di controllo**: **\<input type=”checkbox”>** con attributi name, value, checked, unchecked
 
-**Pulsante di opzione**: \<input type=”radio”> con attributi:
+**Pulsante di opzione**: **\<input type=”radio”>** con attributi:
 
 - **name**, serve per identificarlo. Tutti i pulsanti di opzione che fanno parte dello stesso gruppo devono avere lo stesso nome (per poter essere selezionato soltanto uno)
-- **value**, valore restituito quando il pulsante è selezionato (se omesso e viene selezionato allora value=on)
+- **value**, valore restituito quando il pulsante è selezionato (se omesso e viene selezionato allora value = on)
 - **checked**, seleziona il pulsante
 
 **Elenco a discesa**: racchiuso tra i tag **\<select> … \</select>**
-Ogni opzione è rappresentata dal tag \<option value=” ”> nome dell’opzione \</option>
+Ogni opzione è rappresentata dal tag **\<option value=” ”>** _nome dell’opzione_ **\</option>**
 Gli attributi possibili (facoltativi) sono:
 
-- size, numero di opzioni visibili nella lista senza scrollare con barra di scorrimento
-- multiple, se posso selezionare più elementi contemporaneamente
-- selected, indica una voce di menù selezionata
-- value, NON facoltativo, indica il valore che verrà inviato
+- **size**, numero di opzioni visibili nella lista senza scrollare con barra di scorrimento
+- **multiple**, se posso selezionare più elementi contemporaneamente
+- **selected**, indica una voce di menù selezionata
+- **value**, NON facoltativo, indica il valore che verrà inviato
 
-File upload control: \<input type=”file”> con attributi accept (tipo di file) e size (larghezza del campo)
-In accept posso specificare l’ estensione, audio/\*, video/\*, image/\*
+File upload control: **\<input type=”file”>** con attributi **accept** (tipo di file) e **size** (larghezza del campo)
+In accept posso specificare l’**estensione, audio/\*, video/\*, image/\***
 
-\<fieldset> … \</fieldset> raggruppare vari elementi all’interno di un form tracciando un box
-\<legend> nome del fieldset \</legend> all’interno di un fieldset per indicare il nome
+**\<fieldset> … \</fieldset>** raggruppare vari elementi all’interno di un form tracciando un box
+**\<legend>** nome del fieldset **\</legend>** all’interno di un fieldset per indicare il nome
