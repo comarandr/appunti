@@ -89,17 +89,82 @@ $$ \sum_{k=1}^n a_k\ = a_1 + a_2 + \ldots + a_n $$
 
 #### Regole
 
+$ \sum_{k \in K}\ \textbf{c} \cdot a_k = \textbf{c} \cdot \sum_{k \in K}\ a_k $
+
+$ \sum_{k \in K}\ (a_k + b_k) = \sum_{k \in K}\ a_k + \sum_{k \in K}\ b_k $
+
+$ \sum_{k \in K}\ a_k = \sum_{\Pi (k) \in K}\ a_{\Pi(k)} $
+
+$ \sum_{k=1}^\textbf{m}\ a_k + \sum_{k = \textbf{m}}^n\ a_k = a_{\textbf{m}} + \sum_{k=1}^n\ a_k $
+
+$\sum_{k \in K}\ a_k = \sum_{(k + c) \in K}\ a_{(k + c)} $
+
+$\sum_{k = 1}^n\ a_k = \sum_{k = 1}^{\textbf{m}}\ a_k + \sum_{k = \textbf{m+1}}^n\ a_k $
+
 #### Somme multiple
+
+$$\begin{matrix} a_1 b_1 & a_1 b_2 & a_1 b_3 \\ a_2 b_1 & a_2 b_2 & a_2 b_3 \\ a_3 b_1 & a_3 b_2 & a_3 b_3 \end{matrix}$$
+
+| tipologia | formula | estesione |
+| --- | --- | --- |
+| per righe | $$\sum_{i=1}^3\ \sum_{j=1}^3\ a_i b_j$$ | $$a_1 \sum_{j=1}^3 b_j + a_2 \sum_{j=1}^3 b_j + a_3 \sum_{j=1}^3 b_j$$ |
+| per colonne | $$\sum_{j=1}^3\ \sum_{i=1}^3\ a_i b_j$$ | $$ \sum_{i = 1}^3 (a_i)\ b_1 + \sum_{i = 1}^3 (a_i)\ b_2 + \sum_{i = 1}^3 (a_i)\ b_3 $$ |
 
 #### Scambio di indici
 
+$$ \sum_{i \in I} \sum_{j \in J(i)} a_{ij} = \sum_{j \in J} \sum_{i \in I(j)} a_{ij} $$
+
+| $$\sum_{i=0}^n \sum_{j=i}^n s_ij$$ | $$\sum_{j=0}^n \sum_{i=0}^j s_ij$$ |
+| --- | --- |
+
+$J(i) = \{0, \ldots, n\}$
+$I(j) = \{0, \ldots, j\}$
+
 #### Somme notevoli
+
+- somma numeri consecutivi: $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
+
+- somma quadrati numeri consecutivi: $$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$$
+
+- somma potenze consecutive: $$\sum_{k=1}^n k^m = \frac{1}{m+1} \sum_{j=0}^m \binom{m+1}{j} B_j n^{m+1-j}$$
 
 #### Metodo di perturbazione
 
+$$ s_n + a_{n+1} = \sum_{k=0}^{n+1} a_k = \sum_{k=0}^n a_{k+1} $$
+
+$$ s_n + a_{n+1} = a_0 + \sum_{k=0}^n a_{k+1} $$
+
+$s(n)$ sia a sinistra che a destra ma con coefficienti diversi per non elidersi
+
 ### Probabilità
 
+**universo $S$**: $Pr(S) = P|S| = 1$
+
+**distribuita uniforme**: $Pr(A) = p|A|= \frac{|A|}{|S|}$
+
+**probabilità condizionata**: $Pr(A|B) = \frac{Pr(A \cap B)}{Pr(B)}$
+
+**probabilità eventi indipendenti**: $Pr(A \cap B) = Pr(A) \cdot Pr(B)$
+
+**teorema di Bayes**: $Pr(B|A) = \frac{Pr(A|B) \cdot Pr(B)}{Pr(A)}$
+
 ### Matematica degli interi
+
+**divisibilità:** $a|b$ se $\exists m \in \mathbb{Z} : \textbf{b =}\ \textbf{a} \cdot \textbf{m}$
+
+**MCD (a,b)**: $ \max \text{\{divisori a,b\}} $
+**mcm (a,b)**: $ \min \text{\{multipli a,b\}} $
+
+**Algoritmo di Euclide**:
+
+Calcolo di $MCD(a,b)$
+
+1. $a : b = r$
+2. $r = 0 \implies MCD(a,b) = b $
+3. $r \neq 0 \implies b : r = ... $ (ricomincio)
+
+**Teorema di Bezout**: $MCD(a,b) = ax + by$
+ $1 = ax + by$ allora $a$ e $b$ sono coprimi
 
 ### Parità e disparità
 
