@@ -336,7 +336,7 @@ $S = \{a_1, a_2, \ldots, a_k\}$ con $\{a_1 \cdot n_1, a_2 \cdot n_2, \ldots, a_k
 
 **r-combinazioni**: sottoinsiemi di un multinsieme $S = \{a_1 \cdot n_1, \ldots, a_k \cdot n_k\}$
 
-- $n_i \geq r\ \forall i$ 
+- $n_i \geq r\ \forall i$
 $$\binom{r-k+1}{r} \text{ oppure } \binom{r+k-1}{k-1}$$
 $r$: cardinalità r-combinazione
 $k$: tipologie di elementi
@@ -357,11 +357,23 @@ $$\sum_{i=1}^k y_i = r - \sum_{i=1}^k b_i \implies \binom{r - \sum_{i=1}^k b_i -
 
 #### Principio base
 
+$S = \text{\{insieme di elementi con } p_1, p_2, \ldots, p_m \text{ proprietà}\}$
+
+insieme degli elementi che non possiedono alcuna proprietà $p_1, \ldots, p_m$:
+
+$ |\bar{A_1 \cap \bar{A_2} \cap \ldots \cap \bar{A_m}}| =$
+
+$ = | S | $
+$ - \sum |A_{i_1}| $
+$ + \sum |A_{i_1} \cap A_{i_2}| $
+$ \ldots $
+$ + (-1)^d |A_1 \cap A_2 \cap \ldots \cap A_d| $
+$ \ldots $
+$ + (-1)^m |A_1 \cap A_2 \cap \ldots \cap A_m|$
+
 #### Spiazzamenti
 
 ### Teoria dei Grafi
-
-
 
 ## Parte 2 - Algebra lineare
 
