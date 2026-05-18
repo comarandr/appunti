@@ -150,6 +150,8 @@ $s(n)$ sia a sinistra che a destra ma con coefficienti diversi per non elidersi
 
 ### Matematica degli interi
 
+#### divisibilità, MCD, mcm
+
 **divisibilità:** $a|b$ se $\exists m \in \mathbb{Z} : \textbf{b =}\ \textbf{a} \cdot \textbf{m}$
 
 **MCD (a,b)**: $ \max \text{\{divisori a,b\}} $
@@ -165,6 +167,38 @@ Calcolo di $MCD(a,b)$
 
 **Teorema di Bezout**: $MCD(a,b) = ax + by$
  $1 = ax + by$ allora $a$ e $b$ sono coprimi
+
+#### Numeri primi
+
+**Numero primo**: divisori di p: \{1, p\}
+
+- 1 no primo, no composto
+
+**primi in intervallo di n naturali**: $\Pi(N) \sim \frac{N}{\ln N}$
+
+**Primi di Mersenne**: $M(n) = 2^n - 1\ \text{primo} \implies n\ \text{primo}$
+
+**Primi di Fermat**: $F(n) = 2^{2^n} + 1$
+
+**Fattorizzazione in numeri primi**:
+
+$ p \in \mathbb{N}, p \gt 1.$
+
+- $p \text{ primo} \iff \forall a, b \in \mathbb{N} \text{ se } \ p | ab \implies p | a \lor p | b$
+- $\text{se } p|a_1 \cdot a_2 \cdots a_r \implies p | a_i \text{ (almeno un } i \in [1, r])$
+
+**Teorema fondamentale dell'aritmetica**:
+
+$$ \forall n \in \mathbb{N}, n \geq 2\\ n = p_1 \cdot p_2 \cdots p_i \ \text{ con } p_i = \text{fattore primo} $$
+
+Per cui dati $a,b$ con $a = p_1^{n_1} \cdot p_2^{n_2} \cdots p_k^{n_k}$ e $b = p_1^{m_1} \cdot p_2^{m_2} \cdots p_k^{m_k}$
+
+- $$mcm(a,b) = p_1^{\max(n_1,m_1)} \cdot p_2^{\max(n_2,m_2)} \cdots p_k^{\max(n_k,m_k)}$$
+- $$MCD(a,b) = p_1^{\min(n_1,m_1)} \cdot p_2^{\min(n_2,m_2)} \cdots p_k^{\min(n_k,m_k)}$$
+
+**Primo contenuto in un fattoriale $N!$**
+
+$p$ in $n!$ contenuto $ \sum_{k \geq 1} \lfloor \frac{n}{p^k} \rfloor$ volte
 
 ### Parità e disparità
 
