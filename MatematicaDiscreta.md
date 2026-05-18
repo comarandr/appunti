@@ -152,7 +152,7 @@ $s(n)$ sia a sinistra che a destra ma con coefficienti diversi per non elidersi
 
 #### divisibilità, MCD, mcm
 
-**divisibilità:** $a|b$ se $\exists m \in \mathbb{Z} : \textbf{b =}\ \textbf{a} \cdot \textbf{m}$
+**divisibilità:** $a \mid b$ se $\exists m \in \mathbb{Z} : \textbf{b =}\ \textbf{a} \cdot \textbf{m}$
 
 **MCD (a,b)**: $ \max \text{\{divisori a,b\}} $
 **mcm (a,b)**: $ \min \text{\{multipli a,b\}} $
@@ -200,31 +200,158 @@ Per cui dati $a,b$ con $a = p_1^{n_1} \cdot p_2^{n_2} \cdots p_k^{n_k}$ e $b = p
 
 $p$ in $n!$ contenuto $ \sum_{k \geq 1} \lfloor \frac{n}{p^k} \rfloor$ volte
 
+$n! = \sum_{k \geq 1} \lfloor \frac{n}{p^k} \rfloor$ quante volte $p$ è contenuto in $n$
+
+esempio con $15!$
+
+- quante volte $2$ contenuto in $15!$:
+$$ \lfloor \frac{15}{2} \rfloor + \lfloor \frac{15}{2^2} \rfloor + \lfloor \frac{15}{2^3} \rfloor = 7 + 3 + 1 = 11$$
+- quante volte $3$ contenuto in $15!$: $$ \lfloor \frac{15}{3} \rfloor + \lfloor \frac{15}{9} \rfloor + \lfloor \frac{15}{27} \rfloor = 5 + 1 + 0 = 6$$
+
+**proprietà**:
+
+$a \in \mathbb{Z},\ p \text{ primo}$
+
+- $p \nmid a \implies ia \not\equiv_p ja\ \text{ con } \ i,j \in\{1, 2, \ldots, p-1\}$
+- $p \nmid a \implies a^{p-1} \equiv_p 1$
+- $a^p \equiv_p a$
+
 ### Parità e disparità
 
 #### Segno permutazioni
 
+$S_n = \Pi \{1,2, \ldots, n\}$: insieme permutazioni
+
+data $\Pi =\{\pi_1, \ldots, \pi_n\}$ permutazione, tutti i modi per trasformarla in permutazione identica
+
+- o richiedono un numero **pari** di trasposizioni
+- o richiedono un numero **dispari** di trasposizioni
+
 ### Principio della piccionaia
+
+**Teorema**: $n+1$ oggetti in $n$ contenitori, un contenitore ha $2$ o più oggetti
+
+**Teorema**: se $r_1 + r_2 + \ldots + r_n - n + 1$ oggetti in $n$ contenitori, allora o 1 contiene ha $r_1$ o 2 contiene $r_2$ o n-esimo contiene $r_n$
 
 ### Principio di somma e del prodotto
 
+$k$ elementi diversi, $n_1$ del primo tipo, $n_2$ del secondo tipo, $\ldots$, $n_k$ del k-esimo tipo. In quanti modi posso
+
+- un elemento del primo tipo **o** del secondo **o** ...
+- un elemento del primo tipo **e** del secondo **e** ...
+
 #### Principio di somma
+
+$S = S_1 \cup S_2 \cup \ldots \cup S_k$
+$|S| = |S_1| + |S_2| + \ldots + |S_k|$
+
+**conteggio indiretto**: $|A| = |S| + |S'| \implies |S| = |A| - |S'|$
 
 #### Principio di prodotto
 
+$S$: insieme di tute le coppie $(a,b)$: $a$ in $p$ modi, $b$ in $q$ modi dato il primo
+
+$|S| = p \cdot q$
+
+dimostrazione mediate principio somma
+
+#### Scelte su sequenze
+
+$a_1 a_2 a_3 \ldots a_n$ con $a_1$ in $p_1$ modi, $a_2$ in $p_2$ modi
+
+$$ \text{n-ple: } S = p_1 \cdot p_2 \cdot \ldots \cdot p_n $$
+
 #### Combinazioni
+
+dato $A = \{a_1, a_2, \ldots, a_n\}$ il sottoinsieme è un booleano per ogni elemento (è incluso? T/F)
+
+$$\mathcal{P}(A) = 2^{|A|}$$
 
 #### Coefficiente binomiale
 
+$\binom{n}{k}$ k-oggetti su $n$
+
+$$\binom{n}{k} = \frac{n!}{k! (n-k)!}$$
+
+sottoinsiemi di $k$ elementi su $n$
+
+**proprietà del coefficiente binomiale**:
+
+1. $$\binom{n}{k} = \binom{n}{n-k}$$
+stesso numero di sottoinsiemi per $k$ elementi o $n-k$ elementi (in quanto complementare)
+
+2. $$\binom{n}{n} = 1 \text{ , } \binom{n}{1}=n$$
+insieme completo e numero sottoinsiemi di un elemento
+
+3. $$\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}$$
+
+4. $$\binom{n}{k} = \sum_{i=0}^p \binom{p}{i} \binom{n-p}{k-i}$$
+
+5. $$\binom{n}{k} = \sum_{m = k}^n \binom{m-1}{k-1}$$
+
+6. $$\sum_{k=0}^n \binom{n}{k} = 2^n$$
+
+7. $$\text{con } 0 \leq k \leq \frac{n}{\lfloor 2 \rfloor} \text{ succede } \binom{2k}{k} \leq \binom{n}{k}$$
+
+8. $$\text{con } 0 \leq k \leq n \text{ succede } \binom{n}{k} \leq \binom{n}{\frac{n}{\lfloor 2 \rfloor}}$$
+
+9. $$ \forall n \gt 1 \in \mathbb{N} \text{ succede } \binom{2n}{n} \geq 2^n$$
+
+10. $$\forall n \in \mathbb{N^+} \text{ succede } \binom{2n}{n} \geq \frac{2^n}{2n}$$
+
+11. $$\sum_{k=1}^n k \cdot \binom{n}{k} = n \cdot 2^{n-1}$$
+
+12. $$\sum_{k=0}^n \binom{n}{k} 2^k = 3^n$$
+
 #### Triangolo di Pascal
+
+$$(a+b)^n = \sum_{i=0}^n \binom{n}{i} a^i b^{n-i}$$
 
 #### Processi Bernoulliani
 
+Gli esiti sono indipendenti dai precedenti: $p$, $q = 1-p$
+
+probabilità di $k$ successi in $n$ prove:
+$$Pr(n,k) = \binom{n}{k} p^k q^{n-k}$$
+
+probabilità di almeno $k$ successi in $n$ prove:
+$$Pr(n, \geq k) = \sum_{i=k}^n \binom{n}{i} p^i q^{n-i}$$
+
 #### Disposizioni (insiemi ordinati)
+
+prendere un sottoinsieme ma l'ordine conta
+
+$$D(n,k) = \binom{n}{k} \cdot k!$$
+
+$\binom{n}{k}$: in quanti modi posso scegliere il sottoinsieme (quanti sottoinsiemi ci sono)
+$k!$: permutazioni possibili del sottoinsieme
 
 #### Multinsiemi (insiemi con elementi ripetuti)
 
+$S = \{a_1, a_2, \ldots, a_k\}$ con $\{a_1 \cdot n_1, a_2 \cdot n_2, \ldots, a_k \cdot n_k\}$
+
+**permutazioni**: $$\Pi_s=\frac{n!}{n_1! \cdot n_2! \cdots n_k!} \$$
+
 #### Combinazioni con ripetizioni
+
+**r-combinazioni**: sottoinsiemi di un multinsieme $S = \{a_1 \cdot n_1, \ldots, a_k \cdot n_k\}$
+
+- $n_i \geq r\ \forall i$ 
+$$\binom{r-k+1}{r} \text{ oppure } \binom{r+k-1}{k-1}$$
+$r$: cardinalità r-combinazione
+$k$: tipologie di elementi
+
+**a valori interi limitati - lower bound**:
+
+$$ r \geq \sum_{i=1}^k b_i$$
+
+quante soluzioni intere ha l'equazione $ \sum_{i=1}^k x_i = r$ con $x_i \geq b_i\ \forall i \in [1, \ldots, k]$?
+
+$$ x_1 + x_2 + \ldots + x_k = r $$
+
+sostituisco con $y_i = x_i - b_i \implies x_i = y_i + b_i$ ovvero mi riconduco al caso senza vincoli
+
+$$\sum_{i=1}^k y_i = r - \sum_{i=1}^k b_i \implies \binom{r - \sum_{i=1}^k b_i - k + 1}{k - 1}$$
 
 ### Principio di inclusione-esclusione
 
