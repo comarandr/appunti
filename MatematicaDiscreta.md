@@ -455,7 +455,7 @@ $G_{[S]} = (S, E')$ con $S \subseteq V$, è composto da $ij \in E$ con $i,j \in 
 
 **lati grafo completo $n$ vertici**: Sia $G$ completo. $|V| = n \implies |E| = \frac{n(n-1)}{2}$
 
-**cammino**: sequenza di vertici $v_0, v_1, \ldots, v_k$ per cui dato $i \in (0, k-1) v_i v_{i+1} \in E$
+**cammino**: sequenza di vertici $v_0, v_1, \ldots, v_k$ per cui dato $i \in (0, k-1)$ allora $ v_i v_{i+1} \in E$
 
 ## Parte 2 - Algebra lineare
 
