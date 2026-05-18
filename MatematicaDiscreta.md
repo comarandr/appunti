@@ -11,7 +11,7 @@
     6. [Sommatorie](#sommatorie)
     7. [Probabilità](#probabilità)
     8. [Matematica degli interi](#matematica-degli-interi)
-    9. [Parità e disparità](#parità-e-disparità)
+    9. [Segno permutazioni (parità e disparità)](#segno-permutazioni-parità-e-disparità)
     10. [Principio della piccionaia](#principio-della-piccionaia)
     11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
     12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
@@ -216,13 +216,11 @@ $a \in \mathbb{Z},\ p \text{ primo}$
 - $p \nmid a \implies a^{p-1} \equiv_p 1$
 - $a^p \equiv_p a$
 
-### Parità e disparità
+#### Segno permutazioni (parità e disparità)
 
-#### Segno permutazioni
+$S_n = \pi \{1,2, \ldots, n\}$: insieme permutazioni
 
-$S_n = \Pi \{1,2, \ldots, n\}$: insieme permutazioni
-
-data $\Pi =\{\pi_1, \ldots, \pi_n\}$ permutazione, tutti i modi per trasformarla in permutazione identica
+data $\pi =\{\pi_1, \ldots, \pi_n\}$ permutazione, tutti i modi per trasformarla in permutazione identica
 
 - o richiedono un numero **pari** di trasposizioni
 - o richiedono un numero **dispari** di trasposizioni
@@ -261,13 +259,13 @@ $a_1 a_2 a_3 \ldots a_n$ con $a_1$ in $p_1$ modi, $a_2$ in $p_2$ modi
 
 $$ \text{n-ple: } S = p_1 \cdot p_2 \cdot \ldots \cdot p_n $$
 
-#### Combinazioni
+#### Combinazioni (sottoinsiemi)
 
 dato $A = \{a_1, a_2, \ldots, a_n\}$ il sottoinsieme è un booleano per ogni elemento (è incluso? T/F)
 
 $$\mathcal{P}(A) = 2^{|A|}$$
 
-#### Coefficiente binomiale
+### Coefficiente binomiale
 
 $\binom{n}{k}$ k-oggetti su $n$
 
@@ -361,7 +359,7 @@ $S = \text{\{insieme di elementi con } p_1, p_2, \ldots, p_m \text{ proprietà}\
 
 insieme degli elementi che non possiedono alcuna proprietà $p_1, \ldots, p_m$:
 
-$ |\bar{A_1 \cap \bar{A_2} \cap \ldots \cap \bar{A_m}}| =$
+$ |\bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m}| =$
 
 $ = | S | $
 $ - \sum |A_{i_1}| $
@@ -373,7 +371,91 @@ $ + (-1)^m |A_1 \cap A_2 \cap \ldots \cap A_m|$
 
 #### Spiazzamenti
 
+**spiazzamento**: permutazione $\pi = (\pi_1, \pi_2, \ldots, \pi_n)$ con $\pi_i \neq i\ \forall i \in [1, \ldots, n]$
+
+esempi:
+
+- $(2,1,4,5,3)$ è uno spiazzamento
+- $(4,1,\textbf{3},2,\textbf{5})$ **non** è uno spiazzamento (3 è nella 3a posizione, 5 è nella 5a posizione)
+
+**numero di spiazzamenti $z_n$**:
+
+- $n \geq 1$
+$$ z_n = n! \cdot \left(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots + (-1)^n \frac{1}{n!}\right) $$
+
+approsimmazione: $z_n \approx \frac{n!}{e}$
+
+**formule ricorsive**:
+
+- $z_n = (n-1) \cdot (z_{n-1} + z_{n-2})$
+- $z_n = n \cdot z_{n-1} + (-1)^n$
+
 ### Teoria dei Grafi
+
+#### Grafi non orientati
+
+**grafo non orientato**: $G = (V, E)$ con
+
+- $V$ insieme di vertici
+- $E$ insieme di archi (coppia non orientata di vertici)
+
+**vertici adiacenti**: $(i,j \in V) \land (ij = e \in E)$
+
+**archi adiacenti**: condividono un vertice
+
+**grado di un vertice $d(v)$**: numero di archi incidenti in $v$
+
+**grafo regolare**: tutti i nodi hanno lo stesso grado ($d(i) = d(j)\ \forall i,j \in V$)
+
+- **grafo k-regolare**: tutti i nodi hanno grado $k$ ($d(i) = k)$
+
+**vertice isolato**: ha grado 0 ($d(v) = 0$)
+
+**Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2|E|$$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
+
+(1) ------ (1) $\implies$ 1+1=2
+
+(1)-----(2)-----(1) $\implies$ 1+2+1=4
+
+**Teorema numero di vertici di grado dispari**: in ogni grafo c'è un numero pari di vertici di grado dispari
+
+(1) ---- (...) $\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
+
+(1) ---- (2) ---- (2) ---- (1) $\implies |v: d(v) \text{ dispari}| = 2$
+
+**Sequenza grafica**: $(d_1, \ldots, d_n)$ è una sequenza grafica se esiste un grafo $G$ in cui $d_1, \ldots, d_n$ corrisponde ai gradi di $G$
+
+- non ci può essere un numero $\geq n \implies (d_i < n)$
+- non ci possono essere sia $0$ che $n-1$
+- ci devono essere un numero pari di dispari
+- $\sum_{i=1}^n d_i \leq \frac{n(n-1)}{2}$ sommatoria notevole di gauss
+
+**grafi isomorfi**: quando è possibile rinominare i nodi di un grafo ottenendo l'altro grafo
+presi $G = (V, E), G' = (V', E')$
+$\exists f: V \to V' \mid f(v)f(w) \in E' \iff vw \in E$
+
+**sottografo**: $G' = (V', E')$ è un sottografo di $G = (V, E)$ se $V' \subseteq V$ e $E' \subseteq E$
+
+**grafo di supporto (spanning)**: tutti i vertici, sottoinsieme degli archi
+$G' = (V', E')$ è un grafo di supporto di $G = (V, E)$ se $V' = V$ e $E' \subseteq E$
+
+**sottografo indotto**: scelto un sottoinsieme S dei nodi di un grafo, il grafo con gli archi di quei nodi
+$G_{[S]} = (S, E')$ con $S \subseteq V$, è composto da $ij \in E$ con $i,j \in S$
+
+**grafo completo**: ogni coppia di nodi è collegata da un arco
+
+- Si indica con $K_n$, con $n$ vertici e $|E| = \frac{n(n-1)}{2}$ lati
+- Si chiama **clique** se è un sottografo
+
+**clique**: sottografo completo. Insieme di elementi mutualmente compatibili
+
+**grafo complementare**: dato $G = (V, E)$ si definisce con $\bar{G} = (V, \bar{E})$ con $\bar{E} = \{uw | v,w \in V, vw \not\in E\}$
+
+**insieme indipendente (stabile) di vertici**: dato $S \subseteq V,\ ij \not\in E\ \forall i,j \in S$. Soltanto se il grafo indotto è una clique
+
+**lati grafo completo $n$ vertici**: Sia $G$ completo. $|V| = n \implies |E| = \frac{n(n-1)}{2}$
+
+**cammino**: sequenza di vertici $v_0, v_1, \ldots, v_k$ per cui dato $i \in (0, k-1) v_i v_{i+1} \in E$
 
 ## Parte 2 - Algebra lineare
 
