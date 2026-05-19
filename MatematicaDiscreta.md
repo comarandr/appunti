@@ -328,7 +328,7 @@ $k!$: permutazioni possibili del sottoinsieme
 
 $S = \{a_1, a_2, \ldots, a_k\}$ con $\{a_1 \cdot n_1, a_2 \cdot n_2, \ldots, a_k \cdot n_k\}$
 
-**permutazioni**: $$\Pi_s=\frac{n!}{n_1! \cdot n_2! \cdots n_k!} \$$
+**permutazioni**: $$\Pi_s=\frac{n!}{n_1! \cdot n_2! \cdots n_k!} $$
 
 #### Combinazioni con ripetizioni
 
@@ -449,13 +449,178 @@ $G_{[S]} = (S, E')$ con $S \subseteq V$, è composto da $ij \in E$ con $i,j \in 
 
 **clique**: sottografo completo. Insieme di elementi mutualmente compatibili
 
-**grafo complementare**: dato $G = (V, E)$ si definisce con $\bar{G} = (V, \bar{E})$ con $\bar{E} = \{uw | v,w \in V, vw \not\in E\}$
+**Grafo complementare**: dato $G = (V, E)$ si definisce con $\bar{G} = (V, \bar{E})$ con $\bar{E} = \{uw | v,w \in V, vw \not\in E\}$
 
-**insieme indipendente (stabile) di vertici**: dato $S \subseteq V,\ ij \not\in E\ \forall i,j \in S$. Soltanto se il grafo indotto è una clique
+**Insieme indipendente (stabile) di vertici**: dato $S \subseteq V,\ ij \not\in E\ \forall i,j \in S$. Soltanto se il grafo indotto è una clique
 
-**lati grafo completo $n$ vertici**: Sia $G$ completo. $|V| = n \implies |E| = \frac{n(n-1)}{2}$
+**Lati grafo completo $n$ vertici**: Sia $G$ completo. $|V| = n \implies |E| = \frac{n(n-1)}{2}$
 
-**cammino**: sequenza di vertici $v_0, v_1, \ldots, v_k$ per cui dato $i \in (0, k-1)$ allora $ v_i v_{i+1} \in E$
+**Cammino**: sequenza di vertici $v_0, v_1, \ldots, v_k$ per cui dato $i \in (0, k-1)$ allora $ v_i v_{i+1} \in E$
+
+**Distanza**: lunghezza del cammino minimo tra due vertici
+
+**diametro**: distanza massima tra due vertici
+
+**ciclo**: cammino chiuso, $v_0 = v_k$
+
+**circuito hamiltoniano**: circuito elementare che attraversa tutti i nodi di $G$
+
+**circuito euleriano**: circuito semplice (senza lati ripetuti) che attraversa tutti i nodi di $G$
+
+**grafo connesso**: ogni coppia di vertici è connessa da un cammino
+
+**taglio**: insieme di lati che se rimossi aumento il numero di componenti connesse
+
+Partendo da $S$, posso definire taglio
+
+$$\delta(S):= \{ij : i \in S,\ j \in V-S\}$$ taglio, esiste coppia di nodi adiacenti ($V,V-S$)
+
+**circuito hamiltoniano (permutazione circolare)**: permutazione in cui ogni vertice è preceduto / seguito da un vertice che gli è adiacente in $G$
+
+**grafo hamiltoniano**: contiene un circuito hamiltoniano
+
+**grafo bipartito** nodi ripartiti in 2 insiemi $v_1$ e $v_2$ tale che ogni arco collega un estremo in $v_1$ e uno in $v_2$.
+Si denota con $G = (V_1, V_2, E)$
+
+**Teorema**: $G$ bipartito se e solo se ogni ciclo in $G$ numero pari di nodi
+_nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamiltoniano per il teorema precedente
+
+**grafo bipartito completo**: $ ij \in E \quad \forall V_1\ e \forall j \in V_2$
+
+**Teorema**: $G = (V, E)$ con $n \geq 3$ vertici. Se $d(v) + d(w) \geq n\quad \forall v,w \in V $ allora è hamiltoniano
+
+**Corollario**: $\forall v \in V \quad d(v) \geq \frac{n}{2} \implies G \text{ è hamiltoniano}$
+
+**grafo planare**: può essere disegnato senza che 2 archi si intersechino
+
+**grafo minore**: grafo ottenibile tramite **contrazione di un arco**
+
+- **contrazione di un arco**: rimuovo arco $ij$ e sostituisco con nodo $e'$. Gli archi in $i$ e $j$ ora coincidono in $e'$.
+
+a ---- (i) ---- (j) ---- b $\implies$ a ---- (e') ---- b
+
+**Teorema**: $G$ planare se e solo se non ha $k_5$ o $k_{3,3}$ fra i suoi minori
+
+**grafo euleriano**: grafo che contiene un circuito euleriano (non attraversa 2 volte lo stesso arco)
+
+**Teorema**: $G$ è euleriano $\iff d(v)$ è pari per ogni $v \in V$
+
+**cammino euleriano**: cammino che attraversa tutti gli archi una e una sola volta
+
+**Corollario**: $G$ connesso ha un cammino euleriano $\iff$ ha al più $2$ vertici di grado dispari
+
+#### Alberi
+
+**foresta**: grafo **aciclico**
+
+**albero**: grafo **aciclico** e **connesso**
+
+**proprietà albero**: $n$ nodi, $n-1$ archi
+
+- grafo con $n \geq 3$ nodi e $|E| \gt n-1$ non è aciclico
+- grafo con $n \geq 3$ nodi e $|E| \lt n-1$ non è connesso
+
+**proprietà albero**:
+
+1. connesso e aciclico (definizione)
+2. connesso e $|E| = |V| -1$
+3. aciclico e $|E| = |V| -1$
+4. connesso e $\forall i,j \in V$ esiste cammino $ij$ ed è unico
+5. connesso e la rimozione di un qualsiasi arco sconnette $G$
+6. aciciclico e $\forall i,j \in V : ij \not\in E$, se aggiungo l'arco $ij$ diventa ciclico
+
+**foglia**: se $d(v) = 1$
+**nodo interno**: se $d(v) > 1$
+
+**albero di diametro massimo**: cammino lineare
+
+**albero di diametro minimo**: albero a stella (un solo nodo interno)
+
+**albero di supporto**: $T = (V, E_T)$ dati i vertici di un grafo e **alcuni** archi appartenti a $E$, la rimozione di un arco sconnette $T$
+
+**taglio fondamentale**: dato arco $e=ij$ e $T$ albero di supporto, arco $e$ individua due partizioni di nodi:
+
+- $V_i$ : nodi raggiungibili da $i$ senza passare per arco
+ $e$)
+- $V_j = V - V_i$ : nodi raggiungibili da $j$ senza passare per arco $e$
+
+**circuito fondamentale associato ad $a$ in $T$**: aggiungere a $T$ l'arco $a=ij \in E - E_T$ definisce circuito fondamentale da $i$ a $j$
+
+- unico cammino da $i$ a $j$ in $T$ + arco $a = ij$
+
+**Teorema**: $n$ nodi $\implies n^{n-2}$ alberi distinti.
+Inclusi isomorfi ma non identici: 3 nodi, 3 alberi. 3 nodi, 1 albero non isomorfo.
+
+**numero di alberi non isomorfi $T_n$**: $$ \frac{n^{n-2}}{n!} \leq T_n \leq 4^{n-1}$$
+
+#### Indici di Wiener
+
+**indice**: funzione che a ogni grafo associa un numero
+
+**indice di Wiener**: $$W(G) = \sum_{i,j \in V} d_G(i,j)$$
+
+- valore basso: indica grafi compatti
+- valore alto: grafi sparsi, cammini lunghi
+
+Rappresenta la sommatoria di tutte le distanze tra i vertici
+
+**Teorema**: $\forall t \neq 2, 5$ esiste un grafo $G$ tale che $W(G) = t$
+
+**Lemma**: Per ogni $G = (V, E)$ di diametro $2$, $G' = (V,E \cup \{e\})$ per ogni $e \not\in E$ $$W(G') = W(G) - 2$$
+
+**calcolo indice di Wiener**: dato $T=(V,E)$, arco $e=uv \in E$
+
+- **carico arco**: $\lambda (e) = n_u \cdot n_v$
+$n_u, n_v (=|V| - n_u)$ sono numero di nodi delle componenti connesse indotte dal taglio di $e$ in $T$
+
+**formula calcolo indice di Wiener**:
+$$ W(T) = \sum_{e \in E} \lambda (e)$$
+
+per ogni arco calcolo il **prodotto** tra il **numero di nodi** delle due **componenti connesse**, poi **sommo** tutti i prodotti
+
+**lemma**: $T=(V,E) \quad |V|$ dispari $\implies W(T)$ pari
+
+#### Grafi orientati (diretto, digrafo)
+
+$G=(N,A) \quad N:\{\text{nodi}\},\ A:\{\text{archi}\}$
+
+**arco**: coppia orientata $ij, i \neq j$
+
+Dato un insieme di nodi $S$:
+
+- **insieme di archi uscenti** $\delta^+(S) := \{ij \in A \mid i \in S, j \in N-S\}$
+- **insieme di archi entranti** $\delta^-(S) := \{ij \in A \mid i \in N-S, j \in S\}$
+
+circuiti e cammini definiti analogamente ai grafi non orientati
+
+**grafo non orientato sottostante**: grafo ottenuto rimuovendo orientazione degli archi
+
+**grafo debolmente connesso**: per ogni coppia $i,j$ esiste un cammino
+
+- nota: grafo fortemente connesso se e solo se ogni coppia di nodi è contenuta in un circuito
+
+**albero orientato (arborescenza)**: grafo orientato aciclico
+
+- con **radice** nodo $r$, in cui esiste ed è unico il cammino per ogni nodo
+- $d^-(r) = 0$ radice non ha archi entranti
+- $d^+(v) = 1$ un solo arco uscente per ogni nodo
+- nelle **foglie** $d^+(v) = 0$ nessun arco uscente
+
+**albero $k$-ario**: se ogni nodo NON foglia ha $k$ archi uscenti $d^+(v) = k$
+
+Dato un albero orientato $T$ $k$-ario
+
+- **livello nodo**: lunghezza del cammino dalla radice al nodo
+- **altezza**: livello massimo di un qualsiasi nodo
+- **numero di nodi**: al più $k^l$ nodi di livello $l$
+
+#### Grafi pesati
+
+**grafo pesato**: $G = (V,E,p)$ con $p$ funzione $p:E \rarr \mathbb{R}$ oppure $p:V \rarr \mathbb{R}$
+analogo se orientato $G = (N,A,p)$
+
+$p(e)/p(a)$: peso arco/lato
+$p(v)/p(n)$: peso vertice nodo
 
 ## Parte 2 - Algebra lineare
 
