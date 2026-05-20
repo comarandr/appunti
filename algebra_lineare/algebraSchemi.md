@@ -41,7 +41,7 @@ NB: in $\mathbb{R}^2$ è una retta
 
 **equazione del piano**: $\pi : ax + by + cz = d$
 
-**retta perpendicolare al piano $\pi$**: $v = (a,b,c)$ perpendicolare al piano $\pi : ax + by +cz =d$ 
+**retta perpendicolare al piano $\pi$**: $v = (a,b,c)$ perpendicolare al piano $\pi : ax + by +cz =d$
 NB componenti vettori uguali a coefficienti piano
 
 **retta passante per un punto $P(p_x, p_y, p_z)$ ovvero traslazione**: $d = a \cdot p_x + b \cdot p_y + c \cdot p_z$
@@ -89,4 +89,21 @@ $$ L = \begin{bmatrix} \lambda_{11} & 0 & \ldots & 0 \\ x & \lambda_{22} & \ldot
 
 **matrice trasposta**: matrice ottenuta scambiando righe e colonne di una matrice data
 
-$$ A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{m1} \\ a_{12} & a_{22} & \ldots & a_{m2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1n} & a_{2n} & \ldots & a_{mn} \end{bmatrix} $$
+$$ A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \vdots & \vdots\\ a_{n1} & a_{n2} \end{bmatrix} \rarr A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{n1} \\ a_{12} & a_{22} & \ldots & a_{n2} \end{bmatrix} $$
+
+$$a_{ij} = (A^T)_{ji}$$
+
+**matrice simmetrica**: matrice quadrata che è uguale alla sua trasposta, $A = A^T \implies a_{ij} = a_{ji}$
+
+**matrice antisimmetrica**: matrice quadrata che è uguale alla trasposta con segno opposto, $A = -A^T \implies a_{ij} = -a_{ji}$
+
+## operazioni tra matrici
+
+- somma/differenza: $$(A + B)_{ij} = A_{ij} + B_{ij}$$
+
+**prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**: $$ \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix} $$
+
+Nota bene: $AB \neq BA$ 
+
+- $\exists AB \implies A \cdot (B+C) = AB + AC$
+- $\exists BA \implies (B+C) \cdot A = BA + CA$
