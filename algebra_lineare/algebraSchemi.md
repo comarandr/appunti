@@ -264,7 +264,7 @@ Ovviamente queste regole possono essere combinate
 
 **procedimento**:
 
-1. opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $ 
+1. opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $
 2. trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
 $$\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} $$
 3. riscrivo il sistema con la matrice a gradini
@@ -273,7 +273,7 @@ $$\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 
 **matrice inversa con metodo di Gauss**:
 $$ \begin{bmatrix} A & | & I_n \end{bmatrix} \rarr \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix} $$
 
-**Teorema di Rouché-Capelli**
+**Teorema di Rouché-Capelli**:
 
 $rg(A) = rg (\begin{bmatrix} A | b \end{bmatrix})$ sistema ammissibile
 
@@ -327,4 +327,4 @@ $$ \begin{vmatrix} a_{11} - \lambda & \ldots & \ldots & \ldots \\ \ldots & a_{22
 
 1. **polinomio caratteristico $\mathcal{P}(A)$**: $det (A - \lambda I) = 0$
 2. **autovalori**: $\bar{\lambda}$ che rendono $\mathcal{P}(A) = 0$
-3. calcolo autospazio originato dagli autovettori 
+3. calcolo autospazio originato dagli autovettori

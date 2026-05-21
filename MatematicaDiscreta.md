@@ -2,30 +2,23 @@
 
 ## Indice
 
-1. [Parte 1 - Matematica discreta](#parte-1---matematica-discreta)
-    1. [Contare](#contare)
-    2. [Insiemi](#insiemi)
-    3. [Relazioni](#relazioni)
-    4. [Funzioni](#funzioni)
-    5. [Induzione](#induzione)
-    6. [Sommatorie](#sommatorie)
-    7. [Probabilità](#probabilità)
-    8. [Matematica degli interi](#matematica-degli-interi)
-    9. [Segno permutazioni (parità e disparità)](#segno-permutazioni-parità-e-disparità)
-    10. [Principio della piccionaia](#principio-della-piccionaia)
-    11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
-    12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
-    13. [Teoria dei Grafi](#teoria-dei-grafi)
-2. [Parte 2 - Algebra lineare](#parte-2---algebra-lineare)
-    1. [Spazio $\mathbb{R}^n$](#spazio-mathbbrn)
-        1. [Definizioni base](#definizioni-base)
-        2. [Operazioni e confronti tra n-ple](#operazioni-e-confronti-tra-n-ple)
+1. [Contare](#contare)
+2. [Insiemi](#insiemi)
+3. [Relazioni](#relazioni)
+4. [Funzioni](#funzioni)
+5. [Induzione](#induzione)
+6. [Sommatorie](#sommatorie)
+7. [Probabilità](#probabilità)
+8. [Matematica degli interi](#matematica-degli-interi)
+9. [Segno permutazioni (parità e disparità)](#segno-permutazioni-parità-e-disparità)
+10. [Principio della piccionaia](#principio-della-piccionaia)
+11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
+12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
+13. [Teoria dei Grafi](#teoria-dei-grafi)
 
-## Parte 1 - Matematica discreta
+## Contare
 
-### Contare
-
-### Insiemi
+## Insiemi
 
 **Insieme**: concetto porimitivo, collezione di oggetti detti elementi
 **Cardinalità $|A|$**: numero di elementi di un insieme $A$
@@ -33,7 +26,7 @@
 **A sottoinsieme di B**: $A \subseteq B$ se ogni elemento di A è anche in B
 **prodotto cartesiano $A \times B$**: insieme di tutte le coppie $(a, b)$ con $a \in A$ e $b \in B$
 
-### Relazioni
+## Relazioni
 
 **riflessiva**: $x \smile x\ \forall x$
 **antiriflessiva**: $\neg (x \smile x)\ \forall x$
@@ -48,7 +41,7 @@
 
 Le relazioni d'equivalenza implicano una partizione dell'insieme in classi di equivalenza
 
-#### Congruenza modulo $n$ $x \equiv_n y$
+### Congruenza modulo $n$ $x \equiv_n y$
 
 Resto della divisione intera tra due numeri
 
@@ -67,7 +60,7 @@ considerando anche $z_1 \equiv_n z_2$:
 - $x+z_1 \equiv_n y+z_2$
 - $x \cdot z_1 \equiv_n y \cdot z_2$
 
-### Funzioni
+## Funzioni
 
 **iniettiva**: $x \neq x' \implies f(x) \neq f(x')$
 **suriettiva**: $f: A \to B\ f(A) = B $
@@ -78,16 +71,16 @@ considerando anche $z_1 \equiv_n z_2$:
 
 **composta**: $f \circ g(x) = f(g(x))$
 
-### Induzione
+## Induzione
 
 - Base: $P(0)$ è vera
 - Passo induttivo: $ \forall n \geq 0,\ P(n+1)\ vera \implies P(n)\ vera$
 
-### Sommatorie
+## Sommatorie
 
 $$ \sum_{k=1}^n a_k\ = a_1 + a_2 + \ldots + a_n $$
 
-#### Regole
+### Regole
 
 $ \sum_{k \in K}\ \textbf{c} \cdot a_k = \textbf{c} \cdot \sum_{k \in K}\ a_k $
 
@@ -101,7 +94,7 @@ $\sum_{k \in K}\ a_k = \sum_{(k + c) \in K}\ a_{(k + c)} $
 
 $\sum_{k = 1}^n\ a_k = \sum_{k = 1}^{\textbf{m}}\ a_k + \sum_{k = \textbf{m+1}}^n\ a_k $
 
-#### Somme multiple
+### Somme multiple
 
 $$\begin{matrix} a_1 b_1 & a_1 b_2 & a_1 b_3 \\ a_2 b_1 & a_2 b_2 & a_2 b_3 \\ a_3 b_1 & a_3 b_2 & a_3 b_3 \end{matrix}$$
 
@@ -110,7 +103,7 @@ $$\begin{matrix} a_1 b_1 & a_1 b_2 & a_1 b_3 \\ a_2 b_1 & a_2 b_2 & a_2 b_3 \\ a
 | per righe | $$\sum_{i=1}^3\ \sum_{j=1}^3\ a_i b_j$$ | $$a_1 \sum_{j=1}^3 b_j + a_2 \sum_{j=1}^3 b_j + a_3 \sum_{j=1}^3 b_j$$ |
 | per colonne | $$\sum_{j=1}^3\ \sum_{i=1}^3\ a_i b_j$$ | $$ \sum_{i = 1}^3 (a_i)\ b_1 + \sum_{i = 1}^3 (a_i)\ b_2 + \sum_{i = 1}^3 (a_i)\ b_3 $$ |
 
-#### Scambio di indici
+### Scambio di indici
 
 $$ \sum_{i \in I} \sum_{j \in J(i)} a_{ij} = \sum_{j \in J} \sum_{i \in I(j)} a_{ij} $$
 
@@ -120,7 +113,7 @@ $$ \sum_{i \in I} \sum_{j \in J(i)} a_{ij} = \sum_{j \in J} \sum_{i \in I(j)} a_
 $J(i) = \{0, \ldots, n\}$
 $I(j) = \{0, \ldots, j\}$
 
-#### Somme notevoli
+### Somme notevoli
 
 - somma numeri consecutivi: $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
 
@@ -128,7 +121,7 @@ $I(j) = \{0, \ldots, j\}$
 
 - somma potenze consecutive: $$\sum_{k=1}^n k^m = \frac{1}{m+1} \sum_{j=0}^m \binom{m+1}{j} B_j n^{m+1-j}$$
 
-#### Metodo di perturbazione
+### Metodo di perturbazione
 
 $$ s_n + a_{n+1} = \sum_{k=0}^{n+1} a_k = \sum_{k=0}^n a_{k+1} $$
 
@@ -136,7 +129,7 @@ $$ s_n + a_{n+1} = a_0 + \sum_{k=0}^n a_{k+1} $$
 
 $s(n)$ sia a sinistra che a destra ma con coefficienti diversi per non elidersi
 
-### Probabilità
+## Probabilità
 
 **universo $S$**: $Pr(S) = P|S| = 1$
 
@@ -148,9 +141,9 @@ $s(n)$ sia a sinistra che a destra ma con coefficienti diversi per non elidersi
 
 **teorema di Bayes**: $Pr(B|A) = \frac{Pr(A|B) \cdot Pr(B)}{Pr(A)}$
 
-### Matematica degli interi
+## Matematica degli interi
 
-#### divisibilità, MCD, mcm
+### divisibilità, MCD, mcm
 
 **divisibilità:** $a \mid b$ se $\exists m \in \mathbb{Z} : \textbf{b =}\ \textbf{a} \cdot \textbf{m}$
 
@@ -168,7 +161,7 @@ Calcolo di $MCD(a,b)$
 **Teorema di Bezout**: $MCD(a,b) = ax + by$
  $1 = ax + by$ allora $a$ e $b$ sono coprimi
 
-#### Numeri primi
+### Numeri primi
 
 **Numero primo**: divisori di p: \{1, p\}
 
@@ -216,7 +209,7 @@ $a \in \mathbb{Z},\ p \text{ primo}$
 - $p \nmid a \implies a^{p-1} \equiv_p 1$
 - $a^p \equiv_p a$
 
-#### Segno permutazioni (parità e disparità)
+### Segno permutazioni (parità e disparità)
 
 $S_n = \pi \{1,2, \ldots, n\}$: insieme permutazioni
 
@@ -225,27 +218,27 @@ data $\pi =\{\pi_1, \ldots, \pi_n\}$ permutazione, tutti i modi per trasformarla
 - o richiedono un numero **pari** di trasposizioni
 - o richiedono un numero **dispari** di trasposizioni
 
-### Principio della piccionaia
+## Principio della piccionaia
 
 **Teorema**: $n+1$ oggetti in $n$ contenitori, un contenitore ha $2$ o più oggetti
 
 **Teorema**: se $r_1 + r_2 + \ldots + r_n - n + 1$ oggetti in $n$ contenitori, allora o 1 contiene ha $r_1$ o 2 contiene $r_2$ o n-esimo contiene $r_n$
 
-### Principio di somma e del prodotto
+## Principio di somma e del prodotto
 
 $k$ elementi diversi, $n_1$ del primo tipo, $n_2$ del secondo tipo, $\ldots$, $n_k$ del k-esimo tipo. In quanti modi posso
 
 - un elemento del primo tipo **o** del secondo **o** ...
 - un elemento del primo tipo **e** del secondo **e** ...
 
-#### Principio di somma
+### Principio di somma
 
 $S = S_1 \cup S_2 \cup \ldots \cup S_k$
 $|S| = |S_1| + |S_2| + \ldots + |S_k|$
 
 **conteggio indiretto**: $|A| = |S| + |S'| \implies |S| = |A| - |S'|$
 
-#### Principio di prodotto
+### Principio di prodotto
 
 $S$: insieme di tute le coppie $(a,b)$: $a$ in $p$ modi, $b$ in $q$ modi dato il primo
 
@@ -253,19 +246,19 @@ $|S| = p \cdot q$
 
 dimostrazione mediate principio somma
 
-#### Scelte su sequenze
+### Scelte su sequenze
 
 $a_1 a_2 a_3 \ldots a_n$ con $a_1$ in $p_1$ modi, $a_2$ in $p_2$ modi
 
 $$ \text{n-ple: } S = p_1 \cdot p_2 \cdot \ldots \cdot p_n $$
 
-#### Combinazioni (sottoinsiemi)
+### Combinazioni (sottoinsiemi)
 
 dato $A = \{a_1, a_2, \ldots, a_n\}$ il sottoinsieme è un booleano per ogni elemento (è incluso? T/F)
 
 $$\mathcal{P}(A) = 2^{|A|}$$
 
-### Coefficiente binomiale
+## Coefficiente binomiale
 
 $\binom{n}{k}$ k-oggetti su $n$
 
@@ -301,11 +294,11 @@ insieme completo e numero sottoinsiemi di un elemento
 
 12. $$\sum_{k=0}^n \binom{n}{k} 2^k = 3^n$$
 
-#### Triangolo di Pascal
+### Triangolo di Pascal
 
 $$(a+b)^n = \sum_{i=0}^n \binom{n}{i} a^i b^{n-i}$$
 
-#### Processi Bernoulliani
+### Processi Bernoulliani
 
 Gli esiti sono indipendenti dai precedenti: $p$, $q = 1-p$
 
@@ -315,7 +308,7 @@ $$Pr(n,k) = \binom{n}{k} p^k q^{n-k}$$
 probabilità di almeno $k$ successi in $n$ prove:
 $$Pr(n, \geq k) = \sum_{i=k}^n \binom{n}{i} p^i q^{n-i}$$
 
-#### Disposizioni (insiemi ordinati)
+### Disposizioni (insiemi ordinati)
 
 prendere un sottoinsieme ma l'ordine conta
 
@@ -324,13 +317,13 @@ $$D(n,k) = \binom{n}{k} \cdot k!$$
 $\binom{n}{k}$: in quanti modi posso scegliere il sottoinsieme (quanti sottoinsiemi ci sono)
 $k!$: permutazioni possibili del sottoinsieme
 
-#### Multinsiemi (insiemi con elementi ripetuti)
+### Multinsiemi (insiemi con elementi ripetuti)
 
 $S = \{a_1, a_2, \ldots, a_k\}$ con $\{a_1 \cdot n_1, a_2 \cdot n_2, \ldots, a_k \cdot n_k\}$
 
 **permutazioni**: $$\Pi_s=\frac{n!}{n_1! \cdot n_2! \cdots n_k!} $$
 
-#### Combinazioni con ripetizioni
+### Combinazioni con ripetizioni
 
 **r-combinazioni**: sottoinsiemi di un multinsieme $S = \{a_1 \cdot n_1, \ldots, a_k \cdot n_k\}$
 
@@ -351,9 +344,9 @@ sostituisco con $y_i = x_i - b_i \implies x_i = y_i + b_i$ ovvero mi riconduco a
 
 $$\sum_{i=1}^k y_i = r - \sum_{i=1}^k b_i \implies \binom{r - \sum_{i=1}^k b_i - k + 1}{k - 1}$$
 
-### Principio di inclusione-esclusione
+## Principio di inclusione-esclusione
 
-#### Principio base
+### Principio base
 
 $S = \text{\{insieme di elementi con } p_1, p_2, \ldots, p_m \text{ proprietà}\}$
 
@@ -369,7 +362,7 @@ $ + (-1)^d |A_1 \cap A_2 \cap \ldots \cap A_d| $
 $ \ldots $
 $ + (-1)^m |A_1 \cap A_2 \cap \ldots \cap A_m|$
 
-#### Spiazzamenti
+### Spiazzamenti
 
 **spiazzamento**: permutazione $\pi = (\pi_1, \pi_2, \ldots, \pi_n)$ con $\pi_i \neq i\ \forall i \in [1, \ldots, n]$
 
@@ -390,9 +383,9 @@ approsimmazione: $z_n \approx \frac{n!}{e}$
 - $z_n = (n-1) \cdot (z_{n-1} + z_{n-2})$
 - $z_n = n \cdot z_{n-1} + (-1)^n$
 
-### Teoria dei Grafi
+## Teoria dei Grafi
 
-#### Grafi non orientati
+### Grafi non orientati
 
 **grafo non orientato**: $G = (V, E)$ con
 
@@ -509,7 +502,7 @@ a ---- (i) ---- (j) ---- b $\implies$ a ---- (e') ---- b
 
 **Corollario**: $G$ connesso ha un cammino euleriano $\iff$ ha al più $2$ vertici di grado dispari
 
-#### Alberi
+### Alberi
 
 **foresta**: grafo **aciclico**
 
@@ -553,7 +546,7 @@ Inclusi isomorfi ma non identici: 3 nodi, 3 alberi. 3 nodi, 1 albero non isomorf
 
 **numero di alberi non isomorfi $T_n$**: $$ \frac{n^{n-2}}{n!} \leq T_n \leq 4^{n-1}$$
 
-#### Indici di Wiener
+### Indici di Wiener
 
 **indice**: funzione che a ogni grafo associa un numero
 
@@ -580,7 +573,7 @@ per ogni arco calcolo il **prodotto** tra il **numero di nodi** delle due **comp
 
 **lemma**: $T=(V,E) \quad |V|$ dispari $\implies W(T)$ pari
 
-#### Grafi orientati (diretto, digrafo)
+### Grafi orientati (diretto, digrafo)
 
 $G=(N,A) \quad N:\{\text{nodi}\},\ A:\{\text{archi}\}$
 
@@ -614,48 +607,10 @@ Dato un albero orientato $T$ $k$-ario
 - **altezza**: livello massimo di un qualsiasi nodo
 - **numero di nodi**: al più $k^l$ nodi di livello $l$
 
-#### Grafi pesati
+### Grafi pesati
 
 **grafo pesato**: $G = (V,E,p)$ con $p$ funzione $p:E \rarr \mathbb{R}$ oppure $p:V \rarr \mathbb{R}$
 analogo se orientato $G = (N,A,p)$
 
 $p(e)/p(a)$: peso arco/lato
 $p(v)/p(n)$: peso vertice nodo
-
-## Parte 2 - Algebra lineare
-
-### Spazio $\mathbb{R}^n$
-
-#### Definizioni base
-
-**SPAZIO N-DIMENSIONALE**: insieme $\mathbb{R}^n = \{(x_1, x_2, \ldots, x_n) : x_i \in \mathbb{R}\}$ con $n \geq 1$
-
-**n-pla**: punto dello spazio n-dimensionale, composta da $n$ componenti $x_i$
-
-**origine $O$**: n-pla di 0, $O = (0, 0, \ldots, 0)$, punto di riferimento da cui partono le coordinate
-
-#### Operazioni e confronti tra n-ple
-
-**UGUAGLIANZA**: tutte le componenti devono essere uguali.
-Dati due n-ple $A = (a_1, a_2, \ldots, a_n)$ e $B = (b_1, b_2, \ldots, b_n)$
-$A = B \iff (a_1 = b_1) \land (a_2 = b_2) \land \ldots \land (a_n = b_n)$.
-
-**SOMMA**: n-pla somma ha come componenti la somma delle rispettive componenti
-
-**proprietà somma**:
-
-- commutativa: $(a+b)=(b+a)\ \forall a,b  \in \mathbb{R}^n$
-- associativa: $(a+b)+c = a+(b+c) \forall a,b,c \in \mathbb{R}^n$
-- elemento neutro $O$: $a+O = a \forall a \in \mathbb{R}^n$
-- elemento opposto $-A$: $a+(-a) = O \forall a \in \mathbb{R}^n$
-
-**PRODOTTO N-PLA $\cdot$ SCALARE**: n-pla risultante ha come componenti le componenti della n-pla originaria moltiplicate per lo scalare
-
-$$ z = \lambda \cdot a \iff z_i = \lambda \cdot a_i\ \forall i = 1, \ldots, n $$
-
-**proprietà prodotto n-pla $\cdot$ scalare**:
-
-- distributivo: $$\lambda \cdot (a+b) = \lambda \cdot a + \lambda \cdot b \forall \lambda \in \mathbb{R}, a,b \in \mathbb{R}^n$$
-- elemento neutro: $$1 \cdot a = a \forall a \in \mathbb{R}^n$$
-
-**PRODOTTO SCALARE**:
