@@ -1,4 +1,4 @@
-# ALgebra lineare
+# Algebra lineare
 
 - n-pla: $(a_1, \ldots, a_n)$
 
@@ -103,7 +103,7 @@ $$a_{ij} = (A^T)_{ji}$$
 
 **prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**: $$ \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix} $$
 
-Nota bene: $AB \neq BA$ 
+Nota bene: $AB \neq BA$
 
 - $\exists AB \implies A \cdot (B+C) = AB + AC$
 - $\exists BA \implies (B+C) \cdot A = BA + CA$
@@ -116,7 +116,7 @@ Nota bene: $AB \neq BA$
 
 **calcolo matrice inversa**:
 
-1. calcolo la matrice dei complementi algebrici 
+1. calcolo la matrice dei complementi algebrici
 2. trasposta della matrice dei complementi algebrici
 3. divido per il determinante della matrice originale
 
@@ -160,4 +160,84 @@ $$ \mathcal{L}<W> = \mathcal{L}< v_1, v_2, \ldots, v_n > $$
 
 **indipendenza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 \iff \lambda_1 = \lambda_2 = \ldots = \lambda_n = 0$
 
-**
+NOTA:
+$v_0, v_1, \ldots, v_n$ **indipendenti**:
+
+- se **tolgo** un vettore $v_i \implies$ rimangono **indipendenti**
+- se **aggiungo** un vettore $v_{n+1}$ devo **verificare nuovamente** indipendenza
+
+$v_0, v_1, \ldots, v_n$ **dipendenti**:
+
+- se **tolgo** un vettore $v_i$ devo **verificare nuovamente** dipendenza
+- se **aggiungo** un vettore $v_{n+1} \implies$ rimangono **dipendenti**
+
+## Basi e dimensione
+
+**dimensione $dim(V)$**: cardinalità massima dell'insieme di vettori indipendenti in $V$
+
+**base**: $\{v_1, v_2, \ldots, v_n\}$ insieme di vettori linearmente indipendenti tali che $\mathcal{L}<v_1, v_2, \ldots, v_n> = V $
+
+dati 2 sottospazi $U, W$ di $V$
+
+- $\max\{dim(U), dim(W)\} \leq dim(U + W) \leq dim(U) + dim(W)$
+- $dim(U + W) = dim(U) + dim(W) - dim(U \cap W)$
+
+## Applicazioni lineari
+
+**applicazione lineare $F: V \rarr W$**
+
+**condizioni di linearità**:
+
+1. $F(v + w) = F(v) + F(w)$
+2. $F(\lambda v) = \lambda F(v)$
+
+**nucleo o kernel**: $Ker(F) = \{v \in V : F(v) = 0_W\}$
+
+**immagine o range**: $Im(F) = \{w \in W : \exists v \in V \text{ con } w = F(v)\}$
+
+**nullità**: $dim(Ker(F))$
+
+**rango**: $dim(Im(F))$
+
+**iniettività**: $dim(Ker(F)) = \{0\} \iff F$ iniettiva
+
+**suriettività**: $dim(Im(F)) = dim(W) \iff F$ suriettiva, oppure $Im(F) = W$
+
+**isomorfismo**: iniettività e suriettività
+
+**teorema nullità + rango**: $dim(V) = dim(Ker(F)) + dim(Im(F))$
+
+$F(v_1), F(v_2), \ldots, F(v_p)$ L.I. $\iff v_1, v_2, \ldots, v_p$ L.I.
+
+**matrice associata a una applicazione lineare**:
+$$A = [A^1 \; A^2 \; \ldots \; A^n] = \begin{bmatrix} \begin{bmatrix} \; \\ F(v_1) \\ \; \end{bmatrix}_{B'} & \begin{bmatrix} \; \\ F(v_2) \\ \; \end{bmatrix}_{B'} & \ldots & \begin{bmatrix} \; \\ F(v_n) \\ \; \end{bmatrix}_{B'} \\ \end{bmatrix}$$
+
+**matrice di cambiamento di base**: matrice associata all'identità $I_V$ tra due basi $B$ e $B'$
+
+$B = (b_1, b_2, b_3)$, $B' = (b'_1, b'_2, b'_3)$
+
+$B \rarr B'$
+
+$$M[id, B, B'] = \begin{bmatrix} \begin{bmatrix} \; \\ b_1 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_2 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_3 \\ \; \end{bmatrix}_{B'} \end{bmatrix}$$
+
+$$\begin{array}{c} [b_1]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_1 \\ [b_2]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_2 \\ [b_3]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_3 \end{array}$$
+
+$B' \rarr B$
+
+$$M[id, B', B] = \begin{bmatrix} \begin{bmatrix} \; \\ b'_1 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_2 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_3 \\ \; \end{bmatrix}_{B} \end{bmatrix}$$
+
+$$\begin{array}{c} [b'_1]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_1 \\ [b'_2]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_2 \\ [b'_3]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_3 \end{array}$$
+
+**caso di applicazioni lineari**:
+
+$B' \rarr B \rarr \hat{B} \rarr \hat{B}'$
+
+$$M[id, B', \hat{B}'] = M[id, \hat{B}, \hat{B}'] \cdot M[id, B, \hat{B}] \cdot M[id, B', B]$$
+
+## Sistemi lineari
+
+$AX = B \quad \begin{bmatrix} a_{11} & \ldots \\ \ldots & a_{mn} \end{bmatrix} \cdot \begin{bmatrix} x_1 \\ \ldots \\ x_n \end{bmatrix} = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix} $
+
+
+
+## Autovettori e autovalori
