@@ -236,8 +236,95 @@ $$M[id, B', \hat{B}'] = M[id, \hat{B}, \hat{B}'] \cdot M[id, B, \hat{B}] \cdot M
 
 ## Sistemi lineari
 
-$AX = B \quad \begin{bmatrix} a_{11} & \ldots \\ \ldots & a_{mn} \end{bmatrix} \cdot \begin{bmatrix} x_1 \\ \ldots \\ x_n \end{bmatrix} = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix} $
+$$AX = B$$
 
+$$\begin{bmatrix} \begin{bmatrix} \; \\ A^1 \\ \; \end{bmatrix} & \ldots & \begin{bmatrix} \; \\ A^n \\ \; \end{bmatrix} \end{bmatrix} \cdot \begin{bmatrix} x_1 \\ \ldots \\ x_n \end{bmatrix} = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix} $$
 
+$$ x_1 \cdot A^1 + \ldots + x_n \cdot A^n = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix} $$
+
+$$ \begin{cases} x_1 \cdot a_{11} + \ldots + x_n \cdot a_{n1} = b_1 \\ \vdots \\ x_1 \cdot a_{1m} + \ldots + x_n \cdot a_{nm} = b_m \end{cases} $$
+
+Il sistema può avere 3 tipi di soluzioni:
+
+1. nessuna soluzione: $Ax = B$ è impossibile
+2. una soluzione unica: $Ax = B$ è possibile e $Ker(A) = \{0\}$
+3. infinite soluzioni: $Ax = B$ è possibile e $Ker(A) \neq \{0\}$
+
+### Metodo di Gauss
+
+$$ \begin{array}{c} \; \\ Ri \\ \; \\ Rj \\ \; \end{array} \begin{bmatrix} \ldots &\ldots & \ldots & \ldots \\ a_{i1} & a_{i2} & \ldots & a_{in} \\ \ldots &\ldots & \ldots & \ldots \\ a_{j1} & a_{j2} & \ldots & a_{jm} \\ \ldots &\ldots & \ldots & \ldots \end{bmatrix} $$
+
+VI sono 3 regole per operare sulle matrici, che siano righe o colonne:
+
+- G1: $R_i \leftrightarrow R_j$
+- G2: $R_i \leftrightarrow \lambda R_i$
+- G3: $R_i \leftrightarrow R_i + R_j$
+
+Ovviamente queste regole possono essere combinate
+
+**procedimento**:
+
+1. opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $ 
+2. trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
+$$\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} $$
+3. riscrivo il sistema con la matrice a gradini
+4. risolvo il sistema con sostituzione all'indietro
+
+**matrice inversa con metodo di Gauss**:
+$$ \begin{bmatrix} A & | & I_n \end{bmatrix} \rarr \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix} $$
+
+**Teorema di Rouché-Capelli**
+
+$rg(A) = rg (\begin{bmatrix} A | b \end{bmatrix})$ sistema ammissibile
+
+- $rg(A) = rg (\begin{bmatrix} A|b \end{bmatrix}) = n (x_n)$ unica soluzione
+- $rg(A) = rg (\begin{bmatrix} A|b \end{bmatrix}) < n (x_n)$ infinite soluzioni
+
+$rg(A) \neq rg (\begin{bmatrix} A|b \end{bmatrix})$ sistema impossibile
+
+### Calcolo del determinante
+
+Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LD \implies det(v_1, v_2, \ldots, v_n) = 0$
+Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LI \implies det(v_1, v_2, \ldots, v_n) \neq 0$
+
+**determinante matrice 2x2**: $$det \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} = a_{11} a_{22} - a_{12} a_{21}$$
+
+**Regola di Sarrus**: $$ \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \end{array} = \begin{array}{c} a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} \\ - (a_{13} a_{22} a_{31} + a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33})\end{array}$$
+
+**complemento algebrico**: $\bar a_{ij} = (-1)^{i+j} det(A_{ij}) = (-1)^{i+j} \cdot det M_{ij}$
+$M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
+
+**Sviluppo di Laplace**:
+scelgo una riga o colonna e sviluppo il determinante rispetto a quella riga o colonna
+$$det(A) = \sum_{j=1}^n [(-1)^{i+j} \cdot a_{ij} \cdot det(M_{ij})]$$
+con $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
+
+- esempio con matrice 3x3 scegliendo la prima riga:
+
+$$\begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} = a_{11} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} - a_{12} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} + a_{13} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} $$
+
+**calcolo dell'inversa mediante determinante**:
+
+1. calcolo la matrice dei complementi algebrici
+2. trasposta della matrice dei complementi algebrici
+3. divido per il determinante della matrice originale
+
+in generale: $$b_{ij} = \frac{\bar{a}_{ji}}{\det(A)} $$
+
+**regola di Cramer**: $Ax = b$ con $A$ matrice quadrata invertibile, $x$ vettore incognito, $b$ vettore noto
+
+$$x_i = \frac{det(A_i)}{det(A)}$$
+
+$$\bar{x_i} = \frac{det \begin{bmatrix} A^1 & & \ldots & A^{i-1} & \begin{bmatrix} \; \\ b \\ \; \end{bmatrix} & A^{i+1} & \ldots & A^n \end{bmatrix}}{det(A)}$$
+
+sostituisco la colonna $i$ di $A$ con il vettore $b$ e calcolo il determinante, poi divido per il determinante di $A$
 
 ## Autovettori e autovalori
+
+$A - \lambda I$ matrice ottenuta sottraendo $\lambda$ alla diagonale principale di $A$
+
+$$ \begin{vmatrix} a_{11} - \lambda & \ldots & \ldots & \ldots \\ \ldots & a_{22} - \lambda & \ldots & \ldots \\ \vdots & \vdots & \ddots & \vdots \\ \ldots & \ldots & \ldots & a_{nn} - \lambda \end{vmatrix} $$
+
+1. **polinomio caratteristico $\mathcal{P}(A)$**: $det (A - \lambda I) = 0$
+2. **autovalori**: $\bar{\lambda}$ che rendono $\mathcal{P}(A) = 0$
+3. calcolo autospazio originato dagli autovettori 
