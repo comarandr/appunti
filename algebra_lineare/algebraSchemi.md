@@ -130,9 +130,9 @@ stesso **endomorfismo** rappresentato in basi diverse
 
 ## Spazi vettoriali
 
-**spazio vettoriale $V$**: $V \neq \emptyset$ con
+**spazio vettoriale $V$**: insieme $V \neq \emptyset$ dove sono definite:
 
-- **somma**: $V \times V \quad v + w$
+- **somma**: $V \times V \rarr V \quad v + w$
 - **prodotto**: $\mathbb{R} \times V \rarr V \quad \lambda v$
 
 **condizioni per essere spazio vettoriale**:
@@ -144,21 +144,36 @@ stesso **endomorfismo** rappresentato in basi diverse
 5. elemento neutro prodotto: $1 \cdot v = v$
 6. $(\lambda \cdot \delta) \cdot v = \lambda \cdot (\delta \cdot v)$
 
+**vettori**: elementi di uno spazio vettoriale
+
 **proprietà spazio vettoriale**:
 
-**condizione sottospazio vettoriale**: $\lambda v + \mu w \in W \quad W \subseteq V$
+1. $\exist \bold{0} \in V : v + \bold{0} = v \quad \forall v \in V$ ed è *unico*
+2. $\bold{0} \cdot v = \bold{0} \quad \forall v \in V$
+3. $\alpha \cdot v \iff \alpha = 0 \lor v = \bold{0} $
+4. $ v + u = v + w \iff u = w$
+5. $(-1) \cdot v = < -v > $
+
+**sottospazio vettoriale $W$**: sottoinsieme di $V$ che è esso stesso uno spazio vettoriale con le stesse operazioni di $V$
+
+**condizione sottospazio vettoriale**:
+
+$$\lambda v + \mu w \in W \quad \forall v,w \in W \; \land \; \forall \lambda, \mu \in \mathbb{R}$$
+
 NOTA: se $0 \not\in W$ allora $W$ non è sottospazio vettoriale
-intersezione $W \cap U$ è sottospazio vettoriale
+
+se $W,U$ sottospazi vettoriali allora intersezione $W \cap U$ è sottospazio vettoriale
 
 **combinazione lineare**: $ \lambda_1 v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n $ con $v_i$ vettori e $\lambda_i$ valori in $\mathbb{R}$
 
 $$ w = \sum_{i=1}^n \lambda_i v_i $$
 $w$ generato da $v_1, v_2, \ldots, v_n$
 
-**inviluppo lineare**: insieme di tutte le combinazioni lineari di un insieme di vettori $S = \{v_1, v_2, \ldots, v_n\}$
-$$ \mathcal{L}<W> = \mathcal{L}< v_1, v_2, \ldots, v_n > $$
+**inviluppo lineare**: insieme di tutte le combinazioni lineari di un insieme di vettori $S = \{v_1, v_2, \ldots, v_n\}$. È un sottospazio vettoriale
 
-**dipendeza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 $ con almeno un $\lambda_i \neq 0$
+$$ \mathcal{L}<W> = \mathcal{L}< v_1, v_2, \ldots, v_n > \ = \ \{ \lambda_1 v_1, \ldots, \lambda_n v_n \} : \lambda_i \in \mathbb{R} $$
+
+**dipendenza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 $ con almeno un $\lambda_i \neq 0$
 
 **indipendenza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 \iff \lambda_1 = \lambda_2 = \ldots = \lambda_n = 0$
 

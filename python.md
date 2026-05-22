@@ -8,7 +8,6 @@
 - usare funzione modulo: `nome_modulo.nome_funzione()`
 - importare una funzione specifica: `from modulo import funzione`, * importa tutte funzioni
 
-
 ## base
 
 - commenti: `# commento`
@@ -41,7 +40,7 @@
 - proprietà utile: `s[:i] + s[i:]` &rarr; `s`
 - indicizzazione negativa: parte dal fondo `stringa[-1]` &rarr; `'a'`
 - NOTA: intervalli di indicizzazioni vengono troncati se fuori intervallo
-- stringhe NON possono essere modificate 
+- stringhe NON possono essere modificate
 - lunghezza della stringa: `len(stringa)`
 - stringa unicode: `u'ciao'`
 
