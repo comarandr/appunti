@@ -87,7 +87,7 @@ $$ U = \begin{bmatrix} \lambda_{11} & x & \ldots & y \\ 0 & \lambda_{22} & \ldot
 
 $$ L = \begin{bmatrix} \lambda_{11} & 0 & \ldots & 0 \\ x & \lambda_{22} & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ y & z & \ldots & \lambda_{nn} \end{bmatrix} $$
 
-**matrice trasposta**: matrice ottenuta scambiando righe e colonne di una matrice data
+**matrice trasposta**: le righe diventano colonne o viceversa
 
 $$ A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \vdots & \vdots\\ a_{n1} & a_{n2} \end{bmatrix} \rarr A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{n1} \\ a_{12} & a_{22} & \ldots & a_{n2} \end{bmatrix} $$
 
@@ -102,6 +102,8 @@ $$a_{ij} = (A^T)_{ji}$$
 - somma/differenza: $$(A + B)_{ij} = A_{ij} + B_{ij}$$
 
 **prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**: $$ \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix} $$
+
+$$\begin{bmatrix}  a_{11} \cdot b_{11} + a_{12} \cdot b_{21} + a_{13} \cdot b_{31} & a_{11} \cdot b_{12} + a_{12} \cdot b_{22} + a_{13} \cdot b_{32} \\ \; & \; \\ a_{21} \cdot b_{11} + a_{22} \cdot b_{21} + a_{23} \cdot b_{31} & a_{21} \cdot b_{12} + a_{22} \cdot b_{22} + a_{23} \cdot b_{32} \end{bmatrix} $$
 
 Nota bene: $AB \neq BA$
 
