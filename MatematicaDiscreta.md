@@ -406,15 +406,49 @@ approsimmazione: $z_n \approx \frac{n!}{e}$
 
 **Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2|E|$$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
 
-(1) ------ (1) $\implies$ 1+1=2
 
-(1)-----(2)-----(1) $\implies$ 1+2+1=4
+```dot 
+graph G {
+    rankdir=LR a -- b; } 
+``` 
+
+$|E_G| = 1, \; d(a) + d(b) = 1 + 1 = 2 $
+
+<br>
+
+
+```dot
+graph G { rankdir=LR a -- b; b -- c; } 
+```
+
+$ |E|= 2, \; d(a) + d(b) + d(c) = 1 + 2 + 1 = 4 $
 
 **Teorema numero di vertici di grado dispari**: in ogni grafo c'è un numero pari di vertici di grado dispari
 
-(1) ---- (...) $\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
+```dot
+graph G {
+    rankdir=LR 
+    ".." [style=dashed]
+    "a (1)" -- ".." [style=dashed]; 
+    ".." -- "b (1)" [style=dashed];
+    
+}
+```
 
-(1) ---- (2) ---- (2) ---- (1) $\implies |v: d(v) \text{ dispari}| = 2$
+$\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
+
+<br>
+
+```dot
+graph G {
+    rankdir=LR 
+    "a (1)" -- "b (3)"; 
+    "b (3)" -- "c (1)";
+    "b (3)" -- "d (1)";
+}
+```
+
+$\implies |v: d(v) \text{ dispari}| = |\{a,b,c,d\}|= 4$
 
 **Sequenza grafica**: $(d_1, \ldots, d_n)$ è una sequenza grafica se esiste un grafo $G$ in cui $d_1, \ldots, d_n$ corrisponde ai gradi di $G$
 
@@ -490,7 +524,24 @@ _nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamilton
 
 - **contrazione di un arco**: rimuovo arco $ij$ e sostituisco con nodo $e'$. Gli archi in $i$ e $j$ ora coincidono in $e'$.
 
-a ---- (i) ---- (j) ---- b $\implies$ a ---- (e') ---- b
+```dot
+graph G {
+    rankdir=LR
+    a -- i
+    i -- j
+    j -- b 
+}
+```
+
+
+
+```dot
+graph G {
+    rankdir=LR
+    a -- "e'"
+    "e'"-- b 
+}
+```
 
 **Teorema**: $G$ planare se e solo se non ha $k_5$ o $k_{3,3}$ fra i suoi minori
 
