@@ -429,8 +429,11 @@ $ |E|= 2, \; d(a) + d(b) + d(c) = 1 + 2 + 1 = 4 $
 graph G {
     rankdir=LR 
     ".." [style=dashed]
-    "a (1)" -- ".." [style=dashed]; 
-    ".." -- "b (1)" [style=dashed];
+    " 1" -- " 2";
+    " 2" -- ".." [style=dashed];
+    ".." [style=dashed]; 
+    ".." -- "2" [style=dashed];
+    "2" -- "1";    
     
 }
 ```
@@ -524,24 +527,27 @@ _nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamilton
 
 - **contrazione di un arco**: rimuovo arco $ij$ e sostituisco con nodo $e'$. Gli archi in $i$ e $j$ ora coincidono in $e'$.
 
-```dot
-graph G {
-    rankdir=LR
-    a -- i
-    i -- j
-    j -- b 
-}
-```
+  ```dot
+  graph G {
+      rankdir=LR
+      a -- i
+      i -- j [style=dashed]
+      j -- b 
+      i [style=dashed]
+      j [style=dashed]
+  }
+  ```
 
 
-
-```dot
-graph G {
-    rankdir=LR
-    a -- "e'"
-    "e'"-- b 
-}
-```
+  
+  ```dot
+  graph G {
+      rankdir=LR
+      a -- "e'"
+      "e'"-- b 
+      "e'"[style=dashed]
+  }
+  ```
 
 **Teorema**: $G$ planare se e solo se non ha $k_5$ o $k_{3,3}$ fra i suoi minori
 
